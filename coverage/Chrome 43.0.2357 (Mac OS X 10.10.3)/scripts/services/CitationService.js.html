@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/services/CitationService.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">scripts/services/CitationService.js</span></h1>
+    <h2>
+        Statements: <span class="metric">7.69% <small>(2 / 26)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">11.11% <small>(1 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">7.69% <small>(2 / 26)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">scripts/services/</a> &#187; CitationService.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+angular.module('crackooApp').factory('CitationService', [
+  '$rootScope',
+  '$ajax',
+  '$http',
+  'ENV',
+  function ($rootScope, $ajax, $http, config) {
+    return {
+      base_url: config.basepath,
+      createCitation: <span class="fstat-no" title="function not covered" >function (uid, studyItemId, citation) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $http({</span>
+          method: 'POST',
+          url: _self.base_url + '/usercitations/users/' + uid + '/studyitems/' + studyItemId + '/citations',
+          data: citation
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      updateCitation: <span class="fstat-no" title="function not covered" >function (userId, citationId, citation) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'PUT',
+          url: _self.base_url + '/users/' + userId + '/citations/' + citationId,
+          data: citation
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      deleteCitation: <span class="fstat-no" title="function not covered" >function (uid, citationId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'DELETE',
+          url: _self.base_url + '/usercitations/users/' + uid + '/citations/' + citationId
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      getCitations: <span class="fstat-no" title="function not covered" >function (sid) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'GET',
+          url: _self.base_url + '/studyitems/' + sid + '/citations'
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      getStudyItemUserCitations: <span class="fstat-no" title="function not covered" >function (uid, studyItemId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var citations = $ajax({</span>
+          method: 'GET',
+          url: _self.base_url + '/usercitations/users/' + uid + '/studyitems/' + studyItemId
+        });
+<span class="cstat-no" title="statement not covered" >        return citations;</span>
+      },
+      likeCitation: <span class="fstat-no" title="function not covered" >function (studyItemId, citationId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'PUT',
+          url: _self.base_url + '/studyitems/' + studyItemId + '/citations/' + citationId + '/like'
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      dislikeCitation: <span class="fstat-no" title="function not covered" >function (studyItemId, citationId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'PUT',
+          url: _self.base_url + '/studyitems/' + studyItemId + '/citations/' + citationId + '/dislike'
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      getCitation: <span class="fstat-no" title="function not covered" >function (studyItemId, citationId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var citation = $ajax({</span>
+          method: 'GET',
+          url: _self.base_url + '/studyitems/' + studyItemId + '/citations/' + citationId
+        });
+<span class="cstat-no" title="statement not covered" >        return citation;</span>
+      }
+    };
+  }
+]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 05 2015 16:22:27 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/controllers/report.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">scripts/controllers/report.js</span></h1>
+    <h2>
+        Statements: <span class="metric">0.59% <small>(1 / 170)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 50)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 29)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">0.59% <small>(1 / 170)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">scripts/controllers/</a> &#187; report.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+angular.module('crackooApp').controller('ReportCtrl', [
+  'app.config',
+  'auth',
+  '$routeParams',
+  'ReportService',
+  'ChartService',
+  '$scope',
+  '$rootScope',
+  'UserStudyItemService',
+  '$location',
+  'GoalDataService',
+  'GoalService',
+<span class="fstat-no" title="function not covered" >  function (config, auth, $routeParams, Reports, Charts, $scope, $rootScope, UserStudyItemService, $location, GoalDataService, goalService) {</span>
+<span class="cstat-no" title="statement not covered" >    var uid = $scope.uid = auth.getUser().email;</span>
+<span class="cstat-no" title="statement not covered" >    var gid = $scope.gid = $routeParams.id;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.type = $routeParams.type;</span>
+<span class="cstat-no" title="statement not covered" >    var goals = goalService.getGoal(gid);</span>
+<span class="cstat-no" title="statement not covered" >    goals.then(<span class="fstat-no" title="function not covered" >function (res) {</span></span>
+<span class="cstat-no" title="statement not covered" >      $scope.course = res;</span>
+    });
+    /* Handle Pie charts */
+<span class="cstat-no" title="statement not covered" >    $rootScope.$on('chart:updated', <span class="fstat-no" title="function not covered" >function (event, data, key) {</span></span>
+<span class="cstat-no" title="statement not covered" >      var its;</span>
+<span class="cstat-no" title="statement not covered" >      if (key === 'Time Report') {</span>
+<span class="cstat-no" title="statement not covered" >        console.log('received click notification for time report');</span>
+<span class="cstat-no" title="statement not covered" >        if (data.data.label === 'Slow') {</span>
+<span class="cstat-no" title="statement not covered" >          its = UserStudyItemService.getStudyItemsByTimeLevel(uid, gid, 'AA');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            if (response.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >              GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >              $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+            }
+          });
+        } else <span class="cstat-no" title="statement not covered" >if (data.data.label === 'Fast') {</span>
+<span class="cstat-no" title="statement not covered" >           its = UserStudyItemService.getStudyItemsByTimeLevel(uid, gid, 'BA');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        } else <span class="cstat-no" title="statement not covered" >if (data.data.label === 'Unattempted') {</span>
+<span class="cstat-no" title="statement not covered" >           its = UserStudyItemService.getStudyItemsByTimeLevel(uid, gid, 'N');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        }
+      } else <span class="cstat-no" title="statement not covered" >if (key === 'Confidence Report') {</span>
+        // console.log("received click notification for Confidence report");
+<span class="cstat-no" title="statement not covered" >        if (data.data.label === 'Confident') {</span>
+<span class="cstat-no" title="statement not covered" >          its = UserStudyItemService.getStudyItemsByConfidenceLevel(uid, gid, 'C');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        } else <span class="cstat-no" title="statement not covered" >if (data.data.label === 'Not Sure') {</span>
+<span class="cstat-no" title="statement not covered" >          its = UserStudyItemService.getStudyItemsByConfidenceLevel(uid, gid, 'NS');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        } else <span class="cstat-no" title="statement not covered" >if (data.data.label === 'Other') {</span>
+<span class="cstat-no" title="statement not covered" >          its = UserStudyItemService.getStudyItemsByConfidenceLevel(uid, gid, 'O');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        }
+      } else <span class="cstat-no" title="statement not covered" >if (key === 'Difficulty Report') {</span>
+<span class="cstat-no" title="statement not covered" >        console.log('received click notification for Difficulty report');</span>
+<span class="cstat-no" title="statement not covered" >        if (data.data.label === 'Easy') {</span>
+<span class="cstat-no" title="statement not covered" >          its = UserStudyItemService.getStudyItemsByDifficultyLevel(uid, gid, 'E');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        } else <span class="cstat-no" title="statement not covered" >if (data.data.label === 'Difficult') {</span>
+<span class="cstat-no" title="statement not covered" >           its = UserStudyItemService.getStudyItemsByDifficultyLevel(uid, gid, 'D');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        } else <span class="cstat-no" title="statement not covered" >if (data.data.label === 'Other') {</span>
+<span class="cstat-no" title="statement not covered" >           its = UserStudyItemService.getStudyItemsByDifficultyLevel(uid, gid, 'O');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        }
+      } else <span class="cstat-no" title="statement not covered" >if (key === 'Review Report') {</span>
+<span class="cstat-no" title="statement not covered" >        if (data.data.label === 'Needs Review') {</span>
+<span class="cstat-no" title="statement not covered" >           its = UserStudyItemService.getStudyItemsByReview(uid, gid, 'R');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        } else <span class="cstat-no" title="statement not covered" >if (data.data.label === 'Others') {</span>
+<span class="cstat-no" title="statement not covered" >          its = UserStudyItemService.getStudyItemsByReview(uid, gid, 'O');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        }
+      } else <span class="cstat-no" title="statement not covered" >if (key === 'Status Report') {</span>
+<span class="cstat-no" title="statement not covered" >        if (data.data.label === 'Finished') {</span>
+<span class="cstat-no" title="statement not covered" >           its = UserStudyItemService.getStudyItemsByFinishedStatus(uid, gid, 'F');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        } else <span class="cstat-no" title="statement not covered" >if (data.data.label === 'Unfinished') {</span>
+<span class="cstat-no" title="statement not covered" >           its = UserStudyItemService.getStudyItemsByFinishedStatus(uid, gid, 'UF');</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+          });
+        }
+      }
+    });
+    /* Handle Focus(Topic Wise report charts) */
+<span class="cstat-no" title="statement not covered" >    $rootScope.$on('focus:updated', <span class="fstat-no" title="function not covered" >function (e, focuslabel) {</span></span>
+      //console.log("e is "+JSON.stringify(e));
+<span class="cstat-no" title="statement not covered" >      console.log('label is' + focuslabel.point.label);</span>
+<span class="cstat-no" title="statement not covered" >      console.log('topic Name is ' + focuslabel.e.currentTarget.label);</span>
+<span class="cstat-no" title="statement not covered" >      var its;</span>
+      //console.log("key is" + key);
+<span class="cstat-no" title="statement not covered" >      var focuskey = focuslabel.series.key;</span>
+<span class="cstat-no" title="statement not covered" >      if (focuskey === 'UnAttempted') {</span>
+<span class="cstat-no" title="statement not covered" >        console.log('received click notification for Unattempted study items for topic ');</span>
+<span class="cstat-no" title="statement not covered" >         its = UserStudyItemService.getStudyItemsByConfidenceLevel(uid, gid, 'C');</span>
+<span class="cstat-no" title="statement not covered" >        its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >          console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >          GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+        });
+      } else <span class="cstat-no" title="statement not covered" >if (focuskey === 'Attempted') {</span>
+<span class="cstat-no" title="statement not covered" >        console.log('received click notification for Attempted Study Items for topic');</span>
+<span class="cstat-no" title="statement not covered" >        its = UserStudyItemService.getStudyItemsByConfidenceLevel(uid, gid, 'C');</span>
+<span class="cstat-no" title="statement not covered" >        its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >          console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >          GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('goals/' + gid + '/items/' + response[0].studyItemID);</span>
+        });
+      }
+    });
+<span class="cstat-no" title="statement not covered" >    $scope.$watch('goal', <span class="fstat-no" title="function not covered" >function (newGoal, oldGoal, $scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >      $scope.$watch('type', <span class="fstat-no" title="function not covered" >function (newType, oldType, $scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var uid = $scope.uid;</span>
+<span class="cstat-no" title="statement not covered" >        var gid = $scope.gid;</span>
+<span class="cstat-no" title="statement not covered" >        var container = '.referenceList svg';</span>
+<span class="cstat-no" title="statement not covered" >        var timeframe = 'DAILY';</span>
+<span class="cstat-no" title="statement not covered" >        switch (newType) {</span>
+        //status report
+        case 'status':
+<span class="cstat-no" title="statement not covered" >          $scope.title = 'Goal Completion Status';</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('/report/' + $scope.gid + '/status').replace();</span>
+<span class="cstat-no" title="statement not covered" >          angular.element(container).html('');</span>
+<span class="cstat-no" title="statement not covered" >          Reports.getStatusReport(uid, gid).then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            Charts.pie({ children: response }, container);</span>
+          });
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'studyactivity':
+<span class="cstat-no" title="statement not covered" >          $scope.title = 'Study Activity Report';</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('/report/' + $scope.gid + '/studyactivity').replace();</span>
+<span class="cstat-no" title="statement not covered" >          angular.element(container).html('');</span>
+<span class="cstat-no" title="statement not covered" >          Reports.getStudyactivityData(uid, gid, timeframe).then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log('study activity response is', response);</span>
+<span class="cstat-no" title="statement not covered" >            Charts.stacked({ children: response }, container);</span>
+          });
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'focus':
+<span class="cstat-no" title="statement not covered" >          $scope.title = 'Focus Report';</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('/report/' + $scope.gid + '/focus').replace();</span>
+<span class="cstat-no" title="statement not covered" >          angular.element(container).html('');</span>
+<span class="cstat-no" title="statement not covered" >          Reports.getFocusData(uid, gid).then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            Charts.bar({ children: response }, container);</span>
+          });
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'progress':
+<span class="cstat-no" title="statement not covered" >          $scope.title = 'Daily Progress Report';</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('/report/' + $scope.gid + '/progress').replace();</span>
+<span class="cstat-no" title="statement not covered" >          angular.element(container).html('');</span>
+<span class="cstat-no" title="statement not covered" >          Reports.getProgressData(uid, gid, timeframe).then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            Charts.line({ children: response }, container);</span>
+          });
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'confidencelevel':
+<span class="cstat-no" title="statement not covered" >          $scope.title = 'Confidence Level Report';</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('/report/' + $scope.gid + '/confidencelevel').replace();</span>
+<span class="cstat-no" title="statement not covered" >          angular.element(container).html('');</span>
+<span class="cstat-no" title="statement not covered" >          Reports.getConfidencelevel(uid, gid).then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(response);</span>
+<span class="cstat-no" title="statement not covered" >            Charts.pie({ children: response }, container);</span>
+          });
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'timelevel':
+<span class="cstat-no" title="statement not covered" >          $scope.title = 'Time Level Report';</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('/report/' + $scope.gid + '/timelevel').replace();</span>
+<span class="cstat-no" title="statement not covered" >          angular.element(container).html('');</span>
+<span class="cstat-no" title="statement not covered" >          Reports.getTimelevel(uid, gid).then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            Charts.pie({ children: response }, container);</span>
+          });
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'difficultylevel':
+<span class="cstat-no" title="statement not covered" >          $scope.title = 'Difficult Level Report';</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('/report/' + $scope.gid + '/difficultylevel').replace();</span>
+<span class="cstat-no" title="statement not covered" >          angular.element(container).html('');</span>
+<span class="cstat-no" title="statement not covered" >          Reports.getDifficultylevel(uid, gid).then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            Charts.pie({ children: response }, container);</span>
+          });
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'review':
+<span class="cstat-no" title="statement not covered" >          $scope.title = 'Review Report';</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('/report/' + $scope.gid + '/review').replace();</span>
+<span class="cstat-no" title="statement not covered" >          angular.element(container).html('');</span>
+<span class="cstat-no" title="statement not covered" >          Reports.getReviewReport(uid, gid).then(<span class="fstat-no" title="function not covered" >function (respose) {</span></span>
+<span class="cstat-no" title="statement not covered" >            Charts.pie({ children: respose }, container);</span>
+          });
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        }
+      });
+    });
+  }
+]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 02 2015 15:50:42 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+/* Table of Content
+		1. Home Footer
+		2. App Footer
+
+*/
+
+
+/*======================================
+=            1. Home Footer            =
+======================================*/
+
+#homeFooter {
+	/* General Footer Styling */	
+	background: $color-white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+		/* Footer left copyright */
+		.footerLeft {
+			float: left;
+			width: 400px;
+			@include breakpoint(laptop) {
+				width: 333px;
+			}
+				small {
+					color: $color-vivid-green;
+					font-size: $base-font-size;
+					font-family: $font-nav;
+					margin-top: 8px;
+					display: inline-block;					
+				}
+		}
+		.footerCenter {
+			float: left;
+			width: 300px;
+			margin: 0 auto;
+			text-align: center;
+			@include breakpoint(laptop) {
+				width: 333px;
+			}			
+		}
+		.footerRight {
+			float: right;
+			width: 400px;
+			text-align: right;
+			@include breakpoint(laptop) {
+				width: 333px;
+			}			
+			ul {
+				margin-top: 12px;
+				li {
+					display: inline-block;
+						&:last-child a {
+							border:none!important;
+							padding-right: 0px!important
+							}					
+					a {
+						display: inline-block;
+						font-size: $base-font-size;
+						color: $color-vivid-green;
+						font-family: $font-nav;
+						padding-left: 5px;
+						padding-right: 5px;
+						border-right:1px solid $color-vivid-green;	
+							&:hover {
+								color: $color-gray;
+							}											
+					}
+				}
+			}
+		}
+}
+
+/*-----  End of 1. Home Footer  ------*/
+
+/*=====================================
+=            2. App Footer            =
+=====================================*/
+
+#appFooter {
+	padding-top: 30px;
+	padding-bottom: 40px;
+	background: $color-white;
+	border-top:1px solid #e9ebf1;
+		/* Copyright */
+		small {
+			float: left;
+			display: block;
+			font-size: 13px;
+			color:#c5d1dd;
+			@extend .uppercase;
+			font-family: $nova-bold;
+		}
+		/* Footer navigation */
+		.appFooternav {
+			float: right;
+			margin-top: -2px;
+				ul {
+					float:left;
+					li {
+						display: inline-block;
+						a {
+							display: inline-block;
+							display: inline-block;
+							font-size: $base-font-size;
+							color: $color-vivid-green;
+							font-family: $font-nav;
+							padding-left: 5px;
+							padding-right: 5px;
+							color: #c5d1dd;
+							border-right:1px solid #c5d1dd;
+								&:hover {
+									opacity: $opaque;
+								}
+
+						}		
+						/* remove border from last lnik */
+						&:last-child a {
+							border:none!important;
+							padding-right: 0px;
+						}		
+					}
+				}
+				/* Social Icons */
+			.socials {
+				float: left;
+				margin-left: 15px;
+				margin-top: -10px;
+					a {
+						display: inline-block;
+						width: 32px;
+						height: 32px;
+						text-indent: -9999px;
+						background: #000;
+						margin-left: 5px;
+						background: url(../img/ico/socialsprite.png);
+						background-repeat: no-repeat;
+							&:hover {
+								opacity: $opaque;
+							}
+					}
+					.facebookIco {
+						background-position: 0px 0px;
+					}
+					.twitterIco {
+						background-position: 0px -64px;
+					}
+			}
+		}
+}
+
+/*-----  End of 2. App Footer  ------*/
+
+
+

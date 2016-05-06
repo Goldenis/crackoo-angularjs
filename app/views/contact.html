@@ -1,0 +1,157 @@
+<style type="text/css">
+.row {
+	display: inline;
+	float: left;
+	width: 100%;
+	margin-top: 2%;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+.row.half {
+	width: 42%;
+}
+
+.row.half.first {
+	clear: left;
+}
+
+.row:after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+#main-content {
+	clear: "both";
+	width: 1280px;
+	margin: 50px 0 auto 0;
+	min-height: 600px;
+}
+
+#form {
+	width: 75%;
+	float: left;
+	border-right: 1px solid #cbcbcb;
+}
+
+#contacts {
+	width: 24%;
+	float: left;
+	margin-left: 1%;
+}
+
+select,input[type="text"],input[type="email"] {
+	height: 40px;
+	width: 100%;
+	padding: 8px;
+	background-color: #e9e9e9;
+	border: 1px solid #cbcbcb;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin-bottom: 8px;
+	line-height: 140%;
+	position: relative;
+}
+
+textarea {
+	height: 200px;
+	width: 92%;
+	padding: 8px;
+	background-color: #e9e9e9;
+	border: 1px solid #cbcbcb;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin-bottom: 8px;
+	line-height: 140%;
+	position: relative;
+}
+
+#contacts {
+	padding: 8px 30px;
+	border: 1px solid #cbcbcb;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin-bottom: 8px;
+	line-height: 140%;
+	position: relative;
+}
+
+.actions {
+	display: inline;
+	float: right;
+	margin-right: 4%;
+	margin-top: 2%
+}
+
+.btn1 {
+	background: none repeat scroll 0 0 #6ABE59;
+	text-align: center;
+	min-width: 10%;
+	color: #FFFFFF;
+	padding: 0.57143em 20px 0.64286em;
+	border: 0 none;
+	border-radius: 4px;
+	font-size: 1em;
+}
+
+.btn1:hover {
+	background: none repeat scroll 0 0 #7AC56B;
+}
+</style>
+<div id="container">
+	<div id="header">
+		<img src="img/logo_home.jpg" alt="Crackoo - Learn. Faster."
+			width="150" height="30" align="left" />
+		<div id="homenav" align="center">
+			<a href="index.html">Home</a> <a href="#">Learn More</a> <a href="#">Programs</a>
+			<a href="#">Contact</a>
+		</div>
+	</div>
+	<br clear="both" />
+	<div id="main-content" style="color:#6EB43F;">
+		<div id="form">
+			<form>
+				<div class="row half first">
+					<label>* NAME: </label> <input type="text" />
+				</div>
+				<div class="row half">
+					<label>* EMAIL: </label> <input type="email" />
+				</div>
+				<div class="row half first">
+					<label>* Role: </label> <select>
+						<option value=""></option>
+						<option value="student">Student</option>
+						<option value="tutor">Tutor</option>
+						<option value="publisher">Publisher</option>
+					</select>
+				</div>
+				<div class="row half">
+					<label>Company :</label> <input type="text" />
+				</div>
+				<div class="row" style="margin-top: 2%;">
+					<label>* Message: </label>
+					<textarea></textarea>
+				</div>
+				<div class="actions">
+					<input class="btn1" type="submit" value="Send" name="commit" />
+				</div>
+			</form>
+		</div>
+		<div id="contacts">
+			<h3 style="text-align: center;">Contact Information</h3>
+			<div>
+				<div id="email">
+					<p>Email Address : admin@crackoo.com</p>
+				</div>
+				<div id="phone">
+					<p>Phone Number : 
+					+1-128-121-1212</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

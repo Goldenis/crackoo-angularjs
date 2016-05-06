@@ -1,0 +1,18 @@
+<div class="bluebox comments" ng-hide="isEditVisible">
+  <div class="thumbnail">
+    <img ng-src="{{imgUrl}}"/>
+  </div>
+  <div class="comment-rating">
+    <a ng-click="like(sid, id)">
+      <img src="img/icon_comment_thumbs-up.png" width="15" height="16" alt="Like this Comment" />
+    </a>
+    <div ng-class="color(likes, dislikes)" align="center">{{displayLikes(likes, dislikes)}}</div>
+    <a ng-click="dislike(sid, id)">
+      <img src="img/icon_comment_thumbsdown.png" width="15" height="16" alt="Dislike this Comment" />
+    </a>
+  </div>
+  {{description}}
+</div>
+<div class="right light-grey">{{creationTime | date:'medium'}} <!-- from  <strong>ip</strong> --></div>
+<br clear="all" />
+<br />

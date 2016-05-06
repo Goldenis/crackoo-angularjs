@@ -1,0 +1,41 @@
+    <article id="questionResult">
+        <div class="stepLeft">
+            <dl>
+                <dd>selected choice</dd>
+
+                <dt ng-class="{'correct':correctAns == true, 'incorrect':correctAns == false}">
+                <div>
+                  <ul>
+                   <li class="answerLabel" ng-repeat=" selected in selectedChoice track by $index">
+                     <selectedchoicesdesc text="selected.text"></selectedchoicesdesc>
+                   </li>
+
+                 </ul>
+                </div>
+              <!--<div class="answerLabel">{{selectedChoice}}</div>-->
+              <!--<div class="answerLabel">{{selected.text}}</div>-->
+                </dt>
+                <dd>Right Answer</dd>
+                <dt>
+                  <div> <!--<dt><div class="answerLabel">{{rightAnswer}}</div></dt>-->
+                    <ul>
+                      <li class="answerLabel" ng-repeat="answer in correctAnswers track by $index">
+                        <!--<span>{{answer.rightAnswer}}</span>-->
+                        <span><correctchoicesdesc></correctchoicesdesc></span>
+                      </li>
+                    </ul>
+                  </div>
+                </dt>
+
+            </dl>
+        </div>
+        <!-- // step left -->
+        <div class="stepRight">
+            <h4>explanation</h4>
+
+            <!--<p>{{explanation}}</p>-->
+          <explanationcontentdesc></explanationcontentdesc>
+        </div>
+        <!-- // step Right -->
+        <div class="clearfix"></div>
+    </article>

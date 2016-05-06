@@ -1,0 +1,238 @@
+<!-- Begin SEO -->
+<view-title>{{chosenTitle}}</view-title>
+<meta view-head name="description" content={{SEODescription}}>
+<!--<meta view-head name="keywords" content={{SEOKeywords}}>-->
+<!-- END SEO -->
+
+
+<div data-header ng-if="first_name != undefined && first_name != null" ></div>
+<div ng-if="first_name == undefined || first_name == null">
+  <ng-include src="'views/home-parts/headerNotLoggedIn.html'" ></ng-include>
+</div>
+
+
+<!--<div data-header></div>-->
+<!--<div ng-if="first_name != undefined && first_name != null" data-green-bar data-name="{{title}}" data-active-tab ="study" caption="{{course.name}}"></div>-->
+
+<!--<div id="secNav">-->
+    <!--<div class="container">-->
+        <!--<nav>-->
+            <!--<ul>-->
+                <!--<li><a ng-class="{'active' : activeTab == 'allCourses'}" data-ng-click="switchTab('allCourses')">All Courses</a></li>-->
+                <!--<li><a ng-class="{'active' : activeTab == 'myCourses'}" data-ng-click="switchTab('myCourses')">My Courses</a></li>-->
+            <!--</ul>-->
+            <!--&lt;!&ndash; // list &ndash;&gt;-->
+        <!--</nav>-->
+        <!--&lt;!&ndash; // nav &ndash;&gt;-->
+    <!--</div>-->
+    <!--&lt;!&ndash; // container &ndash;&gt;-->
+<!--</div>-->
+<!-- // sec nav -->
+
+
+<div id="appPageWrapper">
+<div class="container">
+
+<div class="actionBar">
+    <a ng-click="backToAllPrograms();">back to all programs</a>
+</div>
+<!-- // actiion bar -->
+
+<div id="goalsWrapper">
+  <div id="goalsDetailsContainer">
+      <div data-course-box show-more-hide="true"></div>
+  </div>
+
+<nav>
+    <ul>
+        <li><a ng-click="goToByScroll('topicsCovered')">Topics Covered</a></li>
+        <li><a ng-click="goToByScroll('goalsFeatures')">Features</a></li>
+        <li><a ng-click="goToByScroll('goalsReviews')">Reviews</a></li>
+    </ul>
+    <div class="clearfix"></div>
+</nav>
+
+<div class="narrowContainer" id="topicsCovered">
+    <header>
+        <h2>Topics Covered</h2>
+    </header>
+    <div ng-repeat="group in groups" >
+        <h3>{{group.topicName}} </h3>
+        <ul>
+            <li ng-repeat="content in group.childTopics">{{content.topicName}}</li>
+        </ul>
+        <div class="graydivider"></div>
+    </div>
+</div>
+<!-- // narow container -->
+
+<div class="narrowContainer" id="goalsFeatures">
+    <header>
+        <h3>Features</h3>
+    </header>
+
+    <article class="studentsBox">
+        <div class="studentsIco">
+            <span class="trackIco">Track</span>
+        </div>
+        <!-- // icon -->
+        <div class="studentsContent">
+            <h3>Track</h3>
+
+            <p>Track your progress towards your goal</p>
+        </div>
+        <!-- // students content -->
+    </article>
+    <!-- // students box -->
+    <article class="studentsBox">
+        <div class="studentsIco">
+            <span class="reviewIco">Review</span>
+        </div>
+        <!-- // icon -->
+        <div class="studentsContent">
+            <h3>Review</h3>
+
+            <p>Ability to revisit your learning session at any point in time for effective and efficient
+                learning.</p>
+        </div>
+        <!-- // students content -->
+    </article>
+    <!-- // students box -->
+    <article class="studentsBox">
+        <div class="studentsIco">
+            <span class="questionsIco">Questions</span>
+        </div>
+        <!-- // icon -->
+        <div class="studentsContent">
+            <h3>Questions</h3>
+
+            <p>Ask questions and get them answered by other students and experts.</p>
+        </div>
+        <!-- // students content -->
+    </article>
+    <!-- // students box -->
+    <div class="clearfix"></div>
+    <article class="studentsBox">
+        <div class="studentsIco">
+            <span class="personalizeIco">Personalize</span>
+        </div>
+        <!-- // icon -->
+        <div class="studentsContent">
+            <h3>Personalize</h3>
+
+            <p>Personalize your study according to your need and motivation.</p>
+        </div>
+        <!-- // students content -->
+    </article>
+    <!-- // students box -->
+    <article class="studentsBox">
+        <div class="studentsIco">
+            <span class="flashcardsIco">Flashcards</span>
+        </div>
+        <!-- // icon -->
+        <div class="studentsContent">
+            <h3>Flashcards</h3>
+
+            <p>Create custom flashcards for things you would like to memorize.</p>
+        </div>
+        <!-- // students content -->
+    </article>
+    <!-- // students box -->
+    <article class="studentsBox">
+        <div class="studentsIco">
+            <span class="notesIco">Notes</span>
+        </div>
+        <!-- // icon -->
+        <div class="studentsContent">
+            <h3>Notes</h3>
+
+            <p>Store your custom notes and thoughts along side the study content.Leverage notes from other
+                users and past students.</p>
+        </div>
+        <!-- // students content -->
+    </article>
+    <!-- // students box -->
+    <div class="clearfix"></div>
+    <article class="studentsBox">
+        <div class="studentsIco">
+            <span class="inteligentIco">Inteligent Report</span>
+        </div>
+        <!-- // icon -->
+        <div class="studentsContent">
+            <h3>Inteligent report and analysis</h3>
+
+            <p>We analyze the learning data of
+                millions of users and combine that
+                knowledge with your learning data to
+                provide unique insights into your
+                learning.Identify your Strong Areas
+                and Weak Areas, Fastest Attempted
+                or Slowest Attempted question types.</p>
+        </div>
+        <!-- // students content -->
+    </article>
+    <!-- // students box -->
+    <article class="studentsBox">
+        <div class="studentsIco">
+            <span class="mobilityIco">Mobility</span>
+        </div>
+        <!-- // icon -->
+        <div class="studentsContent">
+            <h3>Mobility</h3>
+
+            <p>Access your curse any time form anywhere using any platform (iPhone, android and iPad)</p>
+        </div>
+        <!-- // students content -->
+    </article>
+    <!-- // students box -->
+    <article class="studentsBox">
+        <div class="studentsIco">
+            <span class="analysisIco">Comparative Analysis</span>
+        </div>
+        <!-- // icon -->
+        <div class="studentsContent">
+            <h3>Comparative Analysis</h3>
+
+            <p>Compare your progress with your peers and top students.</p>
+        </div>
+        <!-- // students content -->
+    </article>
+    <!-- // students box -->
+    <div class="clearfix"></div>
+
+
+</div>
+<!-- // features  Temporarily disabled-->
+
+
+<!--<div class="narrowContainer" id="goalsReviews">-->
+    <!--<header>-->
+        <!--<h2>Reviews</h2>-->
+    <!--</header>-->
+    <!--<article class="reviewBox" data-ng-repeat="eachreview in reviews">-->
+        <!--<div class="reviewImage">-->
+            <!--<img src="{{eachreview.imgUrl}}" alt="">-->
+        <!--</div>-->
+        <!--&lt;!&ndash; // review image &ndash;&gt;-->
+        <!--<div class="reviewContent">-->
+            <!--<h3>{{eachreview.author}}</h3>-->
+            <!--<h4>Proin gravida nibh vel </h4>-->
+
+            <!--<p>{{eachreview.desc}}</p>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; // review content &ndash;&gt;-->
+        <!--<div class="clearfix"></div>-->
+    <!--</article>-->
+    <!--&lt;!&ndash; // reiew box &ndash;&gt;-->
+
+<!--</div>-->
+<!-- // goals reviews -->
+
+</div>
+<!-- // goals wrapper -->
+
+<div class="clearfix"></div>
+</div>
+<!-- // container -->
+</div>
+<!-- // app page wrapper -->

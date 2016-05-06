@@ -1,0 +1,39 @@
+<div class="referenceArticle">
+    <div class="referenceImage">
+        <img ng-src="{{imgUrl}}" alt="" class="img-responsive"  width="64" height="64">
+    </div>
+    <!-- // profile image -->
+    <!--<div class="referenceUser">-->
+        <!--<p>{{autherName}}</p>-->
+        <!--<small>{{creationTime | date:'medium'}}</small>-->
+    <!--</div>-->
+    <!-- // profile data -->
+    <!--<div class="referenceLink">-->
+        <!--<p ng-hide="isEditVisible">{{description}}</p>-->
+
+        <!--<input type="text" placeholder="Enter study note ..." onfocus="this.placeholder = ''"-->
+               <!--onblur="this.placeholder = 'Enter study note ...'" ng-model="tempDescription" ng-show="isEditVisible"/>-->
+        <!--<a class="submitBtn" ng-show="isEditVisible"  ng-click="save()">submit</a>-->
+        <!--<a class="cancelBtn" ng-show="isEditVisible"  ng-click="cancel()">cancel</a><br>-->
+    <!--</div>-->
+
+    <div class="discussionDetail">
+        <h3>{{autherName}}</h3>
+        <h6>{{creationTime | date:'medium'}}</h6>
+
+        <p ng-hide="isEditVisible">{{description}}</p>
+
+        <textarea type="text" placeholder="Enter study note ..." onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Enter study note ...'" ng-model="tempDescription" ng-show="isEditVisible"></textarea>
+        <a class="submitBtn" ng-show="isEditVisible"  ng-click="save()">submit</a>
+        <a class="cancelBtn" ng-show="isEditVisible"  ng-click="cancel()">cancel</a><br>
+    </div>
+    <!-- // link -->
+    <div class="referenceActions" ng-show="referenceActionsShow">
+        <a class="editBtn" ng-click="edit()">edit</a>
+        <a class="delBtn" ng-click="delete(id)">delete</a>
+    </div>
+    <!-- // actions -->
+    <div class="clearfix"></div>
+</div>
+<!-- // reference article -->

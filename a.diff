@@ -1,0 +1,75 @@
+diff --git a/app/styles/main.css b/app/styles/main.css
+index 863d354..7e3150b 100644
+--- a/app/styles/main.css
++++ b/app/styles/main.css
+@@ -4616,7 +4616,7 @@ label {
+ .choiceBody{
+   /*text-align: center;*/
+   vertical-align: middle;
+-  font-size: 20px;
++  font-size: 18px;
+   /*padding-left: 15%;*/
+ }
+ 
+@@ -4628,6 +4628,7 @@ label {
+ 
+ .flashcardBodyFront{
+     vertical-align: middle;
++    text-align: center;
+     min-height: 240px;
+     font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+     color: #34495e;
+@@ -4636,6 +4637,19 @@ label {
+     cursor: pointer;
+     font-size:  40px;
+     font-weight: bold;
++    line-height: 200px;
++}
++
++.flashcardBodyBack{
++  vertical-align: middle;
++  min-height: 240px;
++  font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
++  color: #34495e;
++  font-size: 1.3em;
++  letter-spacing: .02em;
++  cursor: pointer;
++  font-size:  30px;
++  font-weight: bold;
+ }
+ 
+ .flashcardExample{
+@@ -4645,7 +4659,7 @@ label {
+   font-size: 1.3em;
+   letter-spacing: .02em;
+   cursor: pointer;
+-  font-size:  40px;
++  font-size:  26px;
+   font-weight: bold;
+ }
+ 
+@@ -4656,15 +4670,15 @@ label {
+   width:100%;
+ }
+ 
+-.flashcardBodyBack{
+-  min-height: 220px;
+-  font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+-  color: #34495e;
+-  font-size: 1.3em;
+-  cursor: pointer;
+-  font-size:  25px;
+-  font-weight: bold;
+-}
++/*.flashcardBodyBack{*/
++  /*min-height: 220px;*/
++  /*font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;*/
++  /*color: #34495e;*/
++  /*font-size: 1.3em;*/
++  /*cursor: pointer;*/
++  /*font-size:  25px;*/
++  /*font-weight: bold;*/
++/*}*/
+ 
+ .flashcardFlipLink{
+   color: #9dabb9;

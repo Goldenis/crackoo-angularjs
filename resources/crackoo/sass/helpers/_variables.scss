@@ -1,0 +1,44 @@
+// Colors
+$color-white: #fff;
+$color-green: #00b9aa;
+$color-gray: #b1b1b1;
+$color-dark-gray: #313740;
+$color-light-gray: #a9b2bc;
+$color-light-green: #81be4a;
+$color-vivid-green: #81be4a;
+$color-gray-blue: #90a4ae;
+$color-gray-lighter: #e9ebf1;
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: 'ralewayregular';;
+$base-font-weight: $regular;
+$base-font-size: 12px;
+$base-line-height: 1.4;
+
+// Nav Font
+$font-nav: 'ralewaysemibold';
+
+// Heading Font
+$font-heading: 'ralewaybold';
+$font-light: 'ralewayextralight';
+
+// Fixed Font
+$fixed-font-family: monospace;
+$fixed-font-size: 85%;
+$fixed-line-height: $base-line-height;
+
+// Headings
+$header-font-weight: $bold;
+
+// Opacity
+$opaque : 0.7;
+
+// App Font 	
+$nova-bold:  'proxima_nova_rgbold';
+$nova-light: 'proxima_novalight';
+$nova-regular: 'proxima_nova_rgregular';

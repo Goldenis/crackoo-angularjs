@@ -1,0 +1,26 @@
+<!--<span ng-bind="time"> </span>-->
+
+<!--&lt;!&ndash; <div class="btn-toolbar"> &ndash;&gt;-->
+
+    <!--<button style="margin-left: 4px; margin-top: -8px;" type="button" class="btn btn-success" ng-show="isRunning" ng-click="toggleClock()">-->
+      <!--&nbsp;&nbsp;&nbsp;Stop&nbsp;&nbsp;&nbsp;-->
+    <!--</button>-->
+
+    <!--<button style="margin: -8px 0 0 15px;" type="button" class="btn btn-danger" ng-hide="isRunning" ng-click="toggleClock()">-->
+      <!--Resume-->
+    <!--</button>-->
+
+
+<!--<div class="span2" style="display:none" showonhoverparentsparent>-->
+    <!--<button style="margin-left: 220px; margin-top: -62px;" type="button" class="btn btn-success"-->
+            <!--ng-class="{'btn-primary': isDifficult, 'btn-default':!isDifficult}" class="btn navbar-btn" ng-click="finishTest()">&nbsp;&nbsp;&nbsp;Finish&nbsp;&nbsp;&nbsp;</button>-->
+<!--</div>-->
+
+<div class="questionControls">
+    <small>Current time:</small>
+    <span ng-bind="time"></span>
+    <a id="timerPlay" class="playBtn2" ng-hide="isRunning" ng-click="toggleClock()">PLay</a>
+    <a id="timerPause" class="pauseBtn" ng-show="isRunning" ng-click="toggleClock()">Pause</a>
+
+    <!--<a href="#" class="playBtn">Play</a>-->
+</div>

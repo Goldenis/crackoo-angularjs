@@ -1,0 +1,42 @@
+<!-- Begin SEO -->
+<view-title>{{chosenTitle}}</view-title>
+<meta view-head name="description" content={{description}}>
+<meta view-head name="keywords" content={{keywords}}>
+<!-- End SEO -->
+
+<ng-include src="'views/home-parts/headerNotLoggedIn.html'" ></ng-include>
+
+<header id="masHeader">
+    <div class="container" ng-click="showCourses();">
+        <hgroup>
+            <h1>The easiest way</h1>
+            <h2>to accelerate your learning!</h2>
+            <h4>GRE   &bull;   GMAT   &bull;   ACT   &bull;   LSAT   &bull;   SAT  &bull;    AP    &bull;  PSAT</h4>
+
+            <a class="signBtn" href="/signup" title="Sign Up Now">SIGN UP now. It's free!</a>
+            <!--<a href="#" class="exploreBtn" title="Explore Features">EXPLORE FEATURES</a>-->
+        </hgroup><!-- // group of headings -->
+
+        <ng-include src="'views/home-parts/homeTab.html'"></ng-include>
+
+    </div><!-- // container -->
+</header><!-- // mas header -->
+
+<ng-include src="'views/home-parts/forStudents.html'"></ng-include>
+<ng-include src="'views/home-parts/forSchools.html'"></ng-include>
+<ng-include src="'views/home-parts/forPublishers.html'"></ng-include>
+<ng-include src="'views/home-parts/seeItInAction.html'"></ng-include>
+<ng-include src="'views/home-parts/contactUs.html'"></ng-include>
+<ng-include src="'views/home-parts/footer.html'"></ng-include>
+
+<script>
+    $('a').click(function(){
+        if($(this).attr('href') != undefined){
+          $('html, body').animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+          }, 500);
+        }
+        return false;
+    });
+</script>
+

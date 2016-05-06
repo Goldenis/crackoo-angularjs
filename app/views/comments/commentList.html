@@ -1,0 +1,34 @@
+<section id="fullWidthPanel">
+    <header>
+        <h3 ng-click="$parent.switchQuestion('question-containerlink')">join the discussion</h3>
+    </header>
+    <!-- // header -->
+    <article class="panelContent">
+        <input type="text" placeholder="Add your comment ..." ng-model="commentData" onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Add your comment ...'"/>
+        <button class="greenBtn" ng-click="addComment(uid, sid)">submit your comment</button>
+    </article>
+    <!-- // panel -->
+
+    <div class="referenceList">
+
+        <div id="questionsHeader">
+            <h3>Comments</h3>
+
+            <div class="demo-list">
+                <input tabindex="1" type="checkbox" id="input-1" ng-model="showMyComment" ng-click="toggleMyComments()">
+            </div>
+            <p>Only show my comments
+            </p>
+
+            <div class="clearfix"></div>
+        </div>
+        <!--<h4>Comments</h4>-->
+
+        <div data-my-comment data-creation-time={{c.creationDate}} data-img-url={{c.imgUrl}} data-sid={{sid}} data-uid="{{uid}}" data-id={{c.commentID}} data-description={{c.description}} data-likes={{c.likes}} data-dislikes={{c.dislikes}} data-userid={{c.userid}} data-auther-name={{c.username}} data-del="delete(id)"  ng-repeat="c in commentsList">
+            <!-- <div ng-if="uid != c.userid" data-comment data-creation-time={{c.creationDate}} data-sid={{id}} data-userid="{{c.userid}}" data-id={{c.id}} data-description={{c.description}} data-likes={{c.likes}} data-dislikes={{c.dislikes}}> -->
+        </div>
+        <br clear="all" />
+    </div>
+    <!-- // reference list -->
+</section>

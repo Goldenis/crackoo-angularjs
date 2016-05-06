@@ -1,0 +1,20 @@
+<!-- BACK ARROW AND QUESTION NUMBER. This is now deprecated and no longer used -->
+<div class="left">
+    <h2>
+        <a href="javascript:void(0);" ng-click="move(prevItem)"><img ng-show="showArrowNavigation" src="img/icon_arrow_grey_left.png"
+                                                                     alt="Previous Question" width="34" height="34" align="absmiddle" /></a>
+        {{headerMessage}}
+    </h2>
+</div>
+
+<!-- EXPAND BUTTON AND NEXT ARROW -->
+<div class="right">
+    <a href="javascript:void(0);" ng-click="toggleExpand()">
+        <img ng-show="showArrowNavigation" src="img/icon_expand.png" alt="Expand" width="85" height="31" align="absmiddle" />
+    </a>&nbsp;
+    <a href="javascript:void(0);" ng-click="move(nextItem);">
+        <img ng-show="showArrowNavigation" src="img/icon_arrow_grey_right.png" alt="Next Question" width="35" height="35" align="absmiddle" />
+    </a>
+</div>
+<br clear="all" />
+

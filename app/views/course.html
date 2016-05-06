@@ -1,0 +1,68 @@
+  <!--<div data-header></div>-->
+  <!--<div data-green-bar data-name="{{title}}" data-active-tab ="study" data-caption="Study Items"> </div>-->
+
+  <!-- Begin SEO -->
+  <view-title>{{chosenTitle}}</view-title>
+  <meta view-head name="description" content={{SEODescription}}>
+  <meta view-head name="keywords" content={{SEOKeywords}}>
+  <!-- END SEO -->
+
+
+  <ng-include src="'views/home-parts/headerNotLoggedIn.html'" ></ng-include>
+  <div id="secNav">
+    <div class="container">
+      <!--<nav>-->
+        <!--<ul>-->
+          <!--<li><a ng-class="{'active' : activeTab == 'allCourses'}" data-ng-click="switchTab('allCourses')">All Courses</a></li>-->
+          <!--<li><a ng-class="{'active' : activeTab == 'myCourses'}" data-ng-click="switchTab('myCourses')">My Courses</a></li>-->
+        <!--</ul>-->
+        <!--&lt;!&ndash; // list &ndash;&gt;-->
+      <!--</nav>-->
+      <!-- // nav -->
+    </div>
+    <!-- // container -->
+  </div>
+  <!-- // sec nav -->
+  <!--<div id="secNav">-->
+      <!--<div class="container">-->
+          <!--<nav>-->
+              <!--<ul>-->
+                  <!--<li><a ng-class="{'active' : activeTab == 'allCourses'}" data-ng-click="switchTab('allCourses')">All Courses</a></li>-->
+                  <!--<li><a ng-class="{'active' : activeTab == 'myCourses'}" data-ng-click="switchTab('myCourses')">My Courses</a></li>-->
+              <!--</ul>-->
+              <!--&lt;!&ndash; // list &ndash;&gt;-->
+          <!--</nav>-->
+          <!--&lt;!&ndash; // nav &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; // container &ndash;&gt;-->
+  <!--</div>-->
+  <!--&lt;!&ndash; // sec nav &ndash;&gt;-->
+
+  <div id="appPageWrapper">
+      <div class="container">
+          <aside id="sidebarNav">
+              <h3>CATEGORIES</h3>
+              <nav>
+                  <ul>
+                      <data-category ng-repeat="category in categories" text="{{category.name}}" data-selected="selectedCategory == category" ng-click="selectCategory(category)" ></data-category>
+                  </ul>
+                  <!-- // list -->
+              </nav>
+              <!-- // nav -->
+          </aside>
+          <!-- // sidebar -->
+          <section id="appContentRight">
+              <div data-course-box ng-repeat="course in courses" data-openmodal="openModal()"></div>
+          <!-- // content right -->
+          </section>
+          <!--<section id="appContentRight" ng-show="activeTab == 'myCourses'">-->
+              <!--<div data-course-box ng-repeat="course in mycourses"></div>-->
+          <!--&lt;!&ndash; // content right &ndash;&gt;-->
+          <!--</section>-->
+          <div class="clearfix"></div>
+      </div>
+      <!-- // container -->
+  </div>
+  <!-- // app page wrapper -->
+
+  <div data-app-footer></div>

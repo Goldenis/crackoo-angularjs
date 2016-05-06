@@ -1,0 +1,35 @@
+<section id="fullWidthPanel">
+    <header>
+        <h3 ng-click="$parent.switchQuestion('question-containerlink')">ask a question</h3>
+    </header>
+    <!-- // header -->
+    <article class="panelContent">
+        <input type="text" placeholder="Your question ..." onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Your question ...'" ng-model="questionData" />
+        <button class="greenBtn" ng-click="addQuestion(uid, sid)">submit your question</button>
+    </article>
+    <!-- // panel -->
+
+    <div class="referenceList">
+
+        <div id="questionsHeader">
+            <h3>Questions</h3>
+
+            <div class="demo-list">
+                <input tabindex="1" type="checkbox" id="input-1" ng-model="showMyComment" ng-click="toggleMyQuestions()">
+            </div>
+            <p>Only show my questions
+            </p>
+
+            <div class="clearfix"></div>
+        </div>
+        <!-- // questions header -->
+
+        <div data-my-question data-creation-time={{Q.creationDate}} data-sid={{sid}} data-uid="{{uid}}" data-id={{Q.questionID}} data-img-url={{Q.imgUrl}} data-description={{Q.description}} data-likes={{Q.likes}} data-dislikes={{Q.dislikes}} data-userid={{Q.userid}} data-auther-name={{Q.username}} data-del="delete(id)" ng-repeat="Q in questionList" ></div>
+
+    </div>
+    <!-- // reference list -->
+
+</section>
+<!-- // full width panel -->
+

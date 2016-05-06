@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/directives/studycontent.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">scripts/directives/studycontent.js</span></h1>
+    <h2>
+        Statements: <span class="metric">2.33% <small>(1 / 43)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 24)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">2.33% <small>(1 / 43)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">scripts/directives/</a> &#187; studycontent.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * This directive represents the contents of a study item. If there is a study item of type questions, this directive represents the question itself.
+ * The answers of a question will be another directive.
+ *
+ * Created by rizwanahmed on 3/2/14.
+ */
+'use strict';
+angular.module('crackooApp').directive('studycontent', [<span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      templateUrl: 'views/studyItem/question.html',
+      restrict: 'EA',
+      replace: true,
+      scope: {
+        item: '=',
+        attempts: '@',
+        correctcount: '@',
+        current_view: '@',
+        questionHeaderText: '@',
+        totalStudyItemStudyTime: '=',
+        switchTab: '&amp;',
+        uid: '@uid',
+        gid: '@gid',
+        id: '@id',
+        istablecontent: '=',
+        groups: '='
+      },
+      link: <span class="fstat-no" title="function not covered" >function (scope) {</span>
+<span class="cstat-no" title="statement not covered" >        scope.showResult = false;</span>
+        //watch the value in the controller
+<span class="cstat-no" title="statement not covered" >        scope.$parent.$watch('item', <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (typeof value === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+          }
+<span class="cstat-no" title="statement not covered" >          scope.item = value;</span>
+        });
+        //watch the value in the controller
+<span class="cstat-no" title="statement not covered" >        scope.$parent.$watch('current_view', <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (typeof value === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+          }
+<span class="cstat-no" title="statement not covered" >          scope.current_view = value;</span>
+        });
+<span class="cstat-no" title="statement not covered" >        console.log('tcv = ', scope.istablecontent);</span>
+<span class="cstat-no" title="statement not covered" >        if (scope.istablecontent) {</span>
+<span class="cstat-no" title="statement not covered" >          scope.containerId = 'questionStepLeft';</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          scope.containerId = 'questionFullWidthPanel';</span>
+        }
+        //watch the value in the controller
+<span class="cstat-no" title="statement not covered" >        scope.$watch('showResult', <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (value === true || scope.item.studyItemType === 'F') {</span>
+<span class="cstat-no" title="statement not covered" >            scope.containerId = 'questionStepLeft';</span>
+          } else {
+<span class="cstat-no" title="statement not covered" >            if (scope.istablecontent) {</span>
+<span class="cstat-no" title="statement not covered" >              scope.containerId = 'questionStepLeft';</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >              scope.containerId = 'questionFullWidthPanel';</span>
+            }
+          }
+        });
+        //listen for answers attribute in the parent controller
+<span class="cstat-no" title="statement not covered" >        scope.$parent.$watch('correct', <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (typeof value === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+          }
+<span class="cstat-no" title="statement not covered" >          scope.correctcount = value;</span>
+        });
+        //listen for answers attribute in the parent controller
+<span class="cstat-no" title="statement not covered" >        scope.$parent.$watch('correct', <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (typeof value === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+          }
+<span class="cstat-no" title="statement not covered" >          scope.correctcount = value;</span>
+        });
+        //listen for answers attribute in the parent controller
+<span class="cstat-no" title="statement not covered" >        scope.$parent.$watch('attempts', <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (typeof value === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+          }
+<span class="cstat-no" title="statement not covered" >          scope.attempts = value;</span>
+        });
+<span class="cstat-no" title="statement not covered" >        scope.$watch('item.studyItemType', <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (value === 'F') {</span>
+<span class="cstat-no" title="statement not covered" >            scope.containerId = 'questionflashCard';</span>
+          } else {
+<span class="cstat-no" title="statement not covered" >            if (scope.showResult === true) {</span>
+<span class="cstat-no" title="statement not covered" >              scope.containerId = 'questionStepLeft';</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >              if (scope.istablecontent) {</span>
+<span class="cstat-no" title="statement not covered" >                scope.containerId = 'questionStepLeft';</span>
+              } else {
+<span class="cstat-no" title="statement not covered" >                scope.containerId = 'questionFullWidthPanel';</span>
+              }
+            }
+          }
+        });
+<span class="cstat-no" title="statement not covered" >        scope.showStudyItem = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >          scope.showResult = false;</span>
+        };
+      }
+    };
+  }]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 05 2015 16:22:27 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

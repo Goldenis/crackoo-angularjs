@@ -1,0 +1,33 @@
+<section id="fullWidthPanel">
+    <header>
+        <h3>ADD REFERENCE</h3>
+    </header>
+    <!-- // header -->
+    <article class="panelContent">
+        <input type="text" placeholder="Enter Website Link ..." onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Enter Website Link ...'" ng-model="dataSite" />
+        <button ng-click="add(uid,sid)">Add</button>
+    </article>
+    <!-- // panel -->
+
+    <div class="referenceList">
+
+        <div id="questionsHeader">
+            <h3>All References</h3>
+
+            <div class="demo-list">
+                <input tabindex="1" type="checkbox" id="input-1" ng-model="showMyReference" ng-click="toggleMyReferences()">
+            </div>
+            <p>Only show my questions
+            </p>
+
+            <div class="clearfix"></div>
+        </div>
+        <!--<h4>All References</h4>-->
+        <div data-reference data-creation-time={{r.creationDate}} data-uid="{{uid}}" data-site="{{r.description}}" data-name="{{r.name}}" data-img-url={{r.imgUrl}} data-desc="{{r.description}}"  data-id="{{r.citationID}}"  data-userid={{r.userid}} data-auther-name={{r.username}} data-del="delete(id)" ng-repeat="r in referencesList" ></div>
+
+    </div>
+    <!-- // reference list -->
+
+</section>
+<!-- // full width panel -->

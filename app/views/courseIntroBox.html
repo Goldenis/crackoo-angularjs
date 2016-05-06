@@ -1,0 +1,33 @@
+<article class="courseBox">
+    <div class="courseImage">
+        <img ng-src="{{course.imageLocation || 'img/courses/course2.png'}}" alt="{{course.name}}" >
+        <!--<img src="img/gre_flashcard.png" alt="" >-->
+
+    </div>
+    <!-- // course image -->
+    <div class="courseDescription">
+        <h4 ng-href="/goals/{{course.name | spaceless}}/details">{{course.name}} </h4>
+        <h5>DESCRIPTION:<a class="editLink" ng-show="!isEditable && course.author == loggedInUser" ng-click="editDescription()"> &nbsp;</a></h5>
+        <p ng-hide="isEditable">{{course.summary}}</p>
+        <div ng-show="isEditable">
+          <textarea ng-model="edit.course.summary"></textarea>
+          <div class="btnPanel">
+            <a href="javascript:void(0)" ng-click="saveEditing()">Save</a>
+            <a href="javascript:void(0)" ng-click="cancelEditing()" >Cancel</a>
+          </div>
+        </div>
+        <a href="/goals/{{course.name | spaceless}}/details" ng-hide="isEditable" ng-hide="showMoreHide">SHOW MORE</a>
+    </div>
+    <!-- // course descrioption -->
+    <div class="courseDetails">
+        <p><strong>{{course.lcount}}</strong> Lessons</p>
+
+        <p><strong>{{course.qcount}}</strong> Practice Questions</p>
+
+        <p><strong>{{course.fcount}}</strong> Flash Cards</p>
+        <a href="javascript:void(0)" ng-click="studyNow(course,id);">STUDY NOW</a>
+    </div>
+    <!-- // course details -->
+    <div class="clearfix"></div>
+    <!-- // course box -->
+</article>

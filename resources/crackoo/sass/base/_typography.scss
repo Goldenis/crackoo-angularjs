@@ -1,0 +1,477 @@
+/* Table of Content
+        1. Import Fonts
+        2. Reset CSS
+        3. Global Classes
+*/
+
+
+
+/*=======================================
+=            1. Import Fonts            =
+=======================================*/
+
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('../fonts/raleway-semibold-webfont.eot');
+    src: url('../fonts/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-semibold-webfont.woff') format('woff'),
+         url('../fonts/raleway-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-semibold-webfont.svg#ralewaysemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewayextralight';
+    src: url('../fonts/raleway-extralight-webfont.eot');
+    src: url('../fonts/raleway-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-extralight-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-extralight-webfont.woff') format('woff'),
+         url('../fonts/raleway-extralight-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-extralight-webfont.svg#ralewayextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hand_of_sean_demoregular';
+    src: url('../fonts/hand_of_sean_demo-webfont.eot');
+    src: url('../fonts/hand_of_sean_demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/hand_of_sean_demo-webfont.woff2') format('woff2'),
+         url('../fonts/hand_of_sean_demo-webfont.woff') format('woff'),
+         url('../fonts/hand_of_sean_demo-webfont.ttf') format('truetype'),
+         url('../fonts/hand_of_sean_demo-webfont.svg#hand_of_sean_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold-webfont.eot');
+    src: url('../fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff'),
+         url('../fonts/raleway-bold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway-regular-webfont.eot');
+    src: url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-regular-webfont.woff') format('woff'),
+         url('../fonts/raleway-regular-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('../fonts/proximanova-bold-webfont.eot');
+    src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-bold-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-bold-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('../fonts/proximanova-regular-webfont.eot');
+    src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-regular-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('../fonts/proximanova-regular-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'proxima_novalight';
+    src: url('../fonts/proximanova-light-webfont.eot');
+    src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-light-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-light-webfont.woff') format('woff'),
+         url('../fonts/proximanova-light-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*-----  End of 1. Import Fonts  ------*/
+
+
+/*====================================
+=            2. Reset CSS            =
+====================================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+a:hover {
+    text-decoration:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding:0px;
+    margin:0px;
+}
+
+ul {
+    list-style-type: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight:normal;
+}
+
+/*-----  End of 2. Reset CSS  ------*/
+
+/*=========================================
+=            3. Global Classes            =
+=========================================*/
+
+.clear         { clear:both; }
+.float-left    { float:left; }
+.float-right   { float:right; }
+
+.text-left     { text-align:left; }
+.text-center   { text-align:center; }
+.text-justify  { text-align:justify; }
+
+.bold          { font-weight:bold; }
+.italic        { font-style:italic; }
+.underline     { border-bottom:1px solid; }
+.highlight     { background:#ffc; }
+
+.img-left      { float:left;margin:4px 10px 4px 0; }
+.img-right     { float:right;margin:4px 0 4px 10px; }
+
+.nopadding     { padding:0; }
+.noindent      { margin-left:0;padding-left:0; }
+.nobullet      { list-style:none;list-style-image:none; }
+.noborder      { border:none!important; }
+.clearfix {
+    clear: both;
+}
+
+.nobrd {
+    border:none!important;
+}
+
+.graydivider {
+    border-top:1px solid #dde4e6;
+    margin-bottom: 15px;
+}
+
+/*-----  End of 3. Global Classes  ------*/
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?gq4t3k');
+    src:url('../fonts/icomoon.eot?#iefixgq4t3k') format('embedded-opentype'),
+        url('../fonts/icomoon.woff?gq4t3k') format('woff'),
+        url('../fonts/icomoon.ttf?gq4t3k') format('truetype'),
+        url('../fonts/icomoon.svg?gq4t3k#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-communication-bubblechatgroupconversation:before {
+    content: "\e600";
+}
+.icon-document-paperarticlenews:before {
+    content: "\e601";
+}
+.icon-document-piechartgraph:before {
+    content: "\e602";
+}
+.icon-ecommerce-creditcard:before {
+    content: "\e603";
+}
+.icon-editorial-pencil:before {
+    content: "\e604";
+}
+.icon-Ellipse1:before {
+    content: "\e605";
+}
+.icon-Ellipse5copy2:before {
+    content: "\e606";
+}
+.icon-interface-arrowleftcopy4:before {
+    content: "\e607";
+}
+.icon-interface-tickdonecopy8:before {
+    content: "\e608";
+}
+.icon-location-streetsymbol:before {
+    content: "\e609";
+}
+.icon-Rectangle7copy6:before {
+    content: "\e60a";
+}
+.icon-Rectangle10copy2:before {
+    content: "\e60b";
+}
+.icon-Rectangle10:before {
+    content: "\e60c";
+}
+.icon-Rectangle12:before {
+    content: "\e60d";
+}
+.icon-Rectangle23copy:before {
+    content: "\e60e";
+}
+.icon-Rectangle24:before {
+    content: "\e60f";
+}
+.icon-RoundedRectangle6copy5:before {
+    content: "\e610";
+}
+.icon-RoundedRectangle9copy:before {
+    content: "\e611";
+}
+.icon-RoundedRectangle12copy:before {
+    content: "\e612";
+}
+.icon-Shape2:before {
+    content: "\e613";
+}
+.icon-Shape6:before {
+    content: "\e614";
+}
+.icon-Shape8copy2:before {
+    content: "\e615";
+}
+.icon-Shape22copy2:before {
+    content: "\e616";
+}
+.icon-Shape29:before {
+    content: "\e617";
+}
+.icon-Shape30copy:before {
+    content: "\e618";
+}
+.icon-Shape32copy:before {
+    content: "\e619";
+}
+.icon-Shape32:before {
+    content: "\e61a";
+}
+.icon-Shape40copy:before {
+    content: "\e61b";
+}
+.icon-Shape40:before {
+    content: "\e61c";
+}
+.icon-Shape43:before {
+    content: "\e61d";
+}
+.icon-Shape45copy:before {
+    content: "\e61e";
+}
+.icon-Shape47:before {
+    content: "\e61f";
+}
+.icon-sport-rewardbadge:before {
+    content: "\e620";
+}
+
+.ps-container .ps-scrollbar-x-rail {
+    position: absolute; /* please don't change 'position' */
+    bottom: 3px; /* there must be 'bottom' for ps-scrollbar-x-rail */
+    height: 8px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -o-transition: background-color .2s linear, opacity .2s linear;
+    -webkit-transition: background-color .2s linear, opacity .2s linear;
+    -moz-transition: background-color .2s linear, opacity .2s linear;
+    transition: background-color .2s linear, opacity .2s linear;
+}
+
+.ps-container:hover .ps-scrollbar-x-rail,
+.ps-container.hover .ps-scrollbar-x-rail {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.ps-container .ps-scrollbar-x-rail:hover,
+.ps-container .ps-scrollbar-x-rail.hover {
+    background-color: #eee;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.ps-container .ps-scrollbar-x-rail.in-scrolling {
+    background-color: #eee;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.ps-container .ps-scrollbar-y-rail {
+    position: absolute; /* please don't change 'position' */
+    right: 3px; /* there must be 'right' for ps-scrollbar-y-rail */
+    width: 8px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    opacity: 1;
+    filter: alpha(opacity = 1);
+    background-color: #e9ebf1;
+    -o-transition: background-color .2s linear, opacity .2s linear;
+    -webkit-transition: background-color .2s linear, opacity .2s linear;
+    -moz-transition: background-color .2s linear, opacity .2s linear;
+    transition: background-color .2s linear, opacity .2s linear;
+}
+
+.ps-container:hover .ps-scrollbar-y-rail,
+.ps-container.hover .ps-scrollbar-y-rail {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.ps-container .ps-scrollbar-y-rail:hover,
+.ps-container .ps-scrollbar-y-rail.hover {
+    background-color: #eee;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.ps-container .ps-scrollbar-y-rail.in-scrolling {
+    background-color: #eee;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.ps-container .ps-scrollbar-x {
+    position: absolute; /* please don't change 'position' */
+    bottom: 0; /* there must be 'bottom' for ps-scrollbar-x */
+    height: 8px;
+    background-color: #aaa;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -o-transition: background-color .2s linear;
+    -webkit-transition: background-color.2s linear;
+    -moz-transition: background-color .2s linear;
+    transition: background-color .2s linear;
+}
+
+.ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x,
+.ps-container .ps-scrollbar-x-rail.hover .ps-scrollbar-x {
+    background-color: #999;
+}
+
+.ps-container .ps-scrollbar-y {
+    position: absolute; /* please don't change 'position' */
+    right: 0; /* there must be 'right' for ps-scrollbar-y */
+    width: 8px;
+    background-color: #aaa;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -o-transition: background-color .2s linear;
+    -webkit-transition: background-color.2s linear;
+    -moz-transition: background-color .2s linear;
+    transition: background-color .2s linear;
+}
+
+.ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y,
+.ps-container .ps-scrollbar-y-rail.hover .ps-scrollbar-y {
+    background-color: #999;
+}
+
+    .fakewindowcontain .ui-widget-overlay {
+        position: absolute;
+    }
+
+.likeNarrow {
+    margin-left: 10px!important;
+
+}

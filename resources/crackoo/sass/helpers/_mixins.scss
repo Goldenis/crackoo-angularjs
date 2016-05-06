@@ -1,0 +1,446 @@
+// Effects
+.fading {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+// Uppercase
+.uppercase {
+	text-transform:uppercase;
+}
+
+// Shadows 
+.smallShadow {
+	-webkit-box-shadow: 0px -2px 29px 0px rgba(50, 50, 50, 0.35);
+	-moz-box-shadow:    0px -2px 29px 0px rgba(50, 50, 50, 0.35);
+	box-shadow:         0px -2px 29px 0px rgba(50, 50, 50, 0.35);	
+}
+
+// Headings 
+.greenHeading {
+	color: $color-light-green;
+	font-size: 46px;
+	font-family: $font-heading;
+	padding-top: 60px!important;
+	margin: 0px!important;
+}
+
+.lightHeading {
+	color: $color-gray-blue;
+	font-size: 20px;
+	@extend .uppercase;
+	font-family: $font-light;
+	padding-top: 10px!important;
+	margin: 0px!important;
+}
+
+.whiteHeading {
+	color: $color-white;
+	font-size: 46px;
+	font-family: $font-heading;
+	padding-top: 60px!important;
+	margin: 0px!important;
+}
+
+// Page Container
+.container {
+	margin: 0 auto;
+	width: 1170px;
+	@include breakpoint(phone) {
+		background: #ccc;
+	}	
+	@include breakpoint(laptop) {
+		width: 1000px;
+	}	
+}
+
+// Main headings
+.mainHeading {
+	font-size: 46px;
+	font-family: $font-heading;
+	padding-top: 40px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+// Sub Heading
+.subheading {
+	text-transform:uppercase;
+	font-size: 20px;
+	margin-top: 10px;
+	font-family: 'ralewayextralight';
+}
+
+// Shadows 
+.smallShadow {
+	-webkit-box-shadow: 0px -2px 29px 0px rgba(50, 50, 50, 0.35);
+	-moz-box-shadow:    0px -2px 29px 0px rgba(50, 50, 50, 0.35);
+	box-shadow:         0px -2px 29px 0px rgba(50, 50, 50, 0.35);	
+}
+
+.nopad {
+	padding-top:0px!important;
+}
+
+
+// Question Step Header
+.questionHeader {
+		header {
+			background: $color-light-green;
+			border:none;
+			padding-top: 23px;
+			padding-bottom: 18px;
+			padding-left: 20px;		
+				h2 {
+					font-size: 18px;
+					color: $color-white;
+					font-family: $nova-bold;
+					@extend .uppercase;
+					background: url(../img/ico/menu.png);
+					background-repeat: no-repeat;
+					background-position: left top;
+					padding-left: 35px;		
+					padding-top: 6px;
+					padding-bottom:5px;
+					display: inline-block;			
+				}
+	}
+	/* Controls in header */
+	.questionControls {
+		float: right;
+		margin-top: -5px;
+			small {
+				color:$color-white;
+				font-size: 14px;
+				font-family: $nova-bold;
+				display: inline-block;
+				margin-right: 15px;
+				position:relative;
+				top:7px;
+			}
+			span {
+				font-size: 21px;
+				color:$color-white;
+				font-family: $nova-bold;
+				position:relative;
+				top:8px;							
+			}
+			/* Play and pause */
+			a {
+				display: inline-block;
+				width: 31px;
+				height: 31px;
+				text-indent: -9999px;
+				margin-left: 10px;
+				margin-right: 10px;
+					&:hover {
+						opacity: $opaque;
+					}
+			}
+			.playBtn {
+				background: url(../img/ico/play.png);
+				margin-right: 20px;
+				margin-left: 5px;
+			}
+			.pauseBtn {
+				background: url(../img/ico/pause.png);
+				border-right:1px solid #6da639;
+				background-repeat: no-repeat;
+				padding-right: 20px;
+			}
+	}
+}
+
+// Question Step footer
+.questionFooter {
+	footer {
+		border-top:1px solid #e7ebee;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+			.reviewBtn {
+				display: inline-block;
+				font-size: 11px;
+				color:$color-white;
+				font-family: $nova-bold;
+				height: 26px;
+				line-height: 26px;
+				background: #8bc34a;
+				padding-left: 20px;
+				padding-right: 20px;
+				border-radius:32px;
+				margin-left: 40px;
+				border:1px solid #fff;
+				@include breakpoint(laptop) {
+					margin-left: 5px;
+				}
+					&:hover {
+						opacity: $opaque;
+					}
+			}
+			.likeBtn {
+				display: inline-block;
+				font-size: 11px;
+				color:#81be4a;
+				font-family: $nova-bold;
+				height: 26px;
+				line-height: 26px;
+				background: #8bc34a;
+				padding-left: 38px;
+				padding-right: 38px;
+				border-radius:32px;
+				background: $color-white;
+				border:1px solid #dee2e6;
+				margin-left: 75px;
+				float:right;
+				@include breakpoint(laptop) {
+					margin-left: 10px;
+					padding-left: 21px;
+					padding-right: 21px;
+				}
+					&:hover {
+						opacity: $opaque;
+					}
+			}
+	}	
+}	
+
+// Question Content 
+.questionContent {
+	.labelHard {
+		background: #313740;
+		font-size: 11px;
+		@extend .uppercase;
+		font-family: $nova-bold;
+		color:$color-white;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		display: inline-block;
+		margin-bottom: 15px;
+	}
+	p {
+		font-size: 21px;
+		color:#313740;
+		font-family: $nova-bold;
+		line-height: 32px;
+	}
+}
+
+// Goals and Courses description
+.goalsDescriptions {
+	h4 {
+		font-size: 20px;
+		color:$color-dark-gray;
+		font-family: $nova-bold;
+		margin-bottom: 30px;
+	}
+	h5 {
+		font-size: 13px;
+		color:$color-light-gray;
+		@extend .uppercase;
+		font-family: $nova-bold;
+	}
+	p {
+		font-size: 14px;
+		color:$color-dark-gray;
+		line-height: 20px;
+		font-family: $nova-regular;
+		margin-top: 10px;
+		padding-right: 15px;
+	}
+	a {
+		display: inline-block;
+		background: #f4f6f7;
+		font-size: 12px;
+		@extend .uppercase;
+		color:#90a4ae;
+		border:1px solid #d3dbdf;
+		border-radius:4px;
+		padding-top: 14px;
+		padding-bottom: 12px;
+		padding-left: 15px;
+		padding-right: 15px;
+		font-family: $nova-bold;
+		margin-top: 20px;
+			&:hover {
+				opacity: $opaque;
+			}
+	}
+}
+
+// Course and goals details 
+.goalsDetailsStyling {
+	border-left:1px solid $color-gray-lighter;
+	margin-top: 30px;
+	float:left;
+	width: 150px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	@include breakpoint(laptop) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+		/* Button */
+		a {
+			display: block;
+			background: $color-light-green;
+			color:$color-white;
+			font-size: 14px;
+			text-align: center;
+			@extend .uppercase;
+			font-family:$nova-bold;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			border-radius:4px;
+			margin: 0 auto;
+			margin-top: 40px;
+				&:hover {
+					opacity: $opaque;
+				}
+		}
+		p {
+			font-size: 14px;
+			color:$color-dark-gray;
+			font-family: $nova-bold;
+			margin-bottom: 20px;
+				strong {
+					color:$color-light-green;
+				}
+		}	
+}
+
+// Students boxes
+.studentFeatures {
+	/* Students Box */
+	.studentsBox {
+		float: left;
+		width: 335px;
+		margin-top: 60px;
+		padding-right: 31px;
+		@include breakpoint(laptop) {
+			padding-right: 0px;
+			width: 330px;
+		}
+		/* Student Icons */
+		.studentsIco {
+				float: left;
+				width: 105px;
+				@include breakpoint(laptop) {
+					width: 105px;
+				}
+				/* Styling for icons */
+				span {
+					display: block;
+					width: 89px;
+					height: 89px;
+					background: url(../img/ico/studentssprite.png);
+					background-repeat: no-repeat;
+					text-indent: -9999px;
+				}
+				/* icons sprite */
+				.trackIco {
+					background-position: 0px 0px;
+				}
+				.reviewIco {
+					background-position: 0px -178px;
+				}
+				.questionsIco {
+					background-position: 0px -356px;
+				}
+				.personalizeIco {
+					background-position: 0px -534px;
+				}
+				.flashcardsIco {
+					background-position: 0px -712px;
+				}
+				.notesIco {
+					background-position: 0px -890px;
+				}
+				.inteligentIco {
+					background-position: 0px -1068px;
+				}
+				.mobilityIco {
+					background-position: 0px -1246px;
+				}
+				.analysisIco {
+					background-position: 0px -1424px;
+				}
+			}
+			/* Students Content */
+			.studentsContent {
+				float: left;
+				width: 230px;
+				@include breakpoint(laptop) {
+					width: 200px;
+				}
+					h3 {
+						font-size: 18px;
+						color: #454941;
+						font-family: $font-heading;
+						margin-top: 12px;
+						line-height: 22px;
+					}
+					p {
+						color: #677480;
+						font-size: 14px;
+						padding-top: 5px;
+						font-family: $base-font-family;
+						line-height: 22px;
+					}
+			}
+	}
+}
+
+// no padding
+.nopadleft {
+	padding-left: 0px!important;
+	width: 96%!important;
+		.likeNarrow {
+			@include breakpoint(laptop) {
+			margin: 0px!important;
+			margin-left: 5px!important;
+		}
+
+		}
+		.switchDivider {
+			@include breakpoint(laptop) {
+			margin-left: -10px;
+			}
+		}
+}
+
+.nopadright {
+	.likeBtn {
+		margin-left: 20px!important;
+		float: right;
+		@include breakpoint(laptop) {
+		float:right;
+		margin-right: 15px!important;
+	}
+	}
+	.reviewBtn {
+		@include breakpoint(laptop) {
+		margin-left: 15px!important;
+	}
+	}
+	@include breakpoint(laptop) {
+	padding-right: 0px!important;
+	padding-left: 0px!important;
+	width: 100%!important;
+	}
+	@include breakpoint(laptop) {
+	a {
+		margin: 0px !important;
+		padding-left: 20px!important;
+		padding-right: 20px!important;
+	}
+	}
+
+}

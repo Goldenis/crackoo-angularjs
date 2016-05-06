@@ -1,0 +1,33 @@
+<div class="modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div ng-hide="isEditVisible">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"aria-hidden="true">&times;</button>
+        <h4 class="modal-title">{{content.title}}</h4>
+      </div>
+      <div class="modal-body" ng-click="flip()">
+        <div ng-show="isFrontVisible">{{content.front}}</div>
+        <div ng-hide="isFrontVisible">{{content.back}}</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="flip()">Flip</button>
+        <button type="button" class="btn btn-warning" ng-click="edit()">Edit</button>
+      </div>
+    </div>
+    <div ng-show="isEditVisible">
+      <div class="modal-header">
+        <input ng-model="tempContent.title" type="text" />
+      </div>
+        <div class="modal-body">
+        <textarea row="3" ng-show="isFrontVisible" ng-model="tempContent.front"></textarea>
+        <textarea row="3" ng-hide="isFrontVisible" ng-model="tempContent.back"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="flip()">Flip</button>
+        <button type="button" class="btn btn-success" ng-click="save()">Save</button>
+        <button type="button" class="btn btn-danger" ng-click="cancel()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="referenceArticle">
+    <div class="referenceImage">
+        <img ng-src="{{imgUrl}}" alt="" class="img-responsive" width="64" height="64">
+    </div>
+    <!-- // profile image -->
+    <div class="referenceUser">
+        <p>{{autherName}}</p>
+        <small>{{creationTime | date:'medium'}}</small>
+    </div>
+    <div class="discussionDetail">
+    <!-- // profile data -->
+    <div class="referenceLink" ng-hide="isEditVisible">
+        <a href="{{site}}" target="_blank">{{site}}</a>
+    </div>
+    <!-- // link -->
+
+    <!-- // actions -->
+    <div class="clearfix"></div>
+
+        <input type="text" placeholder="Your Site ..." onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Your Site ...'" ng-model="tempSite" ng-show="isEditVisible"/>
+        <a class="submitBtn" ng-show="isEditVisible"  ng-click="save()">submit</a>
+        <a class="cancelBtn" ng-show="isEditVisible"  ng-click="cancel()">cancel</a>
+    </div>
+
+    <div class="referenceActions" ng-show="referenceActionsShow">
+        <a class="editBtn" ng-click="edit()">edit</a>
+        <a class="delBtn" ng-click="delete(id)">delete</a>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!-- // reference article -->

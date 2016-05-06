@@ -1,0 +1,16 @@
+<div id="subNav">
+    <div class="container">
+        <nav>
+            <ul>
+                <p>{{current_view}}</p>
+                <li ng-class="{'selected': isTabSelected()('question-containerlink') }"><a data-ng-click="switchTab()('question-containerlink')"><span class="studyIco"></span>Study</a></li>
+                <li ng-class="{'selected': isTabSelected()('statisticslink') }"><a data-ng-click="switchTab()('statisticslink')"><span class="statIco"></span>Statistics</a></li>
+                <li ng-class="{'selected': isTabSelected()('questionslink') }"><a data-ng-click="switchTab()('questionslink')"><span class="questionIco"></span>Questions</a></li>
+                <li ng-class="{'selected': isTabSelected()('commentslink') }"><a data-ng-click="switchTab()('commentslink')"><span class="discIco"></span>Discussion</a></li>
+                <li ng-class="{'selected': isTabSelected()('noteslink') }"><a data-ng-click="switchTab()('noteslink')"><span class="notesIco"></span>Notes</a></li>
+                <!--<li ng-class="{'selected': isTabSelected()('flashcardslink') }"><a data-ng-click="switchTab()('flashcardslink')"><span class="flashIco"></span>Flash Cards</a></li>-->
+                <li ng-class="{'selected': isTabSelected()('referenceslink') }"><a data-ng-click="switchTab()('referenceslink')"><span class="refIco"></span>References</a></li>
+            </ul>
+        </nav>
+    </div><!-- // container -->
+</div><!-- // sec nav -->

@@ -1,0 +1,60 @@
+<div id="topBar" class="homeBar">
+    <div class="container">
+        <div id="branding">
+            <a href="/" title="Crackoo Homepage"><img src="img/logos/site-logo.png" alt="Crackoo"></a>
+        </div><!-- // branding -->
+        <nav id="mainNavigation">
+            <ul>
+                <li><a ng-click="gotoAnchor('forstudents')" title="FOR STUDENTS">FOR STUDENTS</a></li>
+                <li><a ng-click="gotoAnchor('forschools')" title="FOR SCHOOLS">FOR SCHOOLS</a></li>
+                <li><a ng-click="gotoAnchor('forpublishers')" title="FOR PUBLISHERS">FOR PUBLISHERS</a></li>
+                <li><a ng-click="gotoAnchor('inaction')" title="SEE IT IN ACTION">SEE IT IN ACTION</a></li>
+                <li><a href="/courses" title="PROGRAMS">PROGRAMS</a></li>
+                <li><a ng-click="gotoAnchor('contactanchor')" title="Contact">Contact us</a></li>
+            </ul>
+        </nav><!-- // navigation -->
+        <div id="topCta">
+
+            <div id="loginMenu">
+                <ul>
+                    <li>
+                        <a href="#" onclick="fb_login();" class="loginBtn">Login</a>
+                        <ul>
+                            <li><a class="arrowUp"></a></li>
+                            <li><button  onclick="fb_login();" class="fbLogin" data-show-faces='false' data-scope='email,publish_actions' data-size="xlarge">FACEBOOK LOGIN</button></li>
+                            <li><button  id="mySignIn" class="googleLogin" onclick="google_render()" > GOOGLE+ LOGIN </button></li>
+                            <li class="clearfix"></li>
+                            <li><a href="/login" class="mailLogin fancybox">Login with Email</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div><!-- // top call to action login -->
+        <div class="clearfix"></div>
+    </div><!-- // container -->
+
+    <script>
+            //Trigger for FB loging button
+            function fb_login() {
+                FB.login(function () {
+                }, { scope: 'email,public_profile' });
+            }
+
+            //Trigger for Google login button
+            function google_render() {
+                    gapi.signin.render('mySignIn', {
+                                'callback': 'signinCallback',
+                                'clientid': '957635322343-jmmkn962pq9vsuu8j0chvhpjasvop1pu.apps.googleusercontent.com',
+                                'cookiepolicy': 'single_host_origin',
+                                //'requestvisibleactions': 'http://schemas.google.com/AddActivity',
+                                'scope': 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email',
+                                'response_type': 'code'
+                    });
+            }
+
+    </script>
+
+</div><!-- // top bar -->

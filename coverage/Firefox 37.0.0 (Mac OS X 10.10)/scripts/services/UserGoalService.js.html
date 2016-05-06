@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/services/UserGoalService.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">scripts/services/UserGoalService.js</span></h1>
+    <h2>
+        Statements: <span class="metric">10% <small>(2 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">14.29% <small>(1 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">10% <small>(2 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">scripts/services/</a> &#187; UserGoalService.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*---------------------------START OF DOCUMENTATION---------------------------
+&nbsp;
+  This controller maps to UserGoalController.java on the server side
+&nbsp;
+  The conventions used in this code are :
+    uId : userId
+    gId : goalId
+    tId : tagId
+&nbsp;
+  General Overview of the Functions defined below
+  1. createGoal   :   Creates a User Goal for existing Goal
+&nbsp;
+  2. deleteGoal   :   Deletes the provided User Goal
+&nbsp;
+  3. getAllGoals  :   Gets all the User Goals for the specified User.
+            This method returns an array of Goals.
+&nbsp;
+  4. getGoalCompletionPercent :   Returns the percentage of completion of the
+                  particular Goal.
+&nbsp;
+  5. getGoalsByWildCard   :   Gets all the goals by the Wildcard. This method
+                returns an Array of Goals.
+&nbsp;
+  6. getGoalsByTags     :   Gets all the goals by a particular Tag. This method
+                returns an array of Goals.
+&nbsp;
+-----------------------------END OF DOCUMENTATION----------------------------------*/
+'use strict';
+angular.module('crackooApp').factory('UserGoalService', [
+  '$rootScope',
+  '$ajax',
+  'ENV',
+  function ($rootScope, $ajax, config) {
+    return {
+      base_url: config.basepath,
+      createGoal: <span class="fstat-no" title="function not covered" >function (uId, gId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'POST',
+          url: _self.base_url + '/users/' + uId + '/goals/' + gId + '/study'
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      deleteGoal: <span class="fstat-no" title="function not covered" >function (uId, gId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'DELETE',
+          url: _self.base_url + '/users/' + uId + '/goals/' + gId + '/study'
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      getAllGoals: <span class="fstat-no" title="function not covered" >function (uId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var userGoals = $ajax({</span>
+          method: 'GET',
+          url: _self.base_url + '/users/' + uId + '/usergoals'
+        });
+<span class="cstat-no" title="statement not covered" >        return userGoals;</span>
+      },
+      getGoalCompletionPercent: <span class="fstat-no" title="function not covered" >function (uId, gId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var percent = $ajax({</span>
+          method: 'GET',
+          url: _self.base_url + '/users/' + uId + '/goals/' + gId + '/study/completion'
+        });
+<span class="cstat-no" title="statement not covered" >        return percent;</span>
+      },
+      getGoalsByWildCard: <span class="fstat-no" title="function not covered" >function (uId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var goals = $ajax({</span>
+          method: 'GET',
+          url: _self.base_url + '/users/' + uId + '/getUserGoalByGoalName'
+        });
+<span class="cstat-no" title="statement not covered" >        return goals;</span>
+      },
+      getGoalsByTags: <span class="fstat-no" title="function not covered" >function (uId, gId, tId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var goals = $ajax({</span>
+          method: 'GET',
+          url: _self.base_url + '/users/' + uId + '/goals/' + gId + '/gtags/' + tId + '/usergoalbytag'
+        });
+<span class="cstat-no" title="statement not covered" >        return goals;</span>
+      }
+    };
+  }
+]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 02 2015 15:50:42 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

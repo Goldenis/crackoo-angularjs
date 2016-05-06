@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/directives/flashCardList.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">scripts/directives/flashCardList.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4.26% <small>(2 / 47)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">11.11% <small>(1 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4.26% <small>(2 / 47)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">scripts/directives/</a> &#187; flashCardList.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+angular.module('crackooApp').directive('flashCardList', [function () {
+    return {
+      templateUrl: 'views/flashcard/flashcardList.html',
+      restrict: 'A',
+      scope: true,
+      link: <span class="fstat-no" title="function not covered" >function postLink(scope) {</span>
+<span class="cstat-no" title="statement not covered" >        scope.cards = [</span>
+          {
+            id: '1',
+            data: {
+              title: 'Google',
+              front: 'google',
+              back: 'best search engine'
+            }
+          },
+          {
+            id: '2',
+            data: {
+              title: 'Quora',
+              front: 'quora',
+              back: 'question or answer website'
+            }
+          }
+        ];
+<span class="cstat-no" title="statement not covered" >        scope.selectedCard = {</span>
+          id: null,
+          data: {
+            title: null,
+            front: null,
+            back: null
+          }
+        };
+<span class="cstat-no" title="statement not covered" >        scope.showCard = <span class="fstat-no" title="function not covered" >function (val) {</span></span>
+<span class="cstat-no" title="statement not covered" >          var num = 1;</span>
+<span class="cstat-no" title="statement not covered" >          for (var i = 0; i &lt; scope.cards.length; i += 1) {</span>
+<span class="cstat-no" title="statement not covered" >            if (scope.cards[i].id === val.id) {</span>
+<span class="cstat-no" title="statement not covered" >              scope.fcNumber = num;</span>
+<span class="cstat-no" title="statement not covered" >              console.log(scope.cards[i]);</span>
+<span class="cstat-no" title="statement not covered" >              scope.selectedCard = scope.cards[i];</span>
+<span class="cstat-no" title="statement not covered" >              if (i &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                scope.prevCard = scope.cards[i - 1];</span>
+              }
+<span class="cstat-no" title="statement not covered" >              if (i + 1 &lt; scope.cards.length) {</span>
+<span class="cstat-no" title="statement not covered" >                scope.nextCard = scope.cards[i + 1];</span>
+              }
+<span class="cstat-no" title="statement not covered" >              if (i === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                scope.prevCard = 'start';</span>
+              }
+<span class="cstat-no" title="statement not covered" >              if (i === scope.cards.length - 1) {</span>
+<span class="cstat-no" title="statement not covered" >                scope.nextCard = 'end';</span>
+              }
+<span class="cstat-no" title="statement not covered" >              break;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            num += 1;</span>
+          }
+        };
+<span class="cstat-no" title="statement not covered" >        scope.showCard(scope.cards[0]);</span>
+        //scope.isFrontVisible = true;
+<span class="cstat-no" title="statement not covered" >        scope.tempCard = {</span>
+          id: null,
+          data: {
+            title: null,
+            front: null,
+            back: null
+          }
+        };
+<span class="cstat-no" title="statement not covered" >        scope.save = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >          var card = scope.tempCard;</span>
+<span class="cstat-no" title="statement not covered" >          scope.isAddVisible = false;</span>
+<span class="cstat-no" title="statement not covered" >          scope.isListVisible = true;</span>
+<span class="cstat-no" title="statement not covered" >          console.log(card);</span>
+<span class="cstat-no" title="statement not covered" >          scope.cards.unshift(card);</span>
+<span class="cstat-no" title="statement not covered" >          scope.tempCard = null;</span>
+<span class="cstat-no" title="statement not covered" >          scope.tempCard = {</span>
+            id: null,
+            data: {
+              title: null,
+              front: null,
+              back: null
+            }
+          };
+<span class="cstat-no" title="statement not covered" >          console.log(card);</span>
+        };
+<span class="cstat-no" title="statement not covered" >        scope.cancel = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >          scope.isAddVisible = false;</span>
+        };
+<span class="cstat-no" title="statement not covered" >        scope.flip = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >          scope.isFrontVisible = scope.isFrontVisible ? false : true;</span>
+        };
+<span class="cstat-no" title="statement not covered" >        scope.delete = <span class="fstat-no" title="function not covered" >function (id) {</span></span>
+<span class="cstat-no" title="statement not covered" >          for (var i = 0; i &lt; scope.cards.length; i += 1) {</span>
+<span class="cstat-no" title="statement not covered" >            if (scope.cards[i].id === id) {</span>
+<span class="cstat-no" title="statement not covered" >              scope.cards.splice(i, 1);</span>
+            }
+          }
+        };
+<span class="cstat-no" title="statement not covered" >        scope.isListVisible = false;</span>
+<span class="cstat-no" title="statement not covered" >        scope.idAddVisible = false;</span>
+<span class="cstat-no" title="statement not covered" >        scope.toggleAdd = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >          scope.isAddVisible = scope.isAddVisible ? false : true; </span> //scope.isFrontVisible=true;
+        };
+<span class="cstat-no" title="statement not covered" >        scope.toggleList = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >          scope.isListVisible = scope.isListVisible ? false : true;</span>
+        };
+<span class="cstat-no" title="statement not covered" >        scope.toggleList();</span>
+      }
+    };
+  }]);  /*
+&nbsp;
+original source code
+'use strict';
+&nbsp;
+angular.module('crackooApp')
+    .directive('flashCardList', [function () {
+        return {
+            templateUrl: 'views/flashcard/flashcardList.html',
+            restrict: 'A',
+            scope : true,
+            link: function postLink(scope, element, attrs) {
+                scope.cards = [{id: '1', data:{title: 'Google', front: 'google', back : 'best search engine'}}, {id: '2', data:{title: 'Quora', front:'quora', back: 'question or answer website'}}];
+                scope.selectedCard = {id: null, data:{title: null, front: null, back:null}};
+&nbsp;
+                scope.showCard = function (val) {
+                    var num = 1;
+                    for(var i=0; i &lt; scope.cards.length; i++){
+                        if(scope.cards[i].id == val.id) {
+                            scope.fcNumber = num;
+                            console.log(scope.cards[i]);
+                            scope.selectedCard = scope.cards[i];
+                            if(i &gt; 0) scope.prevCard = scope.cards[i-1];
+                            if(i+1 &lt; scope.cards.length) scope.nextCard = scope.cards[i+1];
+                            if(i===0) scope.prevCard = "start";
+                            if(i===scope.cards.length-1) scope.nextCard = "end";
+                            break;
+                        }
+                        num++;
+                    }
+                }
+&nbsp;
+                scope.showCard(scope.cards[0]);
+&nbsp;
+&nbsp;
+                //scope.isFrontVisible = true;
+                scope.tempCard = {id: null, data:{title: null, front: null, back:null}};
+&nbsp;
+                scope.save = function() {
+                    var card = scope.tempCard;
+                    scope.isAddVisible = false;
+                    scope.isListVisible = true;
+                    console.log(card);
+                    scope.cards.unshift(card);
+                    scope.tempCard = null;
+                    scope.tempCard = {id: null, data:{title: null, front: null, back:null}};
+                    console.log(card);
+                };
+&nbsp;
+                scope.cancel = function() {
+                    scope.isAddVisible = false;
+                };
+&nbsp;
+                scope.flip = function() {
+                    scope.isFrontVisible = (scope.isFrontVisible) ? false : true;
+                };
+&nbsp;
+                scope.delete = function(id) {
+                    for (var i = 0; i &lt; scope.cards.length; i++) {
+                        if(scope.cards[i].id===id) {
+                            scope.cards.splice(i, 1);
+                        }
+                    }
+                };
+                scope.isListVisible = false;
+                scope.idAddVisible = false;
+                scope.toggleAdd = function () {
+                    scope.isAddVisible = (scope.isAddVisible) ? false : true;
+                    //scope.isFrontVisible=true;
+                };
+                scope.toggleList = function() {
+                    scope.isListVisible = (scope.isListVisible) ? false : true;
+                };
+                scope.toggleList()
+            }
+        };
+    }]);
+&nbsp;
+*/
+        /*
+&nbsp;
+//original code.
+'use strict';
+&nbsp;
+angular.module('crackooApp')
+  .directive('flashCardList', [function () {
+    return {
+      templateUrl: 'views/flashcard/flashcardList.html',
+      restrict: 'A',
+      scope : true,
+      link: function postLink(scope, element, attrs) {
+        scope.cards = [{id: '1', data:{title: 'Google', front: 'google', back : 'best search engine'}}, {id: '2', data:{title: 'Quora', front:'quora', back: 'question or answer website'}}];
+&nbsp;
+        scope.isFrontVisible = true;
+        scope.tempCard = {id: null, data:{title: null, front: null, back:null}};
+&nbsp;
+        scope.save = function() {
+          var card = scope.tempCard;
+          scope.isAddVisible = false;
+          scope.isListVisible = true;
+          console.log(card);
+          scope.cards.unshift(card);
+          scope.tempCard = null;
+          scope.tempCard = {id: null, data:{title: null, front: null, back:null}};
+          console.log(card);
+        };
+&nbsp;
+        scope.cancel = function() {
+          scope.isAddVisible = false;
+        };
+&nbsp;
+        scope.flip = function() {
+          scope.isFrontVisible = (scope.isFrontVisible) ? false : true;
+        };
+&nbsp;
+        scope.delete = function(id) {
+          for (var i = 0; i &lt; scope.cards.length; i++) {
+            if(scope.cards[i].id===id) {
+              scope.cards.splice(i, 1);
+            }
+          }
+        };
+        scope.isListVisible = false;
+        scope.idAddVisible = false;
+        scope.toggleAdd = function () {
+          scope.isAddVisible = (scope.isAddVisible) ? false : true;
+          scope.isFrontVisible=true;
+        };
+        scope.toggleList = function() {
+          scope.isListVisible = (scope.isListVisible) ? false : true;
+        };
+      }
+    };
+  }]);
+&nbsp;
+*/
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 02 2015 15:50:42 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

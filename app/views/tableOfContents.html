@@ -1,0 +1,27 @@
+
+
+<article id="questionResult" >
+    <div id="Default" class="contentHolder">
+        <div class="scrollContent" id="tableOfContent">
+            <div ng-repeat="group in groups" >
+                <ul ng-click="showChilds(group, $index)" ng-show="group.topicName">
+                    <li > <a href="">{{group.topicName}}</a> </li>
+                </ul>
+                <ul id="groupId{{$index}}" class="submenu ng-hide"> <!-- ng-show="group.active" -->
+                    <li class="submenu" ng-repeat="sumTopic in group.childTopics" ng-click="showTopic(sumTopic)"> <a href="">{{sumTopic.topicName}}</a> </li>
+                    <!--<li class="submenu" ng-repeat="sumTopic in group.childTopics.topicName | limitTo: 2"> <a href="">{{sumTopic.topicName}}</a> </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</article>
+<!--
+<script>
+    setTimeout(function() {
+        var g = document.createElement('script'),
+                s = document.scripts[0];
+        g.src = 'js/script-min.js';
+        s.parentNode.insertBefore(g, s);
+    }, 0);
+</script>-->

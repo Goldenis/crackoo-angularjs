@@ -1,0 +1,286 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html ng-app="crackooApp" lang="en">
+<head>
+  <meta name="fragment" content="!">
+  <meta name="msvalidate.01" content="0F4E2C112E9787B0CD1EAD254BFBC928" /> <!-- necessary to validate domain for Bing -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- basic Meta Tags -->
+  <!--<meta name="keywords" content='GRE wordlist, gre practice, GRE Free verbal practice, free test preparation, free testing for learners, GRE flashcards, crack GRE, Test Prep, Standardized Tests,-->
+<!--Test Preparation, Test Prep Courses, GRE, LSAT, MCAT, GMAT, ACT, SAT, AP, Prep Courses, track study progress, track test preparation, personalized learning platform'>-->
+
+  <!--<meta name="description" content='Crackoo is a cloud based learning platform to address the unique learning goals of every learner and to make learning more efficient and effective'>-->
+  <!--<meta content='Analytics powered smart learning platform | Crackoo' name='title'>-->
+
+  <!--<title>Analytics powered smart learning platform | Crackoo</title>-->
+  <title ng-bind="viewTitle ? viewTitle + ' |Crackoo' : 'Crackoo'">Crackoo</title>
+  <!--<meta view-head name="keywords" content={{keywords}}>-->
+  <base href="/">
+
+  <!--<meta name="description" content="">-->
+  <meta name="viewport" content="width=1024, initial-scale=0">
+
+  <!--<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>-->
+  <!--<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js'></script>-->
+  <!--<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js'></script>-->
+  <!--<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js'></script>-->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js'></script>
+
+  <!-- // Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+
+  <!-- build:css({.tmp,app}) styles/combined.css -->
+  <!-- injector:css -->
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/override.css">
+  <link rel="stylesheet" href="/bower_components/nvd3/nv.d3.min.css">
+  <link rel="stylesheet" href="/bower_components/fancybox/source/helpers/jquery.fancybox-buttons.css">
+  <link rel="stylesheet" href="/bower_components/fancybox/source/helpers/jquery.fancybox-thumbs.css">
+  <link rel="stylesheet" href="/bower_components/fancybox/source/jquery.fancybox.css">
+  <link rel="stylesheet" href="/bower_components/bxslider-4/dist/jquery.bxslider.css">
+  <link rel="stylesheet" href="/bower_components/angular-loading-bar/src/loading-bar.css">
+  <!-- endinjector -->
+  <!-- endbuild -->
+
+
+  <!--mathjax for including mathematical expressions in the web page-->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+    scale: 100,
+    displayAlign: "left",
+    linebreaks: { automatic: true },
+    SVG: { linebreaks: { automatic:true } }
+  },
+  tex2jax: {inlineMath: [['$$$','$$$'], ['\\(','\\)']]}
+
+  });
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!--Google Analytics: change Production Code-->
+  <script>
+    //This is the old code that works for localhost domain
+    //(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    //(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    //m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    //})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    //
+    //ga('create', 'UA-61207132-1', 'none');
+    //
+    //ga('create', 'UA-61207132-1', {
+    //'cookieDomain': 'none'
+    //});
+    //ga('send', 'pageview');
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64905001-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body id="crackoo-body" ng-controller="MainCtrl">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <!--<script src="bower_components/es5-shim/es5-shim.min.js"></script>--> <!-- It seems there is no issue in including this for all browsers, rather
+      then tracking the browsers that need ths shim support-->
+<!--<script src="bower_components/json3/lib/json3.min.js"></script>-->
+<!--<![endif]&ndash;&gt;-->
+
+<!-- Add your site or application content here -->
+<div data-big-container data-ng-view></div>
+
+<!-- Original URL form Google
+  www.google-analytics.com/analytics.js','ga');
+-->
+
+<!--<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>-->
+<!--<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js'></script>-->
+<!--<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js'></script>-->
+<!--<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js'></script>-->
+<!--<script src="js/angular-seo-master/angular-seo.js"></script>-->
+<!--<script src="s/angular-seo.js"></script>-->
+
+
+
+<!--build:js l/vendor.js-->
+<!-- bower:js -->
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/nvd3/nv.d3.js"></script>
+<script src="bower_components/angularytics/dist/angularytics.min.js"></script>
+<script src="bower_components/jquery-sticky/jquery.sticky.js"></script>
+<script src="bower_components/bxslider-4/dist/jquery.bxslider.js"></script>
+<script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
+<script src="bower_components/angular-moment/angular-moment.js"></script>
+<script src="bower_components/angular-scroll/angular-scroll.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+<script src="bower_components/angularjs-viewhead/angularjs-viewhead.js"></script>
+<script src="bower_components/angular-ui-slider/src/slider.js"></script>
+<script src="js/satellizer.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+
+
+
+<!--build:js({.tmp,app}) s/ck.js-->
+<!-- injector:js -->
+<script src="/scripts/app.js"></script>
+<script src="/scripts/controllers/about.js"></script>
+<script src="/scripts/controllers/comingsoonCtrl.js"></script>
+<script src="/scripts/controllers/contact.js"></script>
+<script src="/scripts/controllers/course.js"></script>
+<script src="/scripts/controllers/coursecategoriesCtrl.js"></script>
+<script src="/scripts/controllers/dashboard.js"></script>
+<script src="/scripts/controllers/goalDetails.js"></script>
+<script src="/scripts/controllers/goals.js"></script>
+<script src="/scripts/controllers/home.js"></script>
+<script src="/scripts/controllers/loginCtrl.js"></script>
+<script src="/scripts/controllers/main.js"></script>
+<script src="/scripts/controllers/partnersCtrl.js"></script>
+<script src="/scripts/controllers/privacyPolicy.js"></script>
+<script src="/scripts/controllers/profile.js"></script>
+<script src="/scripts/controllers/report.js"></script>
+<script src="/scripts/controllers/studyItem.js"></script>
+<script src="/scripts/controllers/studyItemFS.js"></script>
+<script src="/scripts/controllers/tableContentCtrl.js"></script>
+<script src="/scripts/controllers/termsConditions.js"></script>
+<script src="/scripts/controllers/title.js"></script>
+<script src="/scripts/directives/annotations.js"></script>
+<script src="/scripts/directives/answerOption.js"></script>
+<script src="/scripts/directives/appFooter.js"></script>
+<script src="/scripts/directives/bar.js"></script>
+<script src="/scripts/directives/bigContainer.js"></script>
+<script src="/scripts/directives/category.js"></script>
+<script src="/scripts/directives/choicecontentdesc.js"></script>
+<script src="/scripts/directives/comment.js"></script>
+<script src="/scripts/directives/commentList.js"></script>
+<script src="/scripts/directives/correctchoicesdesc.js"></script>
+<script src="/scripts/directives/courseBox.js"></script>
+<script src="/scripts/directives/crackoo-mathjax.js"></script>
+<script src="/scripts/directives/dashboard.js"></script>
+<script src="/scripts/directives/donutChart.js"></script>
+<script src="/scripts/directives/explanationcontentdesc.js"></script>
+<script src="/scripts/directives/flashCard.js"></script>
+<script src="/scripts/directives/flashCardList.js"></script>
+<script src="/scripts/directives/flashcardstudy.js"></script>
+<script src="/scripts/directives/greenbar.js"></script>
+<script src="/scripts/directives/header.js"></script>
+<script src="/scripts/directives/myComment.js"></script>
+<script src="/scripts/directives/myNote.js"></script>
+<script src="/scripts/directives/myQuestion.js"></script>
+<script src="/scripts/directives/myQuestionAnswer.js"></script>
+<script src="/scripts/directives/note.js"></script>
+<script src="/scripts/directives/notesList.js"></script>
+<script src="/scripts/directives/progressBar.js"></script>
+<script src="/scripts/directives/question.js"></script>
+<script src="/scripts/directives/questionFooter.js"></script>
+<script src="/scripts/directives/questionHeader.js"></script>
+<script src="/scripts/directives/questionNew.js"></script>
+<script src="/scripts/directives/questionResult.js"></script>
+<script src="/scripts/directives/questionsList.js"></script>
+<script src="/scripts/directives/reference.js"></script>
+<script src="/scripts/directives/referenceList.js"></script>
+<script src="/scripts/directives/reportSubMenu.js"></script>
+<script src="/scripts/directives/selectedchoicesdesc.js"></script>
+<script src="/scripts/directives/showonhoverparent.js"></script>
+<script src="/scripts/directives/showonhoverparentsparent.js"></script>
+<script src="/scripts/directives/studyItemSubMenu.js"></script>
+<script src="/scripts/directives/studycontent.js"></script>
+<script src="/scripts/directives/studycontentanswerchoices.js"></script>
+<script src="/scripts/directives/studycontentdesc.js"></script>
+<script src="/scripts/directives/tableContents.js"></script>
+<script src="/scripts/directives/timer.js"></script>
+<script src="/scripts/filters/Math.js"></script>
+<script src="/scripts/filters/spaceless.js"></script>
+<script src="/scripts/services/AnswerServiceService.js"></script>
+<script src="/scripts/services/ChoiceService.js"></script>
+<script src="/scripts/services/CitationService.js"></script>
+<script src="/scripts/services/CommentService.js"></script>
+<script src="/scripts/services/ContactService.js"></script>
+<script src="/scripts/services/GoalDataService.js"></script>
+<script src="/scripts/services/GoalService.js"></script>
+<script src="/scripts/services/NoteService.js"></script>
+<script src="/scripts/services/PageTitleService.js"></script>
+<script src="/scripts/services/QuestionService.js"></script>
+<script src="/scripts/services/ReportService.js"></script>
+<script src="/scripts/services/StudyItemService.js"></script>
+<script src="/scripts/services/TagService.js"></script>
+<script src="/scripts/services/UserGoalService.js"></script>
+<script src="/scripts/services/UserStudyItemService.js"></script>
+<script src="/scripts/services/ajax.js"></script>
+<script src="/scripts/services/answer.js"></script>
+<script src="/scripts/services/apiconfig.js"></script>
+<script src="/scripts/services/appconfig.js"></script>
+<script src="/scripts/services/auth.js"></script>
+<script src="/scripts/services/authsession.js"></script>
+<script src="/scripts/services/chart.js"></script>
+<script src="/scripts/services/facebook.js"></script>
+<script src="/scripts/services/httpRequestInterceptor.js"></script>
+<script src="/scripts/services/user.js"></script>
+<!-- endinjector -->
+<!-- endbuild -->
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.fancybox').fancybox();
+
+  });
+</script>
+
+
+
+<script>
+  $('a').click(function(){
+    $('html, body').animate({
+      scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+  });
+</script>
+
+<script>
+  $('.bxslider').bxSlider({
+    auto: true,
+    controls: false,
+    paging: true,
+    auto: true,
+    pause: 2000,
+    autoStart: true
+
+  });
+</script>
+
+<script>
+  $("#mainNavigation li a").on('click',function() {
+    $("#mainNavigation li a").removeClass("activex");
+    $(this).addClass("activex");
+  });
+</script>
+
+
+<!--<script src="js/jquery-1.11.1.min.js"></script>-->
+<!--<script src="js/script.min.js"></script>-->
+<!--<script type="text/javascript" src="js/script-min.js"></script>-->
+
+
+</body>
+</html>

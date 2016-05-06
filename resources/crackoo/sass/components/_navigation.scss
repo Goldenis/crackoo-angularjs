@@ -1,0 +1,22 @@
+.navbar {
+	background: none!important;
+	border:none!important;
+	margin:0px!important;
+	padding-top: 0px!important;
+	padding-bottom: 0px!important;
+		ul {
+			li {
+				a {
+				}
+			}
+		}
+}
+
+#mainNavigation {
+	.navbar-toggle {
+		position: absolute;
+		top:-50px;
+		z-index: 9999;
+		right:-20px;
+	}
+}

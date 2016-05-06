@@ -1,0 +1,110 @@
+<!--<div id="container">-->
+	<!---->
+	<!--<div data-header></div>-->
+    <!--<div data-green-bar data-name="{{title}}"></div>-->
+    <!--<br clear="all" />-->
+
+    <!--<div id="report-wrapper">-->
+        <!--&lt;!&ndash; LEFT COLUMN &ndash;&gt;-->
+        <!--<div id="report-left">-->
+
+            <!--<div class="bluebox">-->
+                <!--<a class="tab" rel="status" ng-click="type='status'"><img src="img/icon_related.png" alt="Goal Status" width="16" height="16" align="left" />&nbsp;&nbsp;Goal Status</a>-->
+            <!--</div>-->
+
+            <!--<div class="bluebox">-->
+                 <!--<a class="tab" rel="activity" ng-click="type='studyactivity'"><img src="img/icon_related.png" alt="Activity Report" width="16" height="16" align="left" />&nbsp;&nbsp;Study Activity</a>-->
+            <!--</div>-->
+           <!---->
+            <!--<div class="bluebox">-->
+            	<!--<a ng-click="type='focus'" class="tab" rel="focus"><img src="img/icon_flashcards_small.png" alt="Focus Report" width="16" height="16" align="left" />&nbsp;&nbsp;Focus&nbsp;&nbsp;</a>-->
+            <!--</div>-->
+            <!---->
+            <!--<div class="bluebox">-->
+            	<!--<a ng-click="type='progress'" class="tab" rel="progress"><img src="img/icon_references.png" alt="Progress Report" width="16" height="14" align="left" />&nbsp;&nbsp;Progress&nbsp;&nbsp;</a>-->
+            <!--</div>-->
+            <!--<div class="bluebox">-->
+                <!--<a ng-click="type='confidencelevel'" class="tab" rel="confidence"><img src="img/icon_related.png" alt="Confidence Level Report" width="16" height="16" align="left" />&nbsp;&nbsp;Confidence Level</a>-->
+            <!--</div>-->
+            <!---->
+            <!--<div class="bluebox">-->
+                <!--<a ng-click="type='difficultylevel'" class="tab" rel="difficulty"><img src="img/icon_flashcards_small.png" alt="Difficulty Level Report" width="16" height="16" align="left" />&nbsp;&nbsp;Difficulty Level&nbsp;&nbsp;</a>-->
+            <!--</div>-->
+            <!---->
+            <!--<div class="bluebox">-->
+                <!--<a ng-click="type='timelevel'" class="tab" rel="time"><img src="img/icon_references.png" alt="Time Level Report" width="16" height="14" align="left" />&nbsp;&nbsp;Time Level&nbsp;&nbsp;</a>-->
+            <!--</div>-->
+
+            <!--<div class="bluebox">-->
+                <!--<a ng-click="type='review'" class="tab" rel="review"><img src="img/icon_related.png" alt="Confidence Level Report" width="16" height="16" align="left" />&nbsp;&nbsp;Review Report&nbsp;&nbsp;</a>-->
+            <!--</div>-->
+           <!---->
+        <!--</div>-->
+        <!--<div class="clear"></div>-->
+
+        <!--&lt;!&ndash; END LEFT COLUMN &ndash;&gt;-->
+
+        <!--&lt;!&ndash; CENTER COLUMN &ndash;&gt;-->
+        <!--<div id="report-center">-->
+
+        	<!--&lt;!&ndash; MAIN QUESTION CONTAINER WITH DROP SHADOW &ndash;&gt;-->
+        	<!--<div id="report-container">-->
+        		<!---->
+                <!--<div id="report-bar">-->
+                	<!--<svg style="height:500px; margin-top: 30px;">-->
+                	<!--</svg>-->
+                	<!--<style>-->
+				<!--svg text {font-size: 1.1em; font-weight:bold;}-->
+			<!--</style>-->
+                <!--</div>-->
+            <!---->
+            <!--</div>-->
+
+        <!--</div>-->
+        <!--&lt;!&ndash; END CENTER COLUMN &ndash;&gt;-->
+
+        <!--&lt;!&ndash; RIGHT COLUMN &ndash;&gt;-->
+   <!--&lt;!&ndash;     <div id="report-right">-->
+
+             <!---->
+        <!--</div> &ndash;&gt;-->
+        <!--<div class="clear"></div>-->
+
+    <!--</div>-->
+<!--</div>-->
+
+
+<div data-header></div>
+<div data-green-bar data-name="{{title}}" data-gid="{{gid}}" data-active-tab ="progressReport" data-caption="{{course.name}}"> </div>
+<data-report-sub-menu type='type' ></data-report-sub-menu>
+
+<div id="appPageWrapper">
+    <div class="container">
+
+        <section id="fullWidthPanel">
+            <header>
+                <h3 class="progressIco">{{title}}</h3>
+            </header>
+            <!-- // header -->
+
+            <div class="referenceList">
+
+                <svg style="height:500px; margin-top: 30px;">
+                </svg>
+                <style>
+                    svg text {font-size: 1.1em; font-weight:bold;}
+                </style>
+
+            </div>
+            <!-- // reference list -->
+
+        </section>
+        <!-- // full width panel -->
+
+    </div>
+    <!-- // container -->
+</div>
+<!-- // app page wrapper -->
+
+
+<div data-app-footer></div>

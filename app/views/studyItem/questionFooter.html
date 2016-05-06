@@ -1,0 +1,17 @@
+<footer class="nopadleft nopadright">
+
+    <div class="switchDivider">
+        <p class="field switch">
+            <label class="cb-enable" ng-class="{'selected' : isConfident}" ng-click="toggle('C')"><span>confident</span></label>
+            <label class="cb-disable" ng-class="{'selected' : isNotSure}" ng-click="toggle('NS')"><span>not sure</span></label>
+        </p>
+    </div>
+
+    <p class="field switch">
+        <label class="cb-enable" ng-class="{'selected' : isDifficult}" ng-click="toggle('D')"><span>Difficult</span></label>
+        <label class="cb-disable" ng-class="{'selected' : isEasy}" ng-click="toggle('E')"><span>easy</span></label>
+    </p>
+
+    <a class="reviewBtn likeNarrow" ng-class="{'active' : review}" ng-click="toggle('review')">NEEDS A REVIEW</a>
+    <a class="likeBtn likeNarrow" ng-class="{'active' : isLike}" ng-click="toggle('LK')">Like</a>
+</footer>

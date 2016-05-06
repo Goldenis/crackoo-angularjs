@@ -1,0 +1,35 @@
+<div data-header ng-if="first_name != undefined && first_name != null" ></div>
+<div ng-if="first_name == undefined || first_name == null">
+  <ng-include src="'views/home-parts/headerNotLoggedIn.html'" ></ng-include>
+</div>
+
+<div id="appPageWrapper" class="nopad">
+
+  <div class="container">
+
+    <div class=WordSection1>
+      <span style="line-height:12px"><br /></span>
+      <h1 class=MsoNormal align=center style='text-align:center'>Partners</h1>
+      <span style="line-height:12px"><br /></span>
+
+      <!--<p class=MsoNormal align=center style='text-align:center'><u><span-->
+      <!--style='text-decoration:none'>&nbsp;</span></u></p>-->
+
+      <!--<ul class="logo-list list-inline text-center partners-thumb">-->
+        <div class="course-categories">
+        <a href="http://prepadviser.com" class="course-img-link" target="_blank"> <img src="img/partners/prepadviser.jpg" alt="" class="course-img"/></a>
+        <a href="http://www.essaycourses.co.uk" class="course-img-link" target="_blank"> <img src="img/partners/essaycourses.png" alt="" class="course-img"/></a>
+</div>
+      <!--<li class="visible-md visible-lg clearfix">&lt;!&ndash;clear after three on md and large &ndash;&gt;</li>-->
+      <!--</ul>-->
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div data-app-footer></div>
+

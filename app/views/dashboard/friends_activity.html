@@ -1,0 +1,27 @@
+<h2>Friends' Activity</h2>
+
+<div class="greybox" data-ng-repeat="friend in friends">
+	<div class="left">
+		<img class="icon-small" align="absmiddle"
+			data-ng-src="img/{{friend.thumbnail}}" width="32" height="32" /><a
+			href="#">{{friend.userName}}</a>
+	</div>
+	<div class="right smalltext">
+		<a href="#" class="grey">Unfollow</a>
+	</div>
+	<br clear="all" />
+	<div data-ng-repeat="act in friend.activity">
+		<div class="friend-activity">
+			<div class="left">
+				<img class="icon-small" data-ng-src="img/{{act.img.src}}" width="35"
+					height="33" alt="{{act.img.alt}}" align="absmiddle" />
+			</div>
+			{{act}}
+		</div>
+		<br clear="all" />
+	</div>
+</div>
+
+<div class="right">
+	<a href="#">SEE MORE &raquo;</a>
+</div>

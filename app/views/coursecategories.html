@@ -1,0 +1,42 @@
+<view-title>{{"title"}}</view-title>
+<meta view-head name="description" content={{SEODescription}}>
+<meta view-head name="keywords" content={{SEOKeywords}}>
+<div data-header ng-if="first_name != undefined && first_name != null" ></div>
+<div ng-if="first_name == undefined || first_name == null">
+  <ng-include src="'views/home-parts/headerNotLoggedIn.html'" ></ng-include>
+</div>
+
+<div id="appPageWrapper" class="nopad">
+
+  <div class="container">
+
+    <div class=WordSection1>
+      <span style="line-height:12px"><br /></span>
+      <h1 class=MsoNormal align=center style='text-align:center'>Courses</h1>
+      <span style="line-height:12px"><br /></span>
+
+      <!--<p class=MsoNormal align=center style='text-align:center'><u><span-->
+      <!--style='text-decoration:none'>&nbsp;</span></u></p>-->
+
+
+<div class="course-categories">
+  <a href="/GRE/courses" class="course-img-link"><img src="img/courses/GRE.png" alt="Crackoo GRE Prep" class="course-img"></a>
+  <a href="/GMAT/courses" class="course-img-link"><img src="img/courses/GMAT.png" alt="Crackoo GMAT Prep" class="course-img"></a>
+  <a href="/ACT/courses" class="course-img-link"><img src="img/courses/ACT.png" alt="Crackoo ACT Prep" class="course-img"></a>
+  <a href="/comingsoon" class="course-img-link"><img src="img/courses/LSAT.png" alt="Crackoo LSAT Prep" class="course-img"></a>
+  <a href="/comingsoon" class="course-img-link"><img src="img/courses/MCAT.png" alt="Crackoo MCAT Prep" class="course-img"></a>
+  <a href="/comingsoon" class="course-img-link"><img src="img/courses/TOEFEL.png" alt="Crackoo TOEFEL Prep" class="course-img"></a>
+  <a href="/comingsoon" class="course-img-link"><img src="img/courses/SAT.png" alt="Crackoo SAT Prep" class="course-img"></a>
+
+</div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div data-app-footer></div>
+

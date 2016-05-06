@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+<div id="loginWrapper">
+    <header>
+        <h1>Please Login</h1>
+    </header>
+    <div id="topCta">
+        <div id="loginMenu">
+            <ul>
+                <li><a class="arrowUp"></a></li>
+                <li><button  onclick="fb_login();" class="fbLogin" data-show-faces='false' data-scope='email,publish_actions' data-size="xlarge">FACEBOOK LOGIN</button></li><br>
+                <li><button  id="mySignIn" class="googleLogin" onclick="google_render();" > GOOGLE+ LOGIN </button></li>
+                <li class="clearfix"></li>
+                <!--<li><a href="home-parts/login.html" class="mailLogin fancybox fancybox.iframe">Your Email</a></li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    //Trigger for FB loging button
+    function fb_login() {
+        FB.login(function () {
+        }, { scope: 'email,public_profile' });
+    }
+
+    //Trigger for Google login button
+    function google_render() {
+        gapi.signin.render('mySignIn', {
+            'callback': 'signinCallback',
+            'clientid': '957635322343-jmmkn962pq9vsuu8j0chvhpjasvop1pu.apps.googleusercontent.com',
+            'cookiepolicy': 'single_host_origin',
+            'requestvisibleactions': 'http://schemas.google.com/AddActivity',
+            'scope': 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email',
+            'response_type': 'code'
+        });
+    }
+
+</script>
+
+</body>
+</html>

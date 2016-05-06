@@ -1,0 +1,95 @@
+<view-title>{{chosenTitle}}</view-title>
+
+<ng-include src="'views/home-parts/headerNotLoggedIn.html'" ></ng-include>
+<div id="secNav">
+    <div class="container">
+    </div>
+</div>
+
+<div id="appPageWrapper" style="padding-top:50px; padding-bottom:0px;">
+
+  <div class="container">
+
+        <section class="login-container" >
+            <div class="login-container">
+                <h2 class="regular-header login-button-header">
+                    Log in to Crackoo with
+                </h2>
+                <a id="mySignIn" class="login-google provider-link" href="javascript:void(0)" ng-click="authenticate('google')">
+                    <img src="../img/ico/google.png" class="socials-icon" />
+                    <span class="provider-name">Google</span>
+                </a>
+                <a id="login-facebook" class="provider-link" href="javascript:void(0)" ng-click="authenticate('facebook')">
+                    <img src="../img/ico/facebook.png" class="socials-icon" />
+                    <span class="provider-name">Facebook</span>
+                </a>
+               <!-- <div class="explanation">
+                    We'll <strong>never</strong> post without your permission.
+                </div>-->
+
+                <div class="horizontal-separator">
+                    <span class="separator-text">or</span>
+                </div>
+
+                <h2 class="regular-header">
+                    Log in to your Crackoo account or Signup <a href="/signup">here</a>
+                </h2>
+
+                <p class="kui-button kui-button-plain kui-button-primary" ng-show="loginError" style="background: none repeat scroll 0 0 rgba(185, 0, 0, 0.54) !important;">Login failed:{{errorMsg}}</p>
+
+                <form id="login-form" method="POST" name="loginForm" ng-submit="loginCrackoo()">
+                    <input type="hidden" value="1.0_tNVR7XSBZ3_eyw==_1427521599" name="fkey">
+                    <div id="ka-account-login" class="pw-login">
+                        <div data-reactid=".1">
+                        <div data-reactid=".1.0" class="kui-labeledfield">
+                            <div data-reactid=".1.0.1" class="sr-only" id="kui_labeled_field_1">Email or username</div>
+                            <input type="email" required data-reactid=".1.0.2" placeholder="Email or username" ng-model="email" name="identifier" class="kui-labeledfield__input" aria-labelledby="kui_labeled_field_1" aria-invalid="false">
+                        </div>
+                        <div data-reactid=".1.1" class="kui-labeledfield"><div data-reactid=".1.1.1" class="sr-only" id="kui_labeled_field_2">Password</div>
+                            <input type="password" required data-reactid=".1.1.2" placeholder="Password" ng-model="password" name="password" class="kui-labeledfield__input" aria-labelledby="kui_labeled_field_2" aria-invalid="false">
+                        </div>
+                            <button data-reactid=".1.2" style="width:100%;" class="kui-button kui-button-plain kui-button-primary" type="submit">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+
+                <p>
+                    Lost your password? Reset it
+                    <a href="javascript:void(0)">here</a>
+                </p>
+
+            </div>
+        </section>
+
+        <div class="clearfix"></div>
+    </div>
+    <!-- // container -->
+</div>
+<!-- // app page wrapper -->
+
+<div data-app-footer></div>
+<!--
+<script>
+    //Trigger for FB loging button
+    function fbLogin() {
+        FB.login(function () {
+        }, { scope: 'email,public_profile' });
+    }
+
+    //Trigger for Google login button
+    function googleRender() {
+        console.log("google login work");
+        gapi.signin.render('mySignIn', {
+            'callback': 'signinCallback',
+            'clientid': '957635322343-jmmkn962pq9vsuu8j0chvhpjasvop1pu.apps.googleusercontent.com',
+            'cookiepolicy': 'single_host_origin',
+            'requestvisibleactions': 'http://schemas.google.com/AddActivity',
+            'scope': 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email',
+            'response_type': 'code'
+        });
+    }
+
+</script>
+-->
+
+

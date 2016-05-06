@@ -1,0 +1,47 @@
+<div>
+<!--<div class="question-inner">-->
+    <!--&lt;!&ndash; QUESTION IMAGE (IF THERE IS ONE) &ndash;&gt;-->
+
+    <!--&lt;!&ndash;<div align="center">-->
+        <!--<img src="img/{{q.image.src}}" width="264" height="267" />-->
+    <!--</div>&ndash;&gt;-->
+
+    <!--<br />-->
+
+    <!--&lt;!&ndash; QUESTION TEXT &ndash;&gt;-->
+    <!--<p>{{item.description}}</p>-->
+
+<!--</div>-->
+
+
+<!--<div id="questionPageNvigation">-->
+    <!--<div class="container">-->
+        <!--<a class="nextBtn" href="javascript:void(0);" ng-click="move(nextItem);">next question</a>-->
+        <!--<div class="claerfix"></div>-->
+    <!--</div>-->
+<!--</div>&lt;!&ndash; // app page navigation &ndash;&gt;-->
+
+<section id="{{containerId}}" ng-class="{'fullWidthNoSidebar' : (item.studyItemType == 'S') || (answers.length == 0) }"  class="ng-cloak" ng-show="hiddenContainer">
+    <data-question-new data-show-result="{{showResult}}" data-usi="usi" data-uid="{{uid}}" data-gid="{{gid}}" data-id="{{id}}" data-question-header-text={{questionHeaderText}} on-back="showStudyItem()" data-istablecontent="istablecontent" data-groups="groups" data-author="author" ></data-question-new>
+    <div class="clearfix" ng-show="((item.studyItemType == 'S' || item.studyItemType == 'F' ) && current_view == '')"></div>
+    <div data-uid="{{uid}}" data-sid="{{id}}" data-answers="answers" data-studycontentanswerchoices data-attempts="attempts" ng-show="(item.studyItemType == 'E' || item.studyItemType == 'P') && current_view == '' && !istablecontent" data-show-result="{{showResult}}" data-item-type="item.studyItemType" ></div>
+
+
+</section><!-- // full width panel -->
+
+    <!--This Answer summary section must be out from full width section-->
+    <aside id="questionStepRight" ng-show="showResult == true" >
+        <h3>You got the right answer:</h3>
+
+        <p>{{correctcount}}</p>
+        <small>Times</small>
+        <div class="graydivider"></div>
+        <h3>You have:</h3>
+
+        <p>{{attempts}}</p>
+        <small>Attempts</small>
+        <a ng-click="switchTab()('statisticslink')" class="submitBtn">show more</a>
+    </aside>
+    <!-- // question step right -->
+
+ </div>

@@ -1,0 +1,57 @@
+
+
+<div id="flashcards">
+    <div class="span2 right" style="display:none" showonhoverparent>
+        <button type="button" class="btn btn-primary" ng-click="toggleAdd()" ng-hide="isAddVisible" ng-click="edit()">Add</button>
+    </div>
+    <br clear="all" />
+    <div ng-show="isAddVisible">
+      <!--  <input type="text" class="form-control" ng-model="tempCard.data.title" placeholder="Add title of flash card..."/>
+        <input type="text" class="form-control" ng-model="tempCard.id" ng-hide="true" /> -->
+
+        <textarea rows="4" class="form-control" ng-model="tempCard.data.front" placeholder="Front side of flash card" ></textarea>
+        <br/>
+        <br/><textarea rows="4" class="form-control" ng-model="tempCard.data.back" placeholder="Back side of flash card" ></textarea>
+        <br/>
+
+        <div>
+            <!--<button class="btn btn-default" type="button" ng-click="flip()"> &nbsp;Flip&nbsp;&nbsp; </button>-->
+            <button class="btn btn-success" type="button" ng-click="save()"> &nbsp;Save&nbsp; </button>
+            <button class="btn btn-danger" type="button" ng-click="cancel()"> Cancel </button>
+        </div>
+    </div>
+
+    <div ng-hide="isAddVisible">
+        <div data-flash-card data-content="selectedCard.data" data-id="{{selectedCard.id}}" data-del="delete(id)"></div>
+    </div>
+
+</div>
+
+
+
+
+<!--
+
+<a ng-click="toggleList()">
+  <img src="img/icon_flashcards_small.png" width="16" height="14" align="left"/>
+  &nbsp;&nbsp;Flash Cards&nbsp;&nbsp;
+</a>
+<a ng-click="toggleAdd()">
+  <img src="img/icon_add.png" alt="Add" width="14" height="14" align="right" />
+</a>
+<div ng-show="isAddVisible">
+  <input type="text" class="form-control" ng-model="tempCard.data.title" placeholder="Add title of flash card..."/>
+  <input type="text" class="form-control" ng-model="tempCard.id" ng-hide="true" />
+  <textarea row="3" class="form-control" ng-model="tempCard.data.front" ng-show="isFrontVisible" placeholder="Front side of flash card" ></textarea>
+  <textarea row="3" class="form-control" ng-model="tempCard.data.back" ng-hide="isFrontVisible" placeholder="Back side of flash card" ></textarea>
+  <div>
+    <button class="btn btn-default" type="button" ng-click="flip()"> &nbsp;Flip&nbsp;&nbsp; </button>
+    <button class="btn btn-success" type="button" ng-click="save()"> &nbsp;Save&nbsp; </button>
+    <button class="btn btn-danger" type="button" ng-click="cancel()"> Cancel </button>
+  </div>
+</div>
+<div class="cardList" ng-show="isListVisible && !isAddVisible" ng-repeat="c in cards">
+  <div data-flash-card data-content="c.data" data-id="{{c.id}}" data-del="delete(id)"></div>
+</div>
+
+-->

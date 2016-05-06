@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/services/TagService.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">scripts/services/TagService.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4.55% <small>(2 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">6.67% <small>(1 / 15)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4.55% <small>(2 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">scripts/services/</a> &#187; TagService.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*---------------------------START OF DOCUMENTATION---------------------------
+&nbsp;
+  This controller maps to TagController.java on the server side
+&nbsp;
+  The conventions used in this code are :
+    uId : userId
+    gId : goalId
+    tId : tagId
+    sId : studyItemId
+&nbsp;
+  There are 2 types of tags defined in the Model. Study Item Tag is the tag
+  related with study items. All the functions dealing with study item tag
+  have study item as a prefix to tag.
+  Goal tag are the tags related to goals. ALl the functions with goal as prefix
+  to tag deal with goal tags.
+&nbsp;
+  Also, Please keep in mind that plural ending get functions return an array
+  of tags.
+&nbsp;
+-----------------------------END OF DOCUMENTATION----------------------------------*/
+'use strict';
+angular.module('crackooApp').factory('TagService', [
+  '$rootScope',
+  '$ajax',
+  'ENV',
+  function ($rootScope, $ajax,config) {
+    return {
+      base_url: config.basepath,
+      createStudyItemTag: <span class="fstat-no" title="function not covered" >function (sId, description) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'POST',
+          url: _self.base_url + '/studyitems/' + sId + '/tags',
+          data: description
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      updateStudyItemTag: <span class="fstat-no" title="function not covered" >function (sId, tId, description) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'PUT',
+          url: _self.base_url + '/studyitems/' + sId + '/tags/' + tId,
+          data: description
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      deleteStudyItemTag: <span class="fstat-no" title="function not covered" >function (sId, tId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'DELETE',
+          url: _self.base_url + '/studyitems/' + sId + '/tags/' + tId
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      getUserStudyItemTags: <span class="fstat-no" title="function not covered" >function (uId, sId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var tags = $ajax({</span>
+          method: 'GET',
+          url: _self.base_url + '/users/' + uId + '/studyitems/' + sId + '/tags'
+        });
+<span class="cstat-no" title="statement not covered" >        return tags;</span>
+      },
+      getStudyItemTags: <span class="fstat-no" title="function not covered" >function (sId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var tags = $ajax({</span>
+          method: 'GET',
+          url: _self.base_url + '/studyitems/' + sId + '/tags'
+        });
+<span class="cstat-no" title="statement not covered" >        return tags;</span>
+      },
+      getStudyItemTag: <span class="fstat-no" title="function not covered" >function (sId, tId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var tag = $ajax({</span>
+          method: 'GET',
+          url: _self.base_url + '/studyitems/' + sId + '/tags/' + tId
+        });
+<span class="cstat-no" title="statement not covered" >        return tag;</span>
+      },
+      likeStudyItemTag: <span class="fstat-no" title="function not covered" >function (sId, tId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'PUT',
+          url: _self.base_url + '/studyitems/' + sId + '/tags/' + tId + '/like'
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      dislikeStudyItemTag: <span class="fstat-no" title="function not covered" >function (sId, tId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'PUT',
+          url: _self.base_url + '/studyitems/' + sId + '/tags/' + tId + '/dislike'
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      createGoalTag: <span class="fstat-no" title="function not covered" >function (gId, description) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'POST',
+          url: _self.base_url + '/goals/' + gId + '/gtags',
+          data: description
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      updateGoalTag: <span class="fstat-no" title="function not covered" >function (gId, tId, description) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'PUT',
+          url: _self.base_url + '/goals/' + gId + '/gtags/' + tId,
+          data: description
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      deleteGoalTag: <span class="fstat-no" title="function not covered" >function (gId, tId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'DELETE',
+          url: _self.base_url + '/goals/' + gId + '/gtags/' + tId
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      likeGoalTag: <span class="fstat-no" title="function not covered" >function (gId, tId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'PUT',
+          url: _self.base_url + '/goals/' + gId + '/gtags/' + tId + '/like'
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      dislikeGoalTag: <span class="fstat-no" title="function not covered" >function (gId, tId) {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'PUT',
+          url: _self.base_url + '/goals/' + gId + '/gtags/' + tId + '/dislike'
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      },
+      deleteAllTags: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var _self = this;</span>
+<span class="cstat-no" title="statement not covered" >        var promise = $ajax({</span>
+          method: 'DELETE',
+          url: _self.base_url + '/tags'
+        });
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+      }
+    };
+  }
+]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 09 2015 16:01:27 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

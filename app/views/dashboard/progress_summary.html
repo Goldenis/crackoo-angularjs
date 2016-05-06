@@ -1,0 +1,33 @@
+<h2>Progress Summary</h2>
+<div class="greybox progress">
+	<div ng-repeat="report in reports">
+		<img class="icon-small" ng-src="img/icon_small_studyplan.png" width="35"
+			height="32" alt="Study Plan" align="absmiddle" />
+			<span class="orange">{{report.modulesStudiedCount}}</span> 
+				Modules Studied 
+			<br clear="left" />
+		<img class="icon-small" ng-src="img/" width="35"
+			height="32" alt="" align="absmiddle" />
+			<spn class="orange">{{report.practicedItemsCount}}</span>
+				Practiced Items
+			<br clear="left" />
+		<img class="icon-small" ng-src="img/icon_small_flashcards.png" width="35"
+			height="32" alt="Flashcards" align="absmiddle" />
+			<spn class="orange">{{report.flashCardsStudiedCount}}</span>
+				Modules Studied
+			<br clear="left" />
+		<img class="icon-small" ng-src="img/icon_small_stopwatch.png" width="35"
+			height="32" alt="Stopwatch" align="absmiddle" />
+			<spn class="orange">{{report.totalTimeSpent}}</span>
+				Hours Spent Studying
+			<br clear="left" />
+	</div>
+</div>
+
+<div class="right">
+	<a href="#">SEE MORE &raquo;</a>
+</div>
+<!-- END PROGRESS SUMMARY -->
+
+<br />
+<br />

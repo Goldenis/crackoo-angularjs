@@ -1,0 +1,41 @@
+.questions, .comments {
+  min-height : 75px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.glyphicon-remove, .glyphicon-edit {
+  cursor: pointer;
+}
+
+#annotations {
+  padding : 0 0 0 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.52);
+  position:relative;
+    height: 70px
+}
+
+#annotations > .btn-toolbar > .btn-group {
+  margin: 12px 25px 0 25px;
+}
+
+/* override bootstrap css for answer description */
+.well {
+
+    margin-bottom: 0;
+
+}
+
+/*.nvtooltip { margin-left: -100px; }*/
+
+/* Style Override for MathJax */
+.MathJax,.MathJax_Display {
+    /*text-align: left !important;*/
+    /*margin: 0 !important;*/
+    font-size: 200% !important;
+    font-weight: bold;
+}

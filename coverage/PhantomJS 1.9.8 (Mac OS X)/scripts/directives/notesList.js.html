@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/directives/notesList.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">scripts/directives/notesList.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4.17% <small>(2 / 48)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">12.5% <small>(1 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4.17% <small>(2 / 48)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">scripts/directives/</a> &#187; notesList.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+angular.module('crackooApp').directive('notesList', [
+  'NoteService',
+  'UserService',
+  'authService',
+  function (NotesService, UserService, AuthService) {
+    return {
+      templateUrl: 'views/notes/notesList.html',
+      restrict: 'A',
+      scope: {
+        notes: '=',
+        myNs: '=',
+        sid: '@',
+        gid: '@gid',
+        uid: '@uid',
+        id: '@id'  //        isShowMyNotes: '@',
+               //        isShowNotes: '@'
+      },
+      link: <span class="fstat-no" title="function not covered" >function postLink(scope) {</span>
+<span class="cstat-no" title="statement not covered" >        scope.notesData = null;</span>
+<span class="cstat-no" title="statement not covered" >        scope.qId = 1;</span>
+<span class="cstat-no" title="statement not covered" >        scope.notesList = scope.notes;</span>
+<span class="cstat-no" title="statement not covered" >        console.log(scope.notesList);</span>
+<span class="cstat-no" title="statement not covered" >        scope.showMyNote = false;</span>
+<span class="cstat-no" title="statement not covered" >        scope.toggleMyNotes = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >          scope.showMyNote = !scope.showMyNote;</span>
+<span class="cstat-no" title="statement not covered" >          if (scope.showMyNote) {</span>
+<span class="cstat-no" title="statement not covered" >            scope.notesList = scope.myNs;</span>
+          } else {
+<span class="cstat-no" title="statement not covered" >            scope.notesList = scope.notes;</span>
+          }
+        };
+        //watch for changes in the value of my Notes
+<span class="cstat-no" title="statement not covered" >        scope.$parent.$watch('myNs', <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (typeof value === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+          }
+<span class="cstat-no" title="statement not covered" >          scope.myNs = value;</span>
+<span class="cstat-no" title="statement not covered" >          if (scope.showMyNote) {</span>
+<span class="cstat-no" title="statement not covered" >            scope.notesList = scope.myNs;</span>
+          }  //              scope.myNs= value;
+             //              if ((value.length &gt; 0)){
+             //                  scope.isShowMyNotes = true ;
+             //              }
+             //              console.log("my notes are");
+             //              console.log(value);
+             //alert(scope.isShowMyComments);
+        });
+        //watch for changes in the value of Notes
+<span class="cstat-no" title="statement not covered" >        scope.$parent.$watch('notes', <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (typeof value === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+          }
+<span class="cstat-no" title="statement not covered" >          scope.notes = value;</span>
+<span class="cstat-no" title="statement not covered" >          if (!scope.showMyNote) {</span>
+<span class="cstat-no" title="statement not covered" >            scope.notesList = scope.notes;</span>
+          }  //              scope.notes = value;
+             //              if ((scope.notes.length &gt; 0)){
+             //                  //alert("lenght is greater than zero");
+             //                  scope.isShowNotes= true ;
+             //              }
+             //alert(scope.isShowComments);
+        });
+        /* scope.showMyNotes = function() {
+              //alert(scope.isShowMyNotes);
+              //alert(scope.myNs.length);
+              return scope.myNs.length &gt; 0 ;
+          };*/
+        /*        scope.showNotes = function() {
+              //alert(scope.isShowNotes);
+              return scope.isShowNotes;
+          };
+*/
+<span class="cstat-no" title="statement not covered" >        scope.addNotes = <span class="fstat-no" title="function not covered" >function (uid, sid) {</span></span>
+<span class="cstat-no" title="statement not covered" >          var data = scope.notesData;</span>
+<span class="cstat-no" title="statement not covered" >          scope.notesData = null;</span>
+          //Create the notes and get the notesID
+<span class="cstat-no" title="statement not covered" >          var createdNotes = NotesService.createNote(uid, sid, data);</span>
+<span class="cstat-no" title="statement not covered" >          var notesID = null;</span>
+<span class="cstat-no" title="statement not covered" >          createdNotes.then(<span class="fstat-no" title="function not covered" >function (resp) {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(resp);</span>
+<span class="cstat-no" title="statement not covered" >            var location = resp.headers('location');</span>
+<span class="cstat-no" title="statement not covered" >            notesID = location.substring(location.lastIndexOf('notes') + 9);</span>
+<span class="cstat-no" title="statement not covered" >            var newNotes = {</span>
+              userid: uid,
+              description: data,
+              imgUrl: AuthService.session.imgUrl,
+              username: AuthService.session.displayName,
+              notesID: notesID,
+              creationDate: Date.now()
+            };
+<span class="cstat-no" title="statement not covered" >            scope.qId += 1;</span>
+<span class="cstat-no" title="statement not covered" >            console.log(newNotes);</span>
+<span class="cstat-no" title="statement not covered" >            console.log(scope.myNs);</span>
+<span class="cstat-no" title="statement not covered" >            scope.myNs.unshift(newNotes);</span>
+<span class="cstat-no" title="statement not covered" >            scope.notes.unshift(newNotes);</span>
+<span class="cstat-no" title="statement not covered" >            console.log(scope.notes);</span>
+          });
+        };
+        //scope.getImgUrl = function(userid) {
+        //    alert(userid);
+        //    return User.getProfilePicture(userid);
+        //};
+<span class="cstat-no" title="statement not covered" >        scope.delete = <span class="fstat-no" title="function not covered" >function (id) {</span></span>
+<span class="cstat-no" title="statement not covered" >          NotesService.deleteNote(scope.uid, id);</span>
+<span class="cstat-no" title="statement not covered" >          for (var i = 0; i &lt; scope.myNs.length; i += 1) {</span>
+<span class="cstat-no" title="statement not covered" >            if (scope.myNs[i].notesID === id) {</span>
+<span class="cstat-no" title="statement not covered" >              scope.myNs.splice(i, 1);</span>
+            }
+          }
+<span class="cstat-no" title="statement not covered" >          for (var j = 0; i &lt; scope.notes.length; j += 1) {</span>
+<span class="cstat-no" title="statement not covered" >            if (scope.notes[j].notesID === id) {</span>
+<span class="cstat-no" title="statement not covered" >              scope.notes.splice(j, 1);</span>
+            }
+          }
+        };
+      }
+    };
+  }
+]);  /*
+scope.addNotes = function(uid, sid) {
+    var data = scope.notesData;
+    scope.notesData = null;
+    var newNotes = {
+        description : data
+    };
+    newNotes.id = Notes.createNotes(uid, sid, data);
+    myNotes.unshift(newNotes);
+&nbsp;
+    */
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 09 2015 16:01:27 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

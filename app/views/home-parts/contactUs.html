@@ -1,0 +1,23 @@
+<a name="contactanchor" id="contactanchor"></a>
+
+<div id="contact">
+    <div class="container">
+        <header>
+            <h1>Contact Us</h1>
+        </header><!-- // header -->
+        <div id="contactLeft">
+            <input type="text" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" ng-model="contact.name" />
+            <input type="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" ng-model="contact.email" />
+            <input type="text" placeholder="Role" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Role'" ng-model="contact.location" />
+            <input type="text" placeholder="Phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" ng-model="contact.phone" />
+            <textarea name="" id="" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" ng-model="contact.message" ></textarea>
+            <input type="submit" value="SUBMIT" ng-click="createContact()">
+        </div><!-- // contact left -->
+        <div id="contactRight">
+            <h4>Contact Information</h4>
+            <p><img src="img/ico/email.png" alt=""><a href="mailto:support@crackoo.com">support@crackoo.com</a></p>
+            <p><img src="img/ico/phone.png" alt="">+ 1 650 772 8738</p>
+        </div><!-- // contact right -->
+        <div class="clearfix"></div>
+    </div><!-- // container -->
+</div><!-- // contact -->

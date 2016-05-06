@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Crackoo</title>
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- basic Meta Tags -->
+    <meta name="keywords" content="key">
+    <meta name="description" content="description">
+
+    <!-- // Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=1024, initial-scale=0">
+
+
+</head>
+
+<body>
+
+<div id="topBar">
+    <div class="container">
+        <div id="branding">
+            <a href="#" title="Crackoo Homepage"><img src="img/logos/site-logo.png" alt="Crackoo"></a>
+        </div>
+        <!-- // branding -->
+        <nav id="welcomearea">
+            <p>welcome, seth </p>
+            <img src="img/misc/avatar.jpg" alt="">
+            <a href="#" title="Logout" class="arrowDown"></a>
+        </nav>
+        <!-- // navigation -->
+        <div class="clearfix"></div>
+    </div>
+    <!-- // container -->
+</div>
+<!-- // top bar -->
+
+<section id="appHeader">
+    <div class="container">
+        <header>
+            <h1 class="nobrd">Study Item Caption</h1>
+        </header>
+        <!-- // header -->
+        <div id="mainLinks">
+            <a href="#" class="active">
+                <span class="studyIco"></span>
+                Study Plans
+            </a><!-- // study icon -->
+            <a href="#">
+                <span class="reportIco"></span>
+                progress report
+            </a><!-- // report icon -->
+            <a href="#">
+                <span class="questionsIco"></span>
+                questions
+            </a><!-- // question icon -->
+        </div>
+        <!-- // main links -->
+    </div>
+    <!-- // container -->
+</section>
+<!-- // app header -->
+
+<div id="subNav">
+    <div class="container">
+        <h4>Study</h4>
+        <nav>
+            <ul>
+                <li><a href="#"><span class="statIco"></span>Statistics</a></li>
+                <li><a href="#" class="active"><span class="questionIco"></span>Questions</a></li>
+                <li><a href="#"><span class="discIco"></span>Discussion</a></li>
+                <li><a href="#"><span class="notesIco"></span>Notes</a></li>
+                <li><a href="#"><span class="flashIco"></span>Flash Cards</a></li>
+                <li><a href="#"><span class="refIco"></span>References</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- // container -->
+</div>
+<!-- // sec nav -->
+
+
+<div id="appPageWrapper">
+    <div class="container">
+        <section id="fullWidthPanel">
+            <header>
+                <h3>ask a question</h3>
+            </header>
+            <!-- // header -->
+            <article class="panelContent">
+                <input type="text" placeholder="Your question ..." onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'Your question ...'"/>
+                <button class="greenBtn">submit your question</button>
+            </article>
+            <!-- // panel -->
+
+            <div class="referenceList">
+
+
+                <div id="questionsHeader">
+                    <h3>Questions</h3>
+
+                    <div class="demo-list">
+                        <input tabindex="1" type="checkbox" id="input-1">
+                    </div>
+                    <p>Only show my questions
+                    </p>
+
+                    <div class="clearfix"></div>
+                </div>
+                <!-- // questions header -->
+
+
+                <article class="questionListBox">
+                    <div class="questionImage">
+                        <img src="img/misc/avatar.jpg" alt="">
+                    </div>
+                    <!-- // question image -->
+                    <div class="questionAuthor">
+                        <p>John Doe</p>
+                        <small>19. may, 2014</small>
+                    </div>
+                    <!-- //author -->
+                    <div class="questionContent">
+
+
+                        <h3>1. Etiam carta greada learodorada verum? </h3>
+                        <span class="answerBtn toogle-link">2 answers</span>
+
+
+                        <div id="answerWrapper" class="toogle-content">
+                            <div class="answerList">
+                                <div class="answerAuthorImage">
+                                    <img src="img/misc/avatar.jpg" alt="">
+                                </div>
+                                <!-- // answer -->
+                                <div class="answerContent">
+                                    <h6>John Doe</h6>
+
+                                    <p>Etiam carta greada learodorada verum.</p>
+                                </div>
+                                <!-- // answer content -->
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- // anser list -->
+
+                            <div class="answerList">
+                                <div class="answerAuthorImage">
+                                    <img src="img/misc/avatar.jpg" alt="">
+                                </div>
+                                <!-- // answer -->
+                                <div class="answerContent">
+                                    <h6>John Doe</h6>
+
+                                    <p>Etiam carta greada learodorada verum.</p>
+                                </div>
+                                <!-- // answer content -->
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- // anser list -->
+
+                            <div class="answerList">
+                                <div class="answerAuthorImage">
+                                    <img src="img/misc/avatar.jpg" alt="">
+                                </div>
+                                <!-- // answer -->
+                                <div class="answerContent">
+                                    <h6>John Doe</h6>
+
+                                    <p>Etiam carta greada learodorada verum.</p>
+                                </div>
+                                <!-- // answer content -->
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- // anser list -->
+
+                        </div>
+                        <!-- // anseer wrapper -->
+
+                        <div class="clearfix"></div>
+                        <input type="text" placeholder="Your question ..." onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Your question ...'"/>
+                        <a href="#" class="submitBtn">submit</a>
+
+                        <div class="voteBox">
+                            <span class="likeBox"><a href="#">Like</a> <small>154</small></span>
+                            <span class="dislikeBox"><a href="#">Dislike</a> <small>53</small></span>
+                        </div>
+                        <!-- // vote -->
+
+
+                    </div>
+                    <!-- // question content -->
+                    <div class="clearfix"></div>
+                </article>
+                <!-- // quesiton list box -->
+
+
+                <article class="questionListBox">
+                    <div class="questionImage">
+                        <img src="img/misc/avatar.jpg" alt="">
+                    </div>
+                    <!-- // question image -->
+                    <div class="questionAuthor">
+                        <p>John Doe</p>
+                        <small>19. may, 2014</small>
+                    </div>
+                    <!-- //author -->
+                    <div class="questionContent">
+
+
+                        <h3>1. Etiam carta greada learodorada verum? </h3>
+                        <span class="answerBtn toogle-link">3 answers</span>
+
+                        <div id="answerWrapper" class="toogle-content">
+                            <div class="answerList">
+                                <div class="answerAuthorImage">
+                                    <img src="img/misc/avatar.jpg" alt="">
+                                </div>
+                                <!-- // answer -->
+                                <div class="answerContent">
+                                    <h6>John Doe</h6>
+
+                                    <p>Etiam carta greada learodorada verum.</p>
+                                </div>
+                                <!-- // answer content -->
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- // anser list -->
+
+                            <div class="answerList">
+                                <div class="answerAuthorImage">
+                                    <img src="img/misc/avatar.jpg" alt="">
+                                </div>
+                                <!-- // answer -->
+                                <div class="answerContent">
+                                    <h6>John Doe</h6>
+
+                                    <p>Etiam carta greada learodorada verum.</p>
+                                </div>
+                                <!-- // answer content -->
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- // anser list -->
+
+                            <div class="answerList">
+                                <div class="answerAuthorImage">
+                                    <img src="img/misc/avatar.jpg" alt="">
+                                </div>
+                                <!-- // answer -->
+                                <div class="answerContent">
+                                    <h6>John Doe</h6>
+
+                                    <p>Etiam carta greada learodorada verum.</p>
+                                </div>
+                                <!-- // answer content -->
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- // anser list -->
+
+                        </div>
+                        <!-- // anseer wrapper -->
+
+                        <div class="clearfix"></div>
+
+
+                        <a href="#" class="answerQuestionBtn">answer this question</a>
+
+                        <div class="voteBox">
+                            <span class="likeBox"><a href="#">Like</a> <small>154</small></span>
+                            <span class="dislikeBox"><a href="#">Dislike</a> <small>53</small></span>
+                        </div>
+                        <!-- // vote -->
+
+
+                    </div>
+                    <!-- // question content -->
+                    <div class="clearfix"></div>
+                </article>
+                <!-- // quesiton list box -->
+
+
+            </div>
+            <!-- // reference list -->
+
+        </section>
+        <!-- // full width panel -->
+    </div>
+    <!-- // container -->
+</div>
+<!-- // app page wrapper -->
+
+<footer id="appFooter">
+    <div class="container">
+        <small>Copyright 2013/14 Crackoo, Inc. All Rights Reserved</small>
+        <div class="appFooternav">
+            <ul>
+                <li><a href="#" title="Home">HOME</a></li>
+                <li><a href="#" title="FAQ">FAQ</a></li>
+                <li><a href="#" title="Privacy">PRIVACY</a></li>
+                <li><a href="#" title="Terms">TERMS</a></li>
+                <li><a href="#" title="Contact">CONTACT</a></li>
+            </ul>
+            <div class="socials">
+                <a href="#" target="_blank" title="Facebook" class="facebookIco">Facebook</a>
+                <a href="#" target="_blank" title="Twitter" class="twitterIco">Twitter</a>
+            </div>
+            <!-- // socials -->
+        </div>
+        <!-- // footer nav -->
+    </div>
+    <!-- // container -->
+</footer>
+<!-- // app footer -->
+
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/script-min.js"></script>
+
+
+</body>
+</html>

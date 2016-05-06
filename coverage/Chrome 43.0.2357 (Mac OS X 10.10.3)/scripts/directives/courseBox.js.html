@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/directives/courseBox.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">scripts/directives/courseBox.js</span></h1>
+    <h2>
+        Statements: <span class="metric">12.5% <small>(2 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">20% <small>(1 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">12.5% <small>(2 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">scripts/directives/</a> &#187; courseBox.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+angular.module('crackooApp').directive('courseBox', [
+  '$location',
+  'StudyItemService',
+  'UserGoalService',
+  '$rootScope',
+  'GoalDataService',
+  'authService',
+  function ($location, items, usergoal, $rootScope, GoalDataService, Auth) {
+    return {
+      templateUrl: 'views/courseIntroBox.html',
+      restrict: 'A',
+      link: <span class="fstat-no" title="function not covered" >function postLink(scope, element, attrs) {</span>
+<span class="cstat-no" title="statement not covered" >        scope.showMoreHide = attrs.showMoreHide;</span>
+<span class="cstat-no" title="statement not covered" >        if (Auth.session.status === 'connected') {</span>
+<span class="cstat-no" title="statement not covered" >          scope.isConnent = true;</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          scope.isConnent = false;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        scope.studyNow = <span class="fstat-no" title="function not covered" >function (course) {</span></span>
+          //          $rootScope.headerTitle = course.name;
+          //usergoal.createGoal(id, course.goalID);
+          //$rootScope.cgid = gid;
+          //$rootScope.cgname = gname;
+          //			console.log("auth =",Auth.session);
+<span class="cstat-no" title="statement not covered" >          GoalDataService.setCurrentGoal(course);</span>
+<span class="cstat-no" title="statement not covered" >          var its = items.getStudyItems(course.goalID);</span>
+<span class="cstat-no" title="statement not covered" >          its.then(<span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            GoalDataService.setStudyItems(response);</span>
+<span class="cstat-no" title="statement not covered" >            $location.path('goals/' + course.goalID + '/items/' + response[0].studyItemID);</span>
+          });  /*GoalDataService.setCurrentGoal(course);
+          var its = items.getStudyItems(course.goalID);
+          its.then(function(response) {
+              GoalDataService.setStudyItems(response);
+              $location.path('goals/'+course.goalID+'/items/'+response[0].studyItemID);
+          });*/
+        };
+        //display the number of users for a particular goal
+<span class="cstat-no" title="statement not covered" >        scope.displayUsers = <span class="fstat-no" title="function not covered" >function (n) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (n &lt; 10) {</span>
+<span class="cstat-no" title="statement not covered" >            return '&lt; 100';</span>
+          } else {
+<span class="cstat-no" title="statement not covered" >            return n;</span>
+          }
+        };
+      }
+    };
+  }
+]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 05 2015 16:22:27 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

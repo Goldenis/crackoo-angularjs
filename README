@@ -1,0 +1,9 @@
+If you are having trouble in starting grunt task then 
+  1. Change to the project's root directory.
+  2. Install project dependencies with npm install.
+  3. Run Grunt with grunt
+
+Refer to https://github.com/gruntjs/grunt/wiki/Getting-started for more details
+
+Not Adding bootstrap as dependency because it is downloading source code. We only require latest build of CSS file only.
+Adding it manually to styles folder.

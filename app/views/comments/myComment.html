@@ -1,0 +1,31 @@
+<div class="referenceArticle">
+    <div class="referenceImage">
+        <img ng-src="{{imgUrl}}" alt="" class="img-responsive" width="64" height="64">
+    </div>
+    <!-- // profile image -->
+    <div class="discussionDetail">
+        <h3>{{autherName}}</h3>
+        <h6>{{creationTime | date:'medium'}}</h6>
+
+        <p ng-hide="isEditVisible">{{description}}</p>
+        <p ng-show="isEditVisible">
+            <input type="text" placeholder="Add your comment ..." onfocus="this.placeholder = ''"
+                   onblur="this.placeholder = 'Add your comment ...'" ng-model="tempDescription" ng-show="isEditVisible"/>
+            <a class="submitBtn" ng-show="isEditVisible"  ng-click="save()">submit</a>
+            <a class="cancelBtn" ng-show="isEditVisible"  ng-click="cancel()">cancel</a>
+        </p>
+        <span class="likeBox"><a ng-click="like(userid, id)">Like</a> <small>{{likes}}</small></span>
+        <span class="dislikeBox"><a ng-click="dislike(userid, id)">Dislike</a> <small>{{dislikes}}</small></span>
+
+    </div>
+    <!-- // discussion details -->
+    <div class="referenceActions" ng-show="referenceActionsShow">
+        <a class="editBtn" ng-click="edit()">edit</a>
+        <a class="delBtn" ng-click="delete(id)">delete</a>
+    </div>
+    <!-- // actions -->
+    <div class="clearfix"></div>
+</div>
+<!-- // reference article -->
+
+

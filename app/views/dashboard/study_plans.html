@@ -1,0 +1,49 @@
+<h2>My Study Plans</h2>
+
+<div class="greybox" ng-repeat="goal in goals">
+	<div class="left">
+		<img class="icon-small" align="absmiddle"
+			ng-src="img/{{goal.imageLocation}}" />
+	</div>
+	<div class="overflowfix">
+		<h3>
+			<a href="#">{{goal.name}}</a>
+		</h3>
+		<div class="progressbar">
+			<div class="progress-green" style="width: {{goal.completion"></div>
+		</div>
+		&nbsp;&nbsp;<span class="smalltext">({{goal.completion}}%
+			Complete)</span><br />
+		<div class="plandate">Started {{goal.startDate}}</div>
+		<div class="smalltext">
+			<a href="#" class="grey">Continue</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+				href="#" class="grey">Start Over</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+				href="#" class="grey">Remove</a>
+		</div>
+	</div>
+</div>
+<!-- The complete goal has to be resolved in the Server side, Hence the below code is not used.
+
+<div class="greybox complete" ng-repeat="goal in complete_goals">
+	<div class="left">
+		<img class="icon-small" align="absmiddle"
+			ng-src="img/{{goal.img.src}}" />
+	</div>
+	<div class="overflowfix">
+		<h3>
+			<a href="#">{{goal.title}}</a>
+		</h3>
+		<div class="progressbar">
+			<div class="progress-green" style="width: 100%"></div>
+		</div>
+		&nbsp;&nbsp;<span class="smalltext">(Complete)</span><br />
+		<div class="plandate">
+			Started {{goal.start_date}}<br /> Completed {{goal.end_date}}
+		</div>
+		<div class="smalltext">
+			<a href="#" class="grey">Start Over</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+				href="#" class="grey">Remove</a>
+		</div>
+	</div>
+</div>
+-->

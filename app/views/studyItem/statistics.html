@@ -1,0 +1,116 @@
+<!--<div class="bigtext">-->
+  <!--<p ng-show="showAttempts()"> {{attempts}} Attempts</p>-->
+  <!--<p ng-hide="attempts"> 0 Attempts</p>-->
+<!--</div>-->
+<!--<div id="results">-->
+	<!--<div data-result-bar data-title=" My Results" data-correct="{{correct}}" data-incorrect="{{incorrect}}" data-cp="{{cp}}" data-ip="{{icp}}"> </div>-->
+    <!--<br />-->
+    <!--<div data-result-bar data-title="Average results" data-cp="{{acp}}" data-ip="60"> </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; MASTERY & DIFFICULTY &ndash;&gt;-->
+
+<!--&lt;!&ndash;  "not sure why this is needed here"<div data-level-bar data-title="Mastery" ng-show="showMastery()" data-level={{usi.mastery}}></div> &ndash;&gt;-->
+<!--<div ng-show="showMastery()">-->
+  <!--<h4>Mastery:</h4>-->
+  <!--<div class="greenbar"><img ng-show = "isMastered" src="img/icon_checkmark_white.png" width="17" height="18" /></div>-->
+  <!--<div class="yellowbar"><img ng-show = "isIntermediate" src="img/icon_checkmark_white.png" width="17" height="18" /></div>-->
+  <!--<div class="redbar"><img ng-show = "isBeginner" src="img/icon_checkmark_white.png" width="17" height="18" /></div>-->
+<!--</div>-->
+
+  <!--<br clear="all" /><br />-->
+
+<!--&lt;!&ndash;-->
+<!--/* This shold probably be moved to a diffeent section as this is not part of study item statistics*/-->
+<!--<div data-level-bar data-title="Difficulty" ng-show="item.difficulty" data-level={{item.difficulty}}></div>-->
+<!--<div ng-hide="item.difficulty">-->
+ <!--<h2>Difficulty:</h2>-->
+ <!--<div class="greenbar"><img ng-show = "isEasyStudyItem" src="img/icon_checkmark_white.png" width="17" height="18" ></div>-->
+   <!--<div class="yellowbar"></div>-->
+ <!--<div class="redbar"><img ng-show = "isDifficultStudyItem" src="img/icon_checkmark_white.png" width="17" height="18" ></div>-->
+<!--</div>-->
+
+<!--&ndash;&gt;-->
+
+<!--&lt;!&ndash; LAST STUDIED &ndash;&gt;-->
+<!--<div ng-show="showLastStudied()">-->
+    <!--<p ng-show=lastStudied>-->
+        <!--<h4>Last Studied:</h4> {{lastStudied | date:'medium'}}-->
+  <!--</p>-->
+<!--</div>-->
+<!--<br clear="all" /><br />-->
+<!--<br />-->
+<!--<br />-->
+
+<div id="appPageWrapper">
+    <div class="container">
+        <section id="fullWidthPanel">
+            <header>
+                <h3 ng-click="$parent.switchQuestion('question-containerlink')" ng-show="attempts">you had {{attempts}} attempts</h3>
+                <h3 ng-hide="attempts">you had 0 attempts</h3>
+            </header>
+            <!-- // header -->
+
+
+            <div class="statisticBox">
+                <h3>My Results</h3>
+
+                <div class="statisticSmallBox correctBox">
+                    <p><strong>+{{correct}}</strong>Correct</p>
+                    <div data-donut-chart data-chart-data="{{cp}}" data-chart-type="correct"></div>
+                </div>
+                <!-- // small box -->
+                <div class="statisticSmallBox incorrectBox">
+                    <p><strong>-{{incorrect}}</strong>inCorrect</p>
+                    <div data-donut-chart data-chart-data="{{icp}}" data-chart-type="incorrect"></div>
+                </div>
+                <!-- // small box -->
+                <div class="clearfix"></div>
+                <h4>My Average Time</h4>
+                <span ng-show="hours > 0"><strong>{{hours}} Hours </strong></span><span ng-show="minutes > 0"><strong>{{minutes}} Minutes </strong></span><span ng-show="seconds > 0"><strong>{{seconds}} Seconds</strong></span>
+            </div>
+            <!-- // statist box -->
+
+            <div class="statisticBox">
+                <h3>Average Results</h3>
+
+                <div class="statisticSmallBox correctBox">
+                    <p><strong>+{{communityCorrect}}</strong>Correct</p>
+                    <div data-donut-chart data-chart-data="{{communityCp}}" data-chart-type="correct"></div>
+                </div>
+                <!-- // small box -->
+                <div class="statisticSmallBox incorrectBox">
+                    <p><strong>-{{communityIncorrect}}</strong>inCorrect</p>
+                    <div data-donut-chart data-chart-data="{{communityIcp}}" data-chart-type="incorrect"></div>
+                </div>
+                <!-- // small box -->
+                <div class="clearfix"></div>
+                <h4>Average Time</h4>
+              <span ng-show="hours > 0"><strong>{{avghours}} Hours </strong></span><span ng-show="minutes > 0"><strong>{{avgminutes}} Minutes </strong></span><span ng-show="seconds > 0"><strong>{{avgseconds}} Seconds</strong></span>
+            </div>
+            <!-- // statist box -->
+
+            <div class="masteryBox">
+                <h4>Mastery:</h4>
+                <span>55%</span>
+
+                <div class="progressBar">
+                    <div data-progress-bar data-chart-data="55"></div>
+                </div>
+
+                <div class="clearfix"></div>
+                <h4>Last studied:</h4>
+
+                <p>{{lastStudied | date:'medium'}}</p>
+
+            </div>
+            <!-- // mastery box -->
+
+            <div class="clearfix"></div>
+
+        </section>
+        <!-- // full width panel -->
+    </div>
+    <!-- // container -->
+</div>
+<!-- // app page wrapper -->

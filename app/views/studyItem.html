@@ -1,0 +1,53 @@
+<div data-header></div>
+<div data-green-bar data-name="{{title}}" data-gid="{{gid}}" data-active-tab ="study" data-caption="{{course.name}}"> </div>
+<data-study-item-sub-menu switch-tab='switchQuestion' selected data-is-tab-selected='isTabSelected' ></data-study-item-sub-menu>
+
+<div id="appPageWrapper" class="nopad">
+    <div class="container">
+
+        <div id="questionPageNvigation">
+            <div class="container">
+                <a class="prevBtn" href="javascript:void(0);" ng-hide="prevItem == 'start'" ng-click="move(prevItem);">previous question</a>
+                <a class="nextBtn" href="javascript:void(0);"ng-hide="nextItem == 'end'"  ng-click="move(nextItem);">next question</a>
+              <br/>
+              <div class="question-slider-wrapper">
+                <div class="question-slider">
+                  <div ui-slider="slider.options" step="1" use-decimals ng-model="slider.value"></div>
+                </div>
+              </div>
+
+              <div class="claerfix"></div>
+            </div>
+        </div><!-- // app page navigation -->
+
+        <data-ng-include data-src="q_main"></data-ng-include>
+
+
+        <!--<section id="questionFullWidthPanel">-->
+            <!--<data-question-new ></data-question-new>-->
+
+            <!--<aside id="questionRight">-->
+                <!--<header>-->
+                    <!--<h3>Select Your Answer</h3>-->
+                <!--</header>&lt;!&ndash; // header &ndash;&gt;-->
+
+                <!--<nav>-->
+                    <!--<ul>-->
+                        <!--<div data-gid="{{gid}}" data-uid="{{uid}}" data-sid="{{id}}" data-answers="answers" data-studycontentanswerchoices="" ng-show="item.studyItemType == 'P' && current_view == ''">-->
+                        <!--&lt;!&ndash;<li><a href="" class="activeQuestion">Verendi vur siedi</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><a href="" class="incorrectQuestion">Saggitis sem nibh id elit ipsum</a></li>&ndash;&gt;-->
+
+                    <!--</ul>-->
+                <!--</nav>-->
+
+                <!--<a href="#" class="submitBtn">submit</a>-->
+            <!--</aside>&lt;!&ndash; // question right &ndash;&gt;-->
+
+            <!--<div class="clearfix"></div>-->
+
+        <!--</section>&lt;!&ndash; // full width panel &ndash;&gt;-->
+    </div><!-- // container -->
+</div><!-- // app page wrapper -->
+
+<div data-app-footer></div>
+

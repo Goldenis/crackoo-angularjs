@@ -1,0 +1,20 @@
+<div class="btn-toolbar">
+		<div class="btn-group">
+			<button type="button" ng-class="{'btn-primary': isConfident, 'btn-default': !isConfident}" class="question-control btn navbar-btn" ng-click="toggle('C')">Confident</button>
+			<button type="button" ng-class="{'btn-primary': isNotSure, 'btn-default': !isNotSure}" class="question-control btn navbar-btn" ng-click="toggle('NS')">Not Sure</button>
+		</div>
+		<div class="btn-group">
+			<button type="button"  ng-class="{'btn-primary': isDifficult, 'btn-default':!isDifficult}" class="question-control btn navbar-btn" ng-click="toggle('D')">Difficult</button>
+			<button type="button" ng-class="{'btn-primary': isEasy, 'btn-default':!isEasy}" class="question-control btn navbar-btn" ng-click="toggle('E')">Easy</button>
+		</div>
+		<div class="btn-group">
+			<button type="button" ng-class="{'btn-primary': review, 'btn-default':!review}" class="question-control btn navbar-btn" ng-click="toggle('review')">Needs Review</button> 
+			<button type="button" ng-class="{'btn-primary': inapt, 'btn-default': !inapt}" class="question-control btn navbar-btn" ng-click="toggle('inapt')">Inappropriate</button>
+		</div>
+		<div class="btn-group">
+			<button type="button" ng-class="{'btn-primary': isLike, 'btn-default':!isLike}" class="question-control btn navbar-btn" ng-click="toggle('LK')">
+				<img src="img/icon_like.png" width="13" height="14" alt="Like" />
+			</button> 
+			<button type="button" ng-class="{'btn-primary': hide, 'btn-default':!hide}" class="question-control btn navbar-btn" ng-click="toggle('hide')">Hide</button>
+		</div>
+</div>

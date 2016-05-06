@@ -1,0 +1,54 @@
+<!-- START CONTAINER -->
+<div id="container">
+
+	<div data-header></div>
+	<div data-green-bar data-name="{{title}}"></div>
+	<br clear="all" />
+
+	<!-- MAIN CONTENT AREA -->
+	<div id="dashboard-column">
+
+		<div data-progress-summary data-reports="{{dashboard.progress_summary}}"></div>
+
+		<div data-friends-activity data-friends="{{friends}}"></div>
+
+	</div>
+
+	<div id="dashboard-column">
+
+		<div data-study-plans data-goals="{{goals}}"></div>
+
+	</div>
+
+	<div id="dashboard-column" class="colright">
+
+		<!-- JOURNAL ENTRY -->
+		<h2>
+			<img src="img/icon_journal.png" alt="Journal" width="62" height="38"
+				align="absmiddle" />Add a Journal Entry
+		</h2>
+
+		<div class="greybox">
+			<textarea rows=4></textarea>
+			<br /> <br />
+
+			<div class="right">
+				<img src="img/button_add.png" width="83" height="23" alt="ADD" />
+			</div>
+			<br clear="all" />
+		</div>
+		<!-- END JOURNAL ENTRY -->
+
+		<br />
+
+		<!-- QUESTIONS -->
+		<div  data-questions data-qs="{{questions}}"></div>
+		<!-- END QUESTIONS -->
+
+	</div>
+	<!-- END RIGHT COLUMN -->
+
+	<br clear="all" /> <br />
+
+</div>
+

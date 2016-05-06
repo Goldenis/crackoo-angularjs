@@ -1,0 +1,17 @@
+<aside id="questionRight" ng-hide="showResult == 'true'">
+    <header ng-hide="itemType == 'S' || answers.length == 0">
+        <h3>Select Your Answer</h3>
+    </header><!-- // header -->
+
+    <nav ng-hide="itemType == 'S'  || answers.length == 0">
+        <ul>
+    <!--<answer-option ng-repeat="ans in answers" explanation="{{ans.explanation}}" correct="{{ans.correct}}" text="{{ans.description}}"  id="{{ans.choiceID}}" "ng-click="toggleSelect('{{ans.choiceID}}')></answer-option>-->
+          <answer-option ng-repeat ="ans in answers"  explanation="{{ans.explanation}}" correct="{{ans.correct}}" text="{{ans.description}}"  id="{{ans.choiceID}}"  active="ans.active" ng-hide="itemType == 'E' && $index != 0"></answer-option>
+        </ul>
+    </nav>
+
+    <a href="javascript:void(0);" class="submitBtn" ng-click="submit()" ng-hide="itemType == 'S' || answers.length == 0">submit</a>
+</aside><!-- // question right -->
+
+<div class="clearfix"></div>
+

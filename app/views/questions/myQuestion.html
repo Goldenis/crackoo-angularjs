@@ -1,0 +1,54 @@
+<article class="questionListBox">
+    <div class="questionImage">
+        <img ng-src="{{imgUrl}}" alt="" width="64" height="64">
+    </div>
+    <!-- // question image -->
+    <div class="questionAuthor">
+        <p>{{autherName}}</p>
+        <small>{{creationTime | date:'medium'}}</small>
+    </div>
+    <!-- //author -->
+    <div class="questionContent">
+
+
+        <h3 ng-hide="isAnswerVisibleBtn">{{description}} </h3>
+
+        <div class="referenceActions" ng-show="referenceActionsShow" ng-hide="isAnswerVisibleBtn">
+            <a class="editBtn" ng-click="edit()">edit</a>
+            <a class="delBtn" ng-click="delete(id)">delete</a>
+        </div>
+
+        <span class="answerBtn toogle-link" ng-hide="isAnswerVisibleBtn"> {{ answers.length > 1 ? answers.length + ' answers' : answers.length + ' answer'}} </span>
+
+
+        <div id="answerWrapper" class="toogle-content">
+
+            <div data-my-question-answer data-id={{answer.id}} data-description={{answer.description}} data-img-url={{answer.imgUrl}} data-user="answer.user" ng-repeat="answer in answers" ></div>
+
+        </div>
+        <!-- // anseer wrapper -->
+
+        <div class="clearfix"></div>
+        <a class="answerQuestionBtn" ng-click="newAnswer()" ng-hide="isAnswerVisible || isAnswerVisibleBtn">answer this question</a>
+        <input type="text" placeholder="Your answer ..." onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Your answer ...'" ng-model="tempAnswer" ng-show="isAnswerVisible"/>
+        <a class="submitBtn" ng-show="isAnswerVisible"  ng-click="saveAnswer()">submit</a>
+        <a class="cancelBtn" ng-show="isAnswerVisible"  ng-click="cancelAnswer()">cancel</a>
+
+        <input type="text" placeholder="Your question ..." onfocus="this.placeholder = ''"
+               onblur="this.placeholder = 'Your question ...'" ng-model="tempDescription" ng-show="isEditVisible"/>
+        <a class="submitBtn" ng-show="isEditVisible"  ng-click="save()">submit</a>
+        <a class="cancelBtn" ng-show="isEditVisible"  ng-click="cancel()">cancel</a>
+
+        <div class="voteBox">
+            <span class="likeBox"><a ng-click="like(userid, id)">Like</a> <small>{{likes}}</small></span>
+            <span class="dislikeBox"><a ng-click="dislike(userid, id)">Dislike</a> <small>{{dislikes}}</small></span>
+        </div>
+        <!-- // vote -->
+
+
+    </div>
+    <!-- // question content -->
+    <div class="clearfix"></div>
+</article>
+<!-- // quesiton list box -->

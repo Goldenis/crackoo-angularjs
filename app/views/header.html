@@ -1,0 +1,72 @@
+<div id="topBar">
+    <div class="container" ng-if="first_name === undefined || first_name === null || first_name === ''">
+      <div id="branding">
+        <a href="#" title="Crackoo Homepage"><img src="img/logos/site-logo.png" alt="Crackoo"></a>
+      </div><!-- // branding -->
+      <nav id="mainNavigation">
+        <ul>
+          <li><a href="#forstudents" title="FOR STUDENTS">FOR STUDENTS</a></li>
+          <li><a href="#forschools" title="FOR SCHOOLS">FOR SCHOOLS</a></li>
+          <li><a href="#forpublishers" title="FOR PUBLISHERS">FOR PUBLISHERS</a></li>
+          <li><a href="#inaction" title="SEE IT IN ACTION">SEE IT IN ACTION</a></li>
+          <li><a href="#programs" title="PROGRAMS">PROGRAMS</a></li>
+          <li><a href="#contactanchor" title="Contact">Contact us</a></li>
+        </ul>
+      </nav><!-- // navigation -->
+      <div id="topCta">
+
+        <div id="loginMenu">
+          <ul>
+            <li>
+              <a href="#" class="loginBtn">Login</a>
+              <ul>
+                <li><a class="arrowUp"></a></li>
+                <li><a class="" ng-click="authenticate('facebook')">FACEBOOK LOGIN</a></li>
+                <li><a class="" ng-click="authenticate('google')">GOOGLE+ LOGIN</a></li>
+                <li class="clearfix"></li>
+                <li><a href="views/home-parts/login.html" class="mailLogin fancybox fancybox.iframe">Your Email</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+
+
+      </div><!-- // top call to action login -->
+      <div class="clearfix"></div>
+    </div><!-- // container -->
+
+    <div class="container" ng-if="first_name">
+        <div id="branding">
+            <a href="#" title="Crackoo Homepage"><img src="img/logos/site-logo.png" alt="Crackoo"></a>
+        </div>
+        <!--Not Logged In user header-->
+        <!-- // branding -->
+        <!--<nav id="mainNavigation">
+            <ul>
+                <li><a href="#forStudents" title="FOR STUDENTS">PROGRAMS</a></li>
+                <li><a href="#forSchools" title="FOR SCHOOLS">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- // navigation -->
+        <!--<div id="topCta">
+            <div id="loginMenu">
+                <ul>
+                    <li>
+                        <a href="#" class="loginBtn">Login</a>
+            </div>
+        </div>
+        <!-- // top call to action login -->
+
+        <!--Logged In user header-->
+        <nav id="welcomearea">
+            <p>welcome, {{first_name}}  </p>
+            <img ng-src="{{imgUrl}}" alt="">
+            <a ng-click="logout();" title="Logout" class="arrowDown"></a>
+        </nav><!-- // navigation -->
+
+        <div class="clearfix"></div>
+    </div>
+    <!-- // container -->
+    <!-- // top bar -->
+</div>

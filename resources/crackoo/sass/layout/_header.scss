@@ -1,0 +1,507 @@
+/* Table of Content
+		1. Homepage Header
+			1.1 Top Bar
+		2. App Header
+			2.1 App Header, Title and Links
+			2.2 App Sub Links
+			2.3 Welcome Area
+			2.4	Sub nav
+
+*/
+
+
+/*==========================================
+=            1. Homepage Header            =
+==========================================*/
+
+/*==========  1.1 Top Bar  ==========*/
+
+.homeBar {
+	position:fixed;
+	z-index: 999;	
+}
+
+#topBar {
+	width: 100%;
+	background: $color-white;
+	padding-top: 24px;
+	padding-bottom: 24px;
+		/* Branding Area , logo */
+		#branding {
+			width: 150px;
+			float: left;
+				img {
+					@extend .fading;
+						&:hover {
+							opacity: $opaque;
+						}
+				}
+		}
+		/* Top Main Navigation */
+		#mainNavigation {
+			width: 885px;
+			float: left;
+			padding-top: 5px;
+			text-align: right;
+			@include breakpoint(laptop) {
+				margin-left: 40px;
+				width: 670px;
+			}
+				ul {
+					li {
+						display: inline-block;
+						padding-left: 17px;
+						padding-right: 17px;
+						@include breakpoint(laptop) {
+							padding-left: 7px;
+							padding-right: 7px;
+						}	
+						a {
+							display: inline-block;
+							padding-top: 10px;
+							padding-bottom: 2px;
+							font-size: 12px!important;
+							color: $color-gray;
+							font-family: $font-nav;
+							padding-left: 0px;
+							padding-right: 0px;
+							@extend .uppercase;
+							@include breakpoint(laptop) {
+								font-size: 12px;
+							}
+								&:hover {
+									color: $color-green;
+									border-bottom:2px solid $color-green;
+								}
+						}
+					}
+				}
+		}
+		/* Top Login Button */
+		#topCta {
+			width: 122px;
+			float: right;
+			text-align: center;
+			padding-top: 2px;
+				a.loginBtn {
+					display: inline-block;
+					text-align: center;
+					background: $color-green;
+					color: $color-white;
+					width: 122px!important;
+					font-size: 12px;
+					@extend .uppercase;
+					font-family: $font-nav;
+					padding-top: 12px;
+					padding-bottom: 12px;
+					border-radius:32px;
+						&:hover {
+							opacity: $opaque;
+						}
+				}
+		}
+}
+
+/*-----  End of Top Bar  ------*/
+
+
+
+
+/*-----  End of 1. Homepage Header  ------*/
+
+/*=====================================
+=            2. App Header            =
+=====================================*/
+
+/*==========  2.1 App Header, title, links  ==========*/
+#appHeader {
+	background: #90a4ae;
+	height:115px;
+		/* Heading and search */
+		header {
+			float: left;
+			width: 500px;
+				h1 {
+					font-size: 34px;
+					color:$color-white;
+					display: inline-block;
+					padding-right: 25px;
+					margin-right: 25px;
+					border-right:1px solid #75868f;
+					padding-top: 5px;
+					padding-bottom: 10px;
+					margin-top: 35px;
+					font-family: $nova-light;
+					position: relative;
+					top:3px;
+				}
+				/* Search */
+				input[type="text"] {
+					background: none;
+					border:none;
+					font-size: 14px;
+					color: #58676f;
+					font-family: $nova-bold;
+					margin-top: -10px;
+				}
+				::-webkit-input-placeholder { /* WebKit browsers */
+				    color:    #58676f;
+				}
+				:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+				   color:    #58676f;
+				   opacity:  1;
+				}
+				::-moz-placeholder { /* Mozilla Firefox 19+ */
+				   color:    #58676f;
+				   opacity:  1;
+				}
+				:-ms-input-placeholder { /* Internet Explorer 10+ */
+				   color:    #58676f;
+				}
+				textarea:focus, input:focus{
+				    outline: 0;
+				}
+				input[type="submit"] {
+					width: 19px;
+					height: 19px;
+					border:none;
+					background: url(../img/ico/search.png);
+					text-indent: -9999px;
+					display: inline-block;
+					margin-right: 10px;
+					margin-top: -10px;
+						&:hover {
+							opacity: $opaque;
+							cursor: pointer;
+						}
+				}
+		}
+		/* Main Links at top */
+		#mainLinks {
+			float: right;
+			width: 500px;
+			text-align: right;
+				/* Styling Main link and icons */
+				a {
+					font-size: 14px;
+					@extend .uppercase;
+					color: $color-white;
+					font-family: $nova-bold;
+					text-align: center;
+					height: 85px;
+					display: inline-block;
+					width: 150px;	
+					padding-top: 30px;
+					border-left:1px solid #75868f;
+					margin-left:-3px;
+						&:hover {
+							background-color: #9db2bc;
+						}
+						&:last-child {
+							border-right:1px solid #75868f;	
+						}
+						span {
+							background: url(../img/ico/mainicosprite.png)  no-repeat top left;
+							background-repeat: no-repeat;
+							display: block;
+							width: 32px;
+							height: 32px;
+							margin: 0 auto;
+							margin-bottom: 18px;
+						}
+				}
+				/* Active state of Link */
+				.active {
+					background-color: #9db2bc;
+				}
+				/* Styling icon bgs for main links */
+				.studyIco {
+					background-position: 0px 0px;
+				}
+				.reportIco {
+					background-position: 0px -64px;
+				}
+				.questionsIco {
+					background-position: 0px -128px;
+				}
+		}
+}
+
+/*==========  2.2 App Sub Links  ==========*/
+#secNav {
+	background: $color-white;
+	border-bottom:1px solid #e9ebf1;
+	border-top:1px solid #f5f7f9;
+	height:63px;
+		/* Navigation */
+		nav {
+			li {
+				display: inline-block;
+				&:first-child a {
+					margin-left: 0px;
+				}
+				a {
+					display: inline-block;
+					font-size: 16px;
+					color: #313740;
+					font-family: $nova-bold;
+					padding-top: 25px;
+					padding-bottom: 20px;
+					margin-left: 11px;
+					margin-right: 11px;				
+						&:hover {
+							color: #81be4a;
+							border-bottom:3px solid #81be4a;
+						}
+				}
+					.active {
+							color: #81be4a;
+							border-bottom:3px solid #81be4a;						
+					}				
+			}
+		}
+}
+
+/*==========  2.3 Welcome Area  ==========*/
+#welcomearea {
+	float:right;
+	width: 250px;
+	text-align: right;
+	margin-top: -25px;
+	position:relative;
+	top:15px;
+		p {
+			color: $color-light-gray;
+			@extend .uppercase;
+			font-size: 13px;
+			display: inline-block;
+			font-family: $nova-bold;
+			position:relative;
+			top:-30px;	
+		}
+			img {
+				border-radius:180px;
+				margin-left: 15px;
+				border:3px solid #f5f7f9;
+				margin-right: 15px;
+				display: inline-block;
+			}
+		a {
+			display: inline-block;
+			width: 34px;
+			height: 34px;
+			text-indent: -9999px;
+			background: url(../img/ico/logout.png);
+			@extend .fading;
+			position: relative;
+			top:-19px;
+				&:hover {
+					opacity: $opaque;
+				}		
+		}
+}
+
+/*==========  2.4 Sub nav  ==========*/
+#subNav {
+	/* Sub navigation under header */
+	background: $color-white;
+	border-bottom:1px solid #e9ebf1;
+	border-top:1px solid #f5f7f9;
+	height:60px;
+	padding-top: 3px;
+		h4 {
+			display: inline-block;
+			float: left;
+			font-size: 16px;
+			color:#81be4a;
+			font-family: $nova-bold;
+			@extend .uppercase;
+			border-right:1px solid #ebeef1;
+			margin-right: 15px;	
+			padding-right: 25px;
+			height: 54px;
+			line-height: 54px;
+			padding-top: 3px;
+		}
+		ul {
+			display: inline-block;
+			float: left;
+			li {
+				display: inline-block;
+					padding-left: 13px;
+					padding-right: 13px;	
+					@include breakpoint(laptop) {
+						padding-left: 10px;
+						padding-right: 10px;
+					}			
+				a {
+					display: block;
+					font-size: 14px;
+					color:#313740;
+					font-family: $nova-bold;
+					border-bottom:3px solid #fff;	
+					float:left;
+					height: 57px;
+					line-height: 57px;
+						&:hover {
+							border-bottom:3px solid #81be4a;
+						}	
+					/* Icon Styling */
+					span {
+						display: block;
+						float:left;
+						width: 24px;
+						height: 24px;
+						background: #000;
+						margin-right: 15px;
+						position:relative;
+						top:15px;
+						background: url(../img/ico/subnavsprite.png);
+						background-repeat: no-repeat;
+					}			
+					/* Sprites */
+					.statIco {
+						background-position: 0px 0px;
+					}	
+					.questionIco {
+						background-position: 0px -24px;
+					}	
+					.discIco {
+						background-position: 0px -48px;
+					}	
+					.notesIco {
+						background-position: 0px -72px;
+					}	
+					.flashIco {
+						background-position: 0px -96px;
+					}	
+					.refIco {
+						background-position: 0px -120px;
+					}
+					.focusIco {
+						background-position: 0px -144px;
+					}
+					.progressIco {
+						background-position: 0px -168px;
+					}
+					.confIco {
+						background-position: 0px -192px;
+					}
+					.difIco {
+						background-position: 0px -216px;
+					}
+					.timelvlIco {
+						background-position: 0px -240px;
+					}
+					.revreportIco {
+						background-position: 0px -264px;
+					}
+					.studyIco {
+						background-position: 0px -288px;
+					}
+				}
+				.active {
+					border-bottom:3px solid #81be4a;
+				}
+			}
+		}
+}
+
+/*-----  End of 2. App Header  ------*/
+
+/*=================================
+=            Login Box            =
+=================================*/
+
+.fbLogin {
+	background: url(../img/ico/facebook.png);
+	background-repeat: no-repeat;
+	background-color: #3a57a1;
+	color:$color-white;
+	width: 200px;
+	height: 50px;
+	display:block;
+	float:left;
+	text-align: center;
+	font-size: 13px;
+	@extend .uppercase;
+	font-family:$nova-bold;
+	-webkit-border-top-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	border-top-left-radius: 6px;
+	background-position: center 25px;
+	padding-top: 80px;
+	&:hover {
+		background-color: #324e95;
+	}
+
+}
+
+.googleLogin {
+	background: url(../img/ico/google.png);
+	background-repeat: no-repeat;	
+	background-color: #da3c2b;
+	color:$color-white;
+	width: 200px;
+	height: 50px;
+	display:block;
+	float:left;
+	text-align: center;
+	font-size: 13px;
+	@extend .uppercase;
+	font-family:$nova-bold;	
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	border-top-right-radius: 6px;	
+	background-position: center 25px;
+	padding-top: 80px;
+	&:hover {
+		background-color: #ca3929;
+	}
+}
+
+.mailLogin {
+	color:$color-white;
+	width: 370px;
+	height: 130px;
+	display:block;
+	float:left;
+	text-align: center;
+	height: 62px;
+	font-size: 14px;
+	color:#acb3bf;
+	font-family:$nova-bold;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	line-height:60px;
+	text-align:left;
+	padding-left: 30px;
+	background: url(../img/ico/arrow.jpg);
+	background-color: #ffffff;	
+	background-repeat: no-repeat;
+	background-position: 90% center;
+	-webkit-border-bottom-right-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;	
+		&:hover {
+			background-color: #efecec;
+		}
+}
+
+.arrowUp {
+	display:block;
+	background:url(../img/ico/up.png);
+	background-repeat: no-repeat;
+	background-position: 85% bottom;
+	height: 25px;
+}
+
+/*-----  End of Login Box  ------*/
+
+.activeLink {
+		color: $color-green!important;
+		border-bottom:2px solid $color-green;
+}

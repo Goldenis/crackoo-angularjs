@@ -1,0 +1,33 @@
+<section id="fullWidthPanel">
+    <header>
+        <h3 ng-click="$parent.switchQuestion('question-containerlink')">join the discussion</h3>
+    </header>
+    <!-- // header -->
+    <article class="panelContent">
+        <input type="text" placeholder="Enter study note ..." onfocus="this.placeholder = ''"  ng-model="notesData"
+               onblur="this.placeholder = 'Enter study note ...'"/>
+        <button class="greenBtn" ng-click="addNotes(uid, sid)">add note</button>
+    </article>
+    <!-- // panel -->
+
+    <div class="referenceList">
+        <!--<div class="graydivider"></div>-->
+        <div id="questionsHeader">
+            <h3>Notes</h3>
+
+            <div class="demo-list">
+                <input tabindex="1" type="checkbox" id="input-1" ng-model="showMyNote" ng-click="toggleMyNotes()">
+            </div>
+            <p>Only show my notes
+            </p>
+
+            <div class="clearfix"></div>
+        </div>
+        <!--<h4>Notes</h4>-->
+        <div data-mynote data-creation-time={{N.creationDate}} data-sid={{sid}} data-uid="{{uid}}" data-id={{N.notesID}} data-description={{N.description}}  data-likes={{N.likes}} data-dislikes={{N.dislikes}} data-img-url={{N.imgUrl}} data-userid={{N.userid}} data-auther-name={{N.username}} data-del="delete(id)" ng-repeat="N in notesList"></div>
+        <br clear="all" />
+
+    </div>
+    <!-- // reference list -->
+
+</section>

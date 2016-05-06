@@ -1,0 +1,2142 @@
+/* Table of Content
+		1. Goals Page
+			1.1 Page Wrapper
+			1.2 Courses Content
+		2. Study Page  
+			2.1 Panel
+			2.2 Reference List
+
+*/
+
+/*=====================================
+=            1. Goals Page            =
+=====================================*/
+
+/*==========  1.1 Page Wrapper  ==========*/
+#appPageWrapper {
+	background: #f5f7f9;
+	min-height:500px;
+	padding-top: 70px;
+	padding-bottom: 100px;
+		/* Sidebar Navigation */
+		#sidebarNav {
+			border:1px solid $color-gray-lighter;
+			border-radius:4px;
+			width: 285px;
+			float:left;
+			background: $color-white;
+			@include breakpoint(laptop) {
+				width: 200px;
+			}
+				/* Sidebar heading */
+				h3 {
+					color: $color-light-gray;
+					font-family: $nova-bold;
+					font-size: 13px;
+					@extend .uppercase;
+					background: #fbfbfb;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					border-bottom:1px solid $color-gray-lighter;
+					padding-left: 25px;
+				}
+				/* navigation */
+				nav {
+					li {
+						display: block;
+						border-bottom:1px solid #f0f1f5;
+						/* sidebar link */
+						a {
+							font-size: 15px;
+							color:$color-dark-gray;
+							display: block;
+							padding-top: 20px;
+							padding-bottom: 20px;
+							padding-left: 22px;
+							border-left:3px solid $color-white;
+							font-family: $nova-regular;
+							/* hover over sidebar links */
+								&:hover {
+									border-left:3px solid $color-light-green;
+									color:$color-light-green;
+								}
+						}
+						/* Active link state green color */
+						.active {
+							border-left:3px solid $color-light-green;
+							color:$color-light-green;
+						}						
+					}
+				}
+		}
+}
+
+
+/*==========  1.2 Courses Content  ==========*/
+#appContentRight {
+	float:right;
+	width: 860px;
+	@include breakpoint(laptop) {
+		width: 785px;
+	}
+		/* Course box */
+		.courseBox {
+			background: $color-white;
+			border:1px solid $color-gray-lighter;
+			border-radius:4px;
+			margin-bottom: 10px;
+				/* Course Image */
+				.courseImage {
+					width: 216px;
+					float: left;
+					padding: 0px;
+					margin: 0px;
+					height: 231px;
+				}
+				/* Course Content */
+				.courseDescription {
+					float: left;
+					width: 360px;
+					padding-left: 40px;
+					padding-top: 40px;
+					padding-right: 40px;
+					@include breakpoint(laptop) {
+						width: 345px;
+						padding-right: 0px;
+					}
+					@extend .goalsDescriptions;
+				}
+				/* Course Details */
+				.courseDetails {
+					@extend .goalsDetailsStyling;
+				}
+		}
+}
+
+
+/*-----  End of 1. Goals Page  ------*/
+
+
+/*=====================================
+=            2. Study Page            =
+=====================================*/
+
+
+/*==========  2.1 Panel  ==========*/
+
+#fullWidthPanel {
+	background: $color-white;
+	border:1px solid $color-gray-lighter;
+	border-radius:4px;
+	margin-bottom: 20px;
+	padding-bottom: 40px;
+	/* Header */
+		header {
+				background: $color-light-green;
+				border:none;
+				padding-top: 23px;
+				padding-bottom: 18px;
+				padding-left: 20px;		
+			h3 {
+				font-size: 13px;
+				color: $color-white;
+				font-family: $nova-bold;
+				@extend .uppercase;
+				background: url(../img/bg/arrow-back.png);
+				background-repeat: no-repeat;
+				background-position: left center;
+				padding-left: 35px;		
+				padding-top: 6px;
+				padding-bottom:5px;
+				display: inline-block;			
+			}
+			/* Add Card Button */
+			a {
+				background: $color-white;
+				text-align: center;
+				font-size: 14px;
+				color:$color-light-green;
+				@extend .uppercase;
+				font-family: $nova-bold;
+				margin-right: 40px;
+				float: right;
+				width: 127px;
+				border-radius:4px;
+				padding-top: 12px;
+				padding-bottom: 12px;
+				margin-top: -9px;
+					&:hover {
+						opacity: $opaque;
+					}
+			}
+			.focusIco {
+				background: url(../img/ico/focus.png);
+				background-repeat: no-repeat;
+				background-position: left center;				
+			}
+			.activityIco {
+				background: url(../img/ico/activityico.png);
+				background-repeat: no-repeat;
+				background-position: left center;		
+			}
+			.levelIco {
+				background: url(../img/ico/levelico.png);
+				background-repeat: no-repeat;
+				background-position: left center;	
+			}
+			.progressIco {
+				background: url(../img/ico/progressico.png);
+				background-repeat: no-repeat;
+				background-position: left center;	
+			}
+			.studyIco {
+				background: url(../img/ico/study.png);
+				background-repeat: no-repeat;
+				background-position: left center;	
+			}
+	}
+	/* Form */
+	.panelContent {
+		padding-top: 40px;
+		padding-left: 40px;
+		padding-right: 40px;
+			/* Input */
+			input[type="text"] {
+				border:1px solid #cfd8dc;
+				width: 98%;
+				padding-top: 25px;
+				padding-bottom: 25px;
+				font-size: 18px;
+				color: #546e7a;
+				font-family: $nova-regular;
+				padding-left: 2%;
+			}
+			textarea {
+				border:1px solid #cfd8dc;
+				width: 98%;
+				padding-top: 17px;
+				padding-bottom: 16px;
+				font-size: 18px;
+				color: #546e7a;
+				font-family: $nova-regular;
+				padding-left: 2%;
+				margin-bottom: 30px;
+				height: 75px;				
+			}
+			/* Add button */
+			button {
+				display: inline-block;
+				background: #90a4ae;
+				color: $color-white;
+				@extend .uppercase;
+				font-size: 14px;
+				font-family: $nova-bold;
+				padding-top: 12px;
+				padding-bottom: 12px;
+				border:none;
+				border-radius:4px;
+				margin-top: 30px;
+				padding-left: 32px;
+				padding-right: 32px;
+					&:hover {
+						opacity: $opaque;
+						cursor:pointer;
+					}
+			}
+			/* Save button */
+			.saveBtn {
+				background: #81be4a;
+				width: 127px;
+				padding-left: 0px;
+				padding-right: 0px;
+				margin-right: 25px;
+				margin-top: 10px;
+			}
+			/* Cancel button */
+			.cancelBtn {
+				width: 127px;
+				margin-top: 10px;
+			}
+			/* green Btn */
+			.greenBtn {
+				background: #81be4a;
+			}
+	}
+}
+
+/*==========  2.2 Reference List  ==========*/
+.referenceList {
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 40px;
+	padding-bottom: 30px;
+		/* Heading */
+		h4 {
+			  font-size: 20px;
+			  color: $color-dark-gray;
+			  font-family: "proxima_nova_rgregular";
+			  border-bottom-width: 1px;
+			  border-bottom-style: solid;
+			  border-bottom-color: #dde4e6;
+			  padding-bottom: 15px;			
+		}
+		/* Refenrece Article */
+		.referenceArticle {
+				padding-top: 30px;
+				padding-bottom: 30px;
+				border-bottom:1px solid #f0f1f5;
+			/* Reference Avatar Image */
+			.referenceImage {
+				float:left;
+				width: 100px;
+					img {
+						border-radius:180px;
+					}
+			}
+			/* Reference user Details */
+			.referenceUser {
+				float:left;
+				width: 180px;
+					p {
+						color: $color-dark-gray;
+						font-family: $nova-bold;
+						font-size: 20px;
+						margin-top: 15px;						
+					}
+					small {
+						font-size: 14px;
+						color: #546e7a;
+						font-family: $nova-regular;						
+					}
+			}
+			/* Reference Link */
+			.referenceLink {
+				float:left;
+				width: 550px;
+				@include breakpoint(laptop) {
+					width: 450px;
+				}
+					a {
+						color:$color-light-green;
+						font-size: 16px;
+						font-family: $nova-bold;
+						margin-top: 20px;
+						display: inline-block;
+							&:hover {
+								opacity: $opaque;
+								text-decoration: underline;
+							}				
+					}
+					/* Description on Notes Page */
+					p {
+						font-size: 14px;
+						color:#313740;
+						line-height: 21px;
+						margin-top: 15px;
+						font-family: $nova-regular;
+					}
+					/* Like box */
+					.likeBox {
+						font-family: $nova-bold;
+							a {
+								@extend .uppercase;
+								color:#9dabb9;
+								font-size: 12px;
+								border-right:1px solid #ebeef1;
+								padding: 0px;
+								padding-top: 3px;
+								padding-bottom: 2px;
+								padding-right: 10px!important;
+								display: inline-block;
+								background: url(../img/ico/like.png);
+								background-repeat: no-repeat;
+								background-position: top left;
+								padding-left: 21px;
+								padding-top: 1px;
+							}
+							small {
+								color:#8bc34a;
+								display: inline-block;
+								padding-left: 10px;
+								font-size: 12px;
+							}
+					}
+					.dislikeBox {
+						margin-left: 25px;
+						font-family: $nova-bold;
+							a {
+								@extend .uppercase;
+								color:#9dabb9;
+								font-size: 12px;
+								border-right:1px solid #ebeef1;
+								padding: 0px;
+								padding-top: 3px;
+								padding-bottom: 2px;
+								padding-right: 10px!important;
+								display: inline-block;
+								background: url(../img/ico/dislike.png);
+								background-repeat: no-repeat;
+								background-position: top left;
+								padding-left: 21px;
+								padding-top: 1px;								
+							}
+							small {
+								color:#d54734;
+								display: inline-block;
+								padding-left: 10px;
+								font-size: 12px;
+							}
+					}					
+			}
+			/* Actions buttons */
+			.referenceActions {
+				float:right;
+				width: 150px;
+				padding-top: 20px;
+				/* Action Buttons and Links */
+					a {
+						color: #9dabb9;
+						font-size: 12px;
+						@extend .uppercase;
+						padding-left: 20px;
+						font-family: $nova-bold;
+						padding-right: 20px;	
+							&:hover {
+								opacity: $opaque;
+							}				
+					}
+					/* Edit Button */
+					.editBtn {
+						background: url(../img/ico/edit.png);
+						background-repeat: no-repeat;
+						background-position: left center;
+						padding-right: 10px;
+						border-right:1px solid #ebeef1;
+					}
+					/* Delete Button */
+					.delBtn {
+						background: url(../img/ico/delete.png);
+						background-repeat: no-repeat;
+						background-position: left center;
+					}					
+			}
+		}
+}
+
+/*-----  End of 2. Study Page  ------*/
+
+/*==========================================
+=            3. Flash Card Page            =
+==========================================*/
+
+.flashCard {
+	background: #f9fafb;
+	border:1px solid #cfd8dc;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	padding-left: 25px;
+	padding-right: 25px;
+		p {
+			font-size: 21px;
+			color:#313740;
+			line-height: 31px;
+			font-family:$nova-bold;
+			margin-bottom: 30px;
+		}
+				/* Action Buttons and Links */
+					a {
+						color: #8f9faf;
+						font-size: 12px;
+						@extend .uppercase;
+						padding-left: 20px;
+						font-family: $nova-bold;
+						padding-right: 20px;	
+							&:hover {
+								opacity: $opaque;
+							}				
+					}
+					/* Edit Button */
+					.editBtn {
+						background: url(../img/ico/edit.png);
+						background-repeat: no-repeat;
+						background-position: left center;
+						padding-right: 10px;
+						border-right:1px solid #ebeef1;
+					}
+					/* Delete Button */
+					.delBtn {
+						background: url(../img/ico/delete.png);
+						background-repeat: no-repeat;
+						background-position: left center;
+					}			
+}
+
+/*-----  End of 3. Flash Card Page  ------*/
+
+
+
+/*=========================================
+=            4. Question pages            =
+=========================================*/
+
+/*==========  4.1 Question Step  ==========*/
+#questionPageNvigation {
+	padding-top: 30px;
+	padding-bottom: 35px;
+		a {
+			float: right;
+			font-size: 13px;
+			color:#90a4ae;
+			@extend .uppercase;
+			font-family: $nova-bold;
+				&:hover {
+					opacity: $opaque;
+				}
+		}
+		.nextBtn {
+			background: url(../img/ico/next.png);
+			background-repeat: no-repeat;
+			padding-right: 20px;
+			background-position: center right;
+			margin-right: 20px;
+		}
+}
+
+
+
+/* Question wrapper / panel */
+#questionFullWidthPanel {
+	border:1px solid $color-gray-lighter;
+	border-radius:4px;
+	margin-bottom: 20px;
+	position:relative;
+	background: url(../img/bg/questiondivider.jpg);
+ background-repeat: repeat-y;
+	background-position: 760px top;
+	background-color: $color-white;	
+		/* Question left Wrapper */
+		.questionLeft {
+			float: left;
+			width: 760px;
+			min-height: 400px;
+
+			@include breakpoint(laptop) {
+				width: 690px;
+			}
+				header {
+						background: $color-light-green;
+						border:none;
+						padding-top: 23px;
+						padding-bottom: 18px;
+						padding-left: 20px;
+							h2 {
+								font-size: 18px;
+								color: $color-white;
+								font-family: $nova-bold;
+								@extend .uppercase;
+								background: url(../img/ico/menu.png);
+								background-repeat: no-repeat;
+								background-position: left top;
+								padding-left: 35px;		
+								padding-top: 6px;
+								padding-bottom:5px;
+								display: inline-block;	
+								float:left;
+								width: 300px;						
+									a {
+										color: $color-white;
+											&:hover {
+												opacity: $opaque;
+											}
+									}		
+							}
+				}
+
+
+				/* Controls in header */
+				.questionControls {
+					float: right;
+					margin-top: -5px;
+						small {
+							color:$color-white;
+							font-size: 14px;
+							font-family: $nova-bold;
+							display: inline-block;
+							margin-right: 15px;
+							position:relative;
+							top:7px;
+						}
+						span {
+							font-size: 21px;
+							color:$color-white;
+							font-family: $nova-bold;
+							position:relative;
+							top:8px;							
+						}
+						/* Play and pause */
+						a {
+							display: inline-block;
+							width: 31px;
+							height: 31px;
+							text-indent: -9999px;
+							margin-left: 10px;
+							margin-right: 10px;
+								&:hover {
+									opacity: $opaque;
+								}
+						}
+						.playBtn {
+							background: url(../img/ico/play.png);
+							margin-right: 20px;
+							margin-left: 5px;
+						}
+						.playBtn2 {
+							background: url(../img/ico/playBtn.png);
+							margin-right: 5px;
+							margin-left: 20px;
+						}
+						.pauseBtn {
+							background: url(../img/ico/pause.png);
+							border-right:1px solid #6da639;
+							background-repeat: no-repeat;
+							padding-right: 20px;
+						}
+				}
+		}	
+		/* question content */
+		.questionWrapper {
+			padding-top: 30px;
+			padding-bottom: 80px;
+			padding-left: 30px;
+			padding-right: 30px;
+			.labelHard {
+				background: #313740;
+				font-size: 11px;
+				@extend .uppercase;
+				font-family: $nova-bold;
+				color:$color-white;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-top: 7px;
+				padding-bottom: 7px;
+				display: inline-block;
+				margin-bottom: 15px;
+
+			}
+			p {
+				font-size: 21px;
+				color:#313740;
+				font-family: $nova-bold;
+				line-height: 32px;
+			}
+		}
+			/* Question Fotoer */
+			footer {
+				border-top:1px solid #e7ebee;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-top: 25px;
+				padding-bottom: 25px;
+				position:absolute;
+				bottom:0px;
+				width: 740px!important;
+					/* Review Button */
+					.reviewBtn {
+						display: inline-block;
+						font-size: 11px;
+						color:$color-white;
+						font-family: $nova-bold;
+						height: 26px;
+						line-height: 26px;
+						background: #8bc34a;
+						padding-left: 20px;
+						padding-right: 20px;
+						border-radius:32px;
+						border:1px solid #fff;
+
+							&:hover {
+								opacity: $opaque;
+							}
+					}
+					/* Like Button */
+					.likeBtn {
+						display: inline-block;
+						font-size: 11px;
+						color:#81be4a;
+						font-family: $nova-bold;
+						height: 26px;
+						line-height: 26px;
+						background: #8bc34a;
+						padding-left: 38px;
+						padding-right: 38px;
+						border-radius:32px;
+						background: $color-white;
+						border:1px solid #dee2e6;
+						margin-left: 55px;
+							&:hover {
+								opacity: $opaque;
+							}
+					}
+			}	
+		/* question ruight sidebar */
+		#questionRight {
+			float: right;
+			width: 407px;
+			@include breakpoint(laptop) {
+				width: 307px;
+			}
+				header {
+					padding-left: 35px;
+					padding-top: 29px;
+					padding-bottom: 25px;
+					h3 {
+						font-size: 16px;
+						color:#313740;
+						font-family: $nova-bold;
+					}
+				}
+				/* Submit Button */
+				.submitBtn {
+					display: inline-block;
+					padding-left: 28px;
+					padding-right: 28px;
+					padding-top: 12px;
+					padding-bottom: 12px;
+					color:$color-white;
+					border-radius:4px;
+					background: #81be4a;
+					font-family: $nova-bold;
+					font-size: 14px;
+					@extend .uppercase;
+					margin-left: 35px;
+					margin-bottom: 20px;
+						&:hover {
+							opacity: $opaque;
+						}
+
+				}
+				/* Sidebar questions */
+				nav {
+					margin-bottom: 30px;
+					li {
+						a {
+							display: block;
+							font-size: 15px;
+							background: $color-white;
+							font-family: $nova-regular;
+							padding-left: 30px;
+							padding-right: 30px;
+							padding-top: 17px;
+							padding-bottom: 17px;
+							color:#313740;	
+							border-top:1px solid #fff;
+							border-bottom:1px solid #ebecf1;
+								&:active {
+									background: url(../img/ico/checked.png);
+									background-repeat: no-repeat;
+									background-position: 90% center;
+									background-color: #e8f3db;
+								}
+								/*
+								&:hover {
+									background: url(../img/ico/checked.png); 
+									background-repeat: no-repeat;
+									background-position: 90% center;
+									background-color: #e8f3db;
+									border-top:1px solid #b9db92;
+									border-bottom:1px solid #b9db92;	
+									color:#81be4a!important;
+									font-family: $nova-bold!Important;	
+								}		*/		
+						}
+						/* Active state of question link */
+						.activeQuestion {
+							background: url(../img/ico/checked.png)!important;
+							background-repeat: no-repeat!important;
+							background-position: 90% center!important;
+							background-color: #e8f3db!important;
+							border-top:1px solid #b9db92;
+							border-bottom:1px solid #b9db92;	
+							color:#81be4a!important;
+							font-family: $nova-bold!Important;					
+						}	
+
+						.incorrectQuestion {
+							background: url(../img/ico/incorrect.png)!important;
+							background-repeat: no-repeat!important;
+							background-position: 90% center!important;
+							background-color: #f3dbdb!important;
+							border-top:1px solid #d68484;
+							border-bottom:1px solid #d68484;	
+							color:#313740!important;
+							font-family: $nova-regular!Important;					
+						}							
+
+					}
+				}
+		}	
+	
+}
+
+/*-----  End of 4. Question pages  ------*/
+
+/*=========================================
+=            5. Question Steps            =
+=========================================*/
+
+/*-----  End of 5.1 Question Step Left  ------*/
+#questionStepLeft {
+	width: 830px;
+	float:left;
+	background: $color-white;
+	border:1px solid $color-gray-lighter;
+	border-radius:4px;
+	margin-bottom: 20px;
+	@extend .questionHeader;
+	@extend .questionFooter;
+	@include breakpoint(laptop) {
+		width: 700px;
+	}
+		/* Content inside wrapper */
+		article {
+			padding-top: 30px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 41px;
+		}
+		.playBtn {
+			border-left:1px solid #6da639;
+			margin-left: 15px!important;
+			padding-left: 15px;
+			background-repeat: no-repeat!important;
+			background-position: right center!important;
+		}
+		/* Question Step left box */
+		.stepLeft {
+			float: left;
+			width: 365px;
+			margin-bottom: 20px;
+			@include breakpoint(laptop) {
+				width: 300px;
+			}
+				dl {
+
+					dd {
+						padding-top: 20px;
+						font-size: 13px;
+						@extend .uppercase;
+						color:#b0bec5;
+						font-family: $nova-bold;
+					}
+					dt {
+						border-bottom:1px solid #e9ebf1;
+						padding-bottom: 20px;
+						padding-top: 10px;
+						font-size: 18px;
+						color:#2d2c4a;
+						font-family: $nova-bold;background: url(../img/ico/checked.png);
+						background-repeat: no-repeat;
+						background-position: 90% top;
+					}
+				}
+		}
+		/* Right Box */
+		.stepRight {
+			float: right;
+			width: 365px;
+			@include breakpoint(laptop) {
+				width: 300px;
+			}			
+				h4 {
+					color:#b0bec5;
+					font-size: 13px;
+					font-family: $nova-bold;
+					@extend .uppercase;
+					margin-bottom: 10px;
+
+				}
+				p {
+					color:#2d2c4a;
+					font-size: 14px;
+					font-family: $nova-regular;
+					line-height: 20px;
+				}
+		}	
+		/* question content */
+		.questionWrapper {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			padding-left: 30px;
+			padding-right: 100px;
+			@extend .questionContent;
+		}			
+		
+}
+/* Narrow Left Question for step 3 */
+.questionStepLeftNarrow {
+	width: 760px!important;
+	@include breakpoint(laptop) {
+		width: 670px!important;
+	}
+		.questionWrapper {
+			min-height: 184px;
+		}
+}
+
+/*====================================================================
+=            5.2 Question Step Right - sidebar ntext step            =
+====================================================================*/
+
+#questionStepRight {
+	float:right;
+	width: 260px;
+	background: $color-white;
+	border:1px solid $color-gray-lighter;
+	border-radius:4px;
+	margin-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 30px;
+	padding-bottom: 45px;
+	@include breakpoint(laptop) {
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 240px;
+	}
+		.submitBtn {
+			display: inline-block;
+			padding-left: 28px;
+			padding-right: 28px;
+			padding-top: 13px;
+			padding-bottom: 12px;
+			color:$color-white;
+			border-radius:4px;
+			background: #81be4a;
+			font-family: $nova-bold;
+			font-size: 14px;
+			margin-top: 25px;
+			@extend .uppercase;
+				&:hover {
+					opacity: $opaque;
+				}
+
+		}	
+		h3 {
+			font-size: 16px;
+			color:#2d2c4a;
+			margin-bottom: 15px;
+			font-family: $nova-bold;
+		}
+		p {
+			font-size: 42px;
+			color:#81be4a;
+			font-family: $nova-bold;
+		}
+		small {
+			font-size: 16px;
+			color:#78909c;
+			font-family: $nova-bold;
+			display: block;
+			padding-top: 13px;
+		}
+		.graydivider {
+			margin-top: 25px;
+			margin-bottom: 25px;
+			border-top:1px solid #e9ebf1;
+		}
+}
+
+/* Wider Sidebar area for step 3 */
+.questinStepRightWider {
+	width: 330px !important;
+	padding-bottom: 5px!important;
+	@include breakpoint(laptop) {
+		width: 270px!important;
+		background: #000;
+	}
+		/* Result box */
+		.resultBox {
+			float: left;
+			width: 150px;
+			text-align: center;
+			margin-bottom: 25px;
+			@include breakpoint(laptop) { 
+				width: 135px;
+			}
+				img {
+					margin-top: 15px;
+				}
+				span {
+					font-size: 18px;
+					color:#7ab644;
+					font-family: $nova-bold;
+						strong {
+							font-size: 14px!important;
+							color:#5b5f65;
+							font-family: $nova-regular;
+							@extend .uppercase;
+							padding-left: 20px;
+							font-weight: normal;
+						}
+				}
+		}
+}
+
+
+
+
+/*-----  End of 5.2 Question Step Right - sidebar ntext step  ------*/
+
+
+
+/*-----  End of 5. Question Steps  ------*/
+
+
+/*==========================================
+=            6. Discussion Page            =
+==========================================*/
+
+.discussionDetail {
+	float:left;
+	width: 600px;
+		p {
+			font-size: 14px;
+			color:#313740;
+			line-height: 21px;
+			margin-top: 25px;
+			font-family: $nova-regular;
+			margin-bottom: 20px;
+		}	
+		h3 {
+			color: $color-dark-gray;
+			font-family: $nova-bold;
+			font-size: 20px;
+			margin-top: 15px;						
+		}
+		h6 {
+			font-size: 14px;
+			color: #546e7a;
+			margin-top: 5px;
+			font-family: $nova-regular;						
+		}		
+	/* Like box */
+	.likeBox {
+		font-family: $nova-bold;
+			a {
+				@extend .uppercase;
+				color:#9dabb9;
+				font-size: 12px;
+				border-right:1px solid #ebeef1;
+				padding: 0px;
+				padding-top: 3px;
+				padding-bottom: 2px;
+				padding-right: 10px!important;
+				display: inline-block;
+				background: url(../img/ico/like.png);
+				background-repeat: no-repeat;
+				background-position: top left;
+				padding-left: 21px;
+				padding-top: 1px;
+			}
+			small {
+				color:#8bc34a;
+				display: inline-block;
+				padding-left: 10px;
+				font-size: 12px;
+			}
+	}
+	.dislikeBox {
+		margin-left: 25px;
+		font-family: $nova-bold;
+			a {
+				@extend .uppercase;
+				color:#9dabb9;
+				font-size: 12px;
+				border-right:1px solid #ebeef1;
+				padding: 0px;
+				padding-top: 3px;
+				padding-bottom: 2px;
+				padding-right: 10px!important;
+				display: inline-block;
+				background: url(../img/ico/dislike.png);
+				background-repeat: no-repeat;
+				background-position: top left;
+				padding-left: 21px;
+				padding-top: 1px;								
+			}
+			small {
+				color:#d54734;
+				display: inline-block;
+				padding-left: 10px;
+				font-size: 12px;
+			}
+	}	
+
+}
+
+/*-----  End of 6. Discussion Page  ------*/
+
+/*==========================================
+=            7. Goals More Page            =
+==========================================*/
+
+/*==========  7.1 Action Bar  ==========*/
+
+.actionBar {
+	padding-top: 31px;
+	padding-bottom: 31px;
+		/* Actual link */
+		a {
+			font-size: 13px;
+			color:#a9b2bc;
+			font-family: $nova-bold;
+			@extend .uppercase;
+				&:hover {
+					opacity: $opaque;
+				}
+		}
+}
+
+/*==========  7.2 Goals   ==========*/
+#goalsWrapper {
+	min-height:300px;
+	background: $color-white;
+	border:1px solid $color-gray-lighter;
+	border-radius:4px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+		/* inner contaner */
+		.containerInner {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		/* Goals introduction and description */
+		#goalsDetails {
+			.goalsImage {
+				width: 300px;
+				float:left;
+					img {
+						border-radius:4px;
+					}
+			}
+			.goalsDescription {
+				width: 500px;
+				float:left;
+				padding-top: 12px;
+				@extend .goalsDescriptions;		
+				@include breakpoint(laptop) {
+					width: 475px;
+				}		
+			}
+			.goalsDetails {
+				@extend .goalsDetailsStyling;
+				margin-top: 10px;
+			}
+		}
+		nav {
+			margin-top: 20px;
+			li {
+				a {
+					background: #90a4ae;
+					display: block;
+					float: left;
+					width: 33.20%;
+					height: 60px;
+					line-height: 60px;
+					font-size: 16px;
+					font-family: $nova-bold;
+					color:$color-white;
+					text-align: center;
+					border-right:1px solid #a6b6be;
+						&:hover {
+							background: #9db2bc;
+						}
+				}
+			}
+		}
+		.narrowContainer {
+			padding: 40px;
+		}
+		/* Topics Covered Area */
+		#topicsCovered {
+			header {
+				h2 {
+					color:#81be4a;
+					font-family: $nova-regular;
+					font-size: 24px;
+					font-weight: normal;
+					margin-bottom: 35px;
+				}
+			}
+			h3 {
+				font-size: 13px;
+				@extend .uppercase;
+				color:#a9b2bc;
+				font-family: $nova-bold;
+				padding-bottom: 11px;
+			}
+			ul {
+				li {
+					display: block;
+					font-size: 14px;
+					color:#313740;
+					color:#313740;
+					font-family: $nova-regular;
+					padding-top: 4px;
+					padding-bottom: 4px;
+				}
+			}			
+		}
+		.graydivider {
+			margin-top: 24px;
+			margin-bottom: 24px;
+		}
+		/* Goals Features */
+		#goalsFeatures {
+			header {
+				h3 {
+					font-size: 24px;
+					color:#4f4e79;
+					font-family: $nova-regular;
+					font-weight:normal;
+				}
+			}
+			@extend .studentFeatures;
+			.studentsBox {
+				width: 300px;
+					.studentsContent {
+						width: 195px;
+					}
+			}
+		}
+		/* Goals Reviews */
+		#goalsReviews {
+			header {
+				h2 {
+					color:#313740;
+					font-size: 24px;
+					font-family: $nova-regular;
+				}
+				padding-bottom: 25px;
+			}
+			.reviewBox {
+				border-bottom:1px solid #e5e5e5;
+				padding-top: 30px;
+				padding-bottom: 30px;
+				/* User image */
+				.reviewImage {
+					float:left;
+					width: 110px;
+					img {
+						border-radius:180px;
+					}
+				}
+				/* Review content */
+				.reviewContent {
+					width: 800px;
+					float:left;
+						h3 {
+							font-size: 14px;
+							color:#313740;
+							font-family: $nova-bold;
+							@extend .uppercase;
+
+						}
+						h4 {
+							font-size: 16px;
+							color:#81be4a;
+							font-family: $nova-bold;
+							margin-top: 5px;
+							margin-bottom: 10px;
+						}
+						p {
+							font-size: 14px;
+							color:#313740;
+							font-family: $nova-regular;
+							line-height: 20px;
+						}
+				}
+			}
+		}
+}
+
+
+/*-----  End of 7. Goals More Page  ------*/
+
+/*===========================================
+=            8. Table of Content            =
+===========================================*/
+
+
+#tableOfContent {
+	ul {
+		margin-left: 30px;
+		margin-right: 30px;
+		li {
+			a {
+				font-size: 15px;
+				font-family: $nova-regular;
+				color:#2d2c4a;
+				display: block;
+				padding-top: 18px;
+				padding-bottom: 17px;
+				border-bottom:1px solid #e9ebf1;
+				background: url(../img/ico/toc.png);
+				background-repeat: no-repeat;
+				background-position: 0px 17px;
+				padding-left: 35px;
+			}
+		}
+	}
+}
+
+
+	/* Scroller */
+	.contentHolder { 
+		position:relative;   
+		height: 200px; 
+		overflow: hidden;
+		margin-top: 30px;
+		margin-right: 20px;
+	}
+
+/*-----  End of 8. Table of Content  ------*/
+
+
+/*========================================
+=            9. Statistc Page            =
+========================================*/
+
+.statisticBox {
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 40px;
+	float:left;
+	border-right:1px solid #f0f1f5;
+		h3 {
+			font-size: 16px;
+			font-family: $nova-bold;
+			color:#313740;
+			margin-bottom: 30px;
+		}
+		h4 {
+			font-size: 16px;
+			font-family: $nova-bold;
+			color:#313740;
+			margin-bottom: 17px;
+			margin-top: 50px;
+
+		}
+		span {
+			font-size: 14px;
+			color:#9dabb9;
+			font-family: $nova-regular;
+				strong {
+					font-size: 28px;
+					color:#313740;
+				}
+		}
+		/* Small box left right */
+		.statisticSmallBox {
+			text-align: center;
+			float: left;
+			width: 120px;
+			padding-left: 15px;
+			padding-right: 15px;
+			@include breakpoint(laptop) {
+				width: 110px;
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+				img {
+					margin-top: 20px;
+				}			
+				p {
+					font-size: 14px;
+					@extend .uppercase;
+					font-family: $nova-regular;
+						strong {
+							padding-right: 20px;
+							font-family:$nova-bold;
+						}
+				}
+		}
+		.correctBox {
+			p {
+				color:#81be4a;
+			}
+		}
+		.incorrectBox {
+			p {
+				color:#313740;
+			}
+		}
+
+}
+
+		/* Mastery Box */
+		.masteryBox {
+			float: right;
+			width: 360px;
+			padding-top: 30px;
+			margin-right: 40px;
+			padding-left: 30px;
+			@include breakpoint(laptop) { 
+				width: 340px;
+				margin-left: 0px;
+				padding-left: 0px;
+			}
+				h4 {
+					font-size: 24px;
+					color:#313740;
+					font-family: $nova-bold;
+					display: inline-block;
+					margin-bottom: 15px;
+				}
+				span {
+					display: inline-block;
+					font-size: 24px;
+					color:#81be4a;
+					float: right;
+					font-family: $nova-regular;
+				}
+				p {
+					font-size: 14px;
+					@extend .uppercase;
+					color:#9dabb9;
+					font-family: $nova-regular;
+
+				}
+				.progressBar {
+					padding-bottom: 30px;
+				}
+		}
+
+/*-----  End of 9. Statistc Page  ------*/
+
+
+/*========================================
+=            10. Profile Page            =
+========================================*/
+
+#profileWrapper {
+	width: 100%;
+	height:894px;
+	background: url(../img/bg/profile-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	padding-top: 105px;
+		/* Profile inner content */
+		#profileInner {
+			width: 530px;
+			min-height: 707px;
+			margin: 0 auto;
+			background: $color-white;
+			border-radius:6px;
+		}
+		/* Profile name and image */
+		#profileName {
+			background: #81be4a;
+			text-align: center;
+			padding-top: 45px;
+			padding-bottom: 30px;
+			-webkit-border-top-left-radius: 6px;
+			-webkit-border-top-right-radius: 6px;
+			-moz-border-radius-topleft: 6px;
+			-moz-border-radius-topright: 6px;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;			
+				/* Profile name */
+				h3 {
+					color:$color-white;
+					font-size: 26px;
+					margin-bottom: 30px;
+					font-family: $nova-light;
+				}
+				/* profile image */
+				img {
+					border-radius:180px;
+					border:2px solid $color-white;
+				}
+		}
+		/* Profile details */
+		#profileDetails {
+			/* Tabs */
+			#tabs {
+				ul {
+					border-bottom:1px solid #ebeef1;
+					padding-left: 40px;
+						li {
+							margin-right: 110px;
+									&:hover {
+										border-bottom:3px solid #81be4a;
+										outline:none;
+									}
+							a {
+								color:#323a46;
+								font-size: 14px;
+								font-family: $nova-bold;
+								border-bottom:3px solid $color-white;
+								padding-left: 2px;
+								padding-right: 2px;
+								padding-top: 18px;
+								padding-bottom: 14px;
+
+
+							}
+						}
+				}
+					div {
+						margin-left: 20px;
+						margin-right: 20px;
+							p {
+								border-bottom:1px solid #ebeef1;
+								padding-top: 25px;
+								padding-bottom: 25px;
+								font-size: 18px;
+								color:#313740;
+								font-family: $nova-bold;
+									small {
+										display: block;
+										@extend .uppercase;
+										font-size: 12px;
+										color:#9dabb9;
+										padding-top: 10px;
+									}
+							}
+							/* See more btn */
+							.seemoreBtn {
+								display: block;
+								font-size: 12px;
+								margin: 0 auto;
+								@extend .uppercase;
+								color:#90a4ae;
+								font-family: $nova-bold;
+								background: #f4f6f7;
+								border:1px solid #d3dbdf;
+								border-radius:4px;
+								padding-top: 10px;
+								padding-bottom: 10px;
+								width: 110px;
+								text-align: center;
+								margin-top: 25px;
+									&:hover {
+										opacity: $opaque;
+									}
+							}
+					}
+			}
+		}
+}
+
+/*-----  End of 10. Profile Page  ------*/
+
+/*==========================================
+=            11. Questions Page            =
+==========================================*/
+
+#questionsHeader {
+	padding-top: 20px;
+	padding-bottom: 37px;
+	border-bottom:1px solid #f0f1f5;
+	border-top:1px solid #f0f1f5;
+	h3 {
+		color:#313740;
+		font-size: 18px;
+		font-family: $nova-regular;
+		display: inline-block;
+		float:left;
+	}
+	p {
+		float: right;
+		font-size: 14px;
+		color:#546e7a;
+		font-family: $nova-regular;
+		position:relative;
+		top:3px;
+	}
+	div {
+		display: inline-block;
+		float: right;
+		margin-top: 0px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+
+}
+
+/* queston box */
+.questionListBox {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom:1px solid #f0f1f5;
+		#answerWrapper {
+			padding-bottom: 30px;
+		}
+		/* quesiton image */
+		.questionImage {
+			float: left;
+			width: 90px;
+				img {
+					border-radius:180px;
+				}
+		}
+		/* question author */
+		.questionAuthor {
+			float: left;
+			width: 180px;
+			padding-top: 10px;
+			@include breakpoint(laptop) {
+				width: 120px;
+			}
+				p {
+					font-size: 18px;
+					color:#313740;
+					font-family: $nova-bold;
+				}
+				small {
+					font-size: 14px;
+					color:#313740;
+					font-family: $nova-regular;
+					display: block;
+					padding-top: 10px;
+				}
+		}
+		/* queston content */
+		.questionContent {
+			float: right;
+			padding-top: 10px;
+			width: 745px;
+			@include breakpoint(laptop) {
+				width: 686px;
+			}
+			input[type="text"] {
+				border:1px solid #cfd8dc;
+				width: 98%;
+				padding-top: 25px;
+				padding-bottom: 25px;
+				font-size: 14px;
+				color: #546e7a;
+				font-family: $nova-regular;
+				padding-left: 2%;
+				margin-bottom: 30px;
+						}
+				.submitBtn {
+					display: inline-block;
+					width: 100px;
+					text-align: center;
+					background: #81be4a;
+					color:$color-white;
+					@extend .uppercase;
+					padding-top: 12px;
+					padding-bottom: 12px;
+					font-family: $nova-bold;
+					border-radius:4px;
+					font-size: 14px;
+						&:hover {
+							opacity: $opaque;
+						}
+				}
+				h3 {
+					font-size: 21px;
+					color:#313740;
+					font-family: $nova-bold;
+					margin-bottom: 30px;
+					display: inline-block;
+				}
+				/* Answers collapsable btn */
+				.answerBtn {
+					@extend .uppercase;
+					color:#9dabb9;
+					font-family:$nova-bold;
+					font-size: 14px;
+					padding-left: 40px;
+						background: url(../img/ico/arrowDown.jpg);
+						padding-right: 33px;
+					background-repeat: no-repeat;
+					background-position: right 4px;
+						&:hover {
+							opacity: $opaque;
+							cursor:pointer;
+						}
+				}
+				/* Answer Question btn */
+				.answerQuestionBtn {
+					display: inline-block;
+					font-size: 12px;
+					color:#90a4ae;
+					@extend .uppercase;
+					font-family: $nova-bold;
+					padding-top: 12px;
+					padding-bottom: 10px;
+					border-radius:4px;
+					width: 200px;
+					text-align: center;
+					background: #f4f6f7;
+					border:1px solid #d3dbdf;
+						&:hover {
+							opacity: $opaque;
+						}
+				}
+		}
+		/* answer content */
+		.answerList {
+			border-bottom:1px solid #f0f1f5;
+			padding-top: 30px;
+			padding-bottom: 30px;
+				.answerAuthorImage {
+					float: left;
+					width: 90px;
+						img {
+							border-radius:180px;
+						}
+				}
+				.answerContent {
+					float:left;
+					width: 500px;
+					padding-top: 10px;
+						h6 {
+							font-size: 18px;
+							color:#313740;
+							font-family: $nova-bold;
+						}
+						p {
+							font-size: 14px;
+							color:#313740;
+							font-family: $nova-regular;
+							display: block;
+						}
+
+				}
+		}
+
+		.voteBox {
+			display: inline-block;
+			margin-left: 30px;
+					/* Like box */
+					.likeBox {
+						font-family: $nova-bold;
+							a {
+								@extend .uppercase;
+								color:#9dabb9;
+								font-size: 12px;
+								border-right:1px solid #ebeef1;
+								padding: 0px;
+								padding-top: 3px;
+								padding-bottom: 2px;
+								padding-right: 10px!important;
+								display: inline-block;
+								background: url(../img/ico/like.png);
+								background-repeat: no-repeat;
+								background-position: top left;
+								padding-left: 21px;
+								padding-top: 1px;
+							}
+							small {
+								color:#8bc34a;
+								display: inline-block;
+								padding-left: 10px;
+								font-size: 12px;
+							}
+					}
+					.dislikeBox {
+						margin-left: 25px;
+						font-family: $nova-bold;
+							a {
+								@extend .uppercase;
+								color:#9dabb9;
+								font-size: 12px;
+								border-right:1px solid #ebeef1;
+								padding: 0px;
+								padding-top: 3px;
+								padding-bottom: 2px;
+								padding-right: 10px!important;
+								display: inline-block;
+								background: url(../img/ico/dislike.png);
+								background-repeat: no-repeat;
+								background-position: top left;
+								padding-left: 21px;
+								padding-top: 1px;								
+							}
+							small {
+								color:#d54734;
+								display: inline-block;
+								padding-left: 10px;
+								font-size: 12px;
+							}
+					}							
+		}
+		.questionSpacer {
+			margin-top: 30px;
+		}
+}
+
+.closed-content {
+	background: url(../img/ico/arrowUp.jpg)!important;
+	padding-right: 33px;
+	background-repeat: no-repeat!important;
+	background-position: right 4px!important;
+}
+
+
+.toogle-content {
+	display:none;
+}
+
+.green-title {
+	color:#81be4a!important;
+}
+
+
+/*-----  End of 11. Questions Page  ------*/
+
+/*=================================
+=            12. Popup            =
+=================================*/
+
+#loginWrapper {
+	text-align: center;
+	background: $color-white;
+	padding-bottom: 20px;
+		header {
+			background: #81be4a;
+			color:$color-white;
+			font-size: 26px;
+			padding-top: 25px;
+			padding-bottom: 25px;
+			font-family: $nova-light;
+			margin-bottom: 30px;
+				h1 {
+					font-size: 26px;
+				}
+		}
+		input[type="text"], input[type="password"] {
+			width: 80%;
+			border-radius:6px;
+			border:1px solid #dfe1e9;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			margin-bottom: 20px;
+			padding-left: 20px;
+			font-size: 14px;
+			color:#323a46;
+			border-radius:4px;
+		}
+		input[type="submit"] {
+			display: block;
+			background: #00b9aa;
+			color:$color-white;
+			@extend .uppercase;
+			font-size: 16px;
+			border:none;
+			margin: 0 auto;
+			width: 85%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+				&:hover {
+					opacity: $opaque;
+					cursor: pointer;
+				}
+		}
+		p {
+			margin-top: 20px;
+			font-family: $nova-regular;
+			color:#acb3bf;
+			font-size: 14px;
+				a {
+					color:#81be4a;
+						&:hover {
+							opacity: $opaque;
+						}
+				}
+		}
+}
+
+/*-----  End of 12. Popup  ------*/
+
+
+/*==========  Switch  ==========*/
+
+  .cb-enable .cb-enable span {
+   display: block; 
+   float: left;
+  font-size: 11px; 
+  font-family: $nova-bold!important;
+  @extend .uppercase;
+  text-align: center;
+
+  height: 26px;
+  line-height: 26px;
+  margin-top: 15px;
+  position:relative;
+  top:30px;
+
+}
+
+  .cb-enable, .cb-disable, .cb-enable span, .cb-disable span {
+   display: block; 
+   float: left;
+  font-size: 11px; 
+  font-family: $nova-bold!important;
+  @extend .uppercase;
+  text-align: center;
+  width: 110px;
+  height: 26px;
+  line-height: 26px;  
+
+}
+
+.field {
+	position:relative;
+}
+  .cb-enable span, .cb-disable span {  
+  	display: block; 
+  	border-radius:32px;  
+border:1px solid #dee2e6;
+  font-size: 11px; 
+  font-family: $nova-bold;
+
+
+
+  }
+  .cb-enable span { 
+  	background: #fff;
+  	border:1px solid #dee2e6;
+  	border-radius:32px;
+  	color:#9dabb9;
+  	  font-size: 11px; 
+  font-family: $nova-bold;
+
+
+
+  }
+  .cb-disable span { 
+  	background: #fff;
+  	border:1px solid #dee2e6;
+  	color:#9dabb9;
+  	  font-size: 11px; 
+  font-family: $nova-bold;
+
+  }
+
+  .cb-disable {
+	
+  }
+
+   .cb-enable {
+   	position:relative;
+   	left:18px;
+   	z-index: 9999;
+   }
+
+
+  .cb-disable.selected { 
+
+  }
+  .cb-disable.selected span { 
+  	background: #90a4ae;
+  	color:#fff;
+
+   	position:relative;
+
+   	z-index: 9999;
+
+  }
+  .cb-enable.selected { 
+  	background: #90a4ae;  
+  	color:#fff;
+  	border-radius:32px;
+  	  font-size: 11px; 
+  font-family: $nova-bold;
+  position:relative;
+  z-index: 9999;
+
+  
+  }
+  .cb-enable.selected span {  
+  	background: #90a4ae;  
+  	border:1px solid #90a4ae;
+  	color:#fff;
+  	border-radius:32px;
+  	  font-size: 11px; 
+  font-family: $nova-bold;  position:relative;
+  z-index: 9999;
+
+
+
+
+  }
+
+  .switch label { cursor: pointer; }
+
+.switchDivider {
+	margin-right: 5px;
+	float:left;
+	@include breakpoint(laptop) {
+		margin-right: 0px;
+	}
+}
+
+.btn
+{
+  display: inline-block;
+  margin-bottom: 0px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-image: none;
+  border-top-width: medium;
+  border-right-width-value: medium;
+  border-bottom-width: medium;
+  border-left-width-value: medium;
+  border-top-style: none;
+  border-right-style-value: none;
+  border-bottom-style: none;
+  border-left-style-value: none;
+  border-image-source: none;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-width: 1 1 1 1;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  white-space: nowrap;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px -3px 0px 0px rgba(0, 0, 0, 0.05) inset;
+}
+
+/* Line 561 */
+ label
+{
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "Raleway",sans-serif;
+  font-weight: 400;
+}
+
+/* Line 573 */
+ .select-radio
+{
+  background-color: transparent;
+  background-image: url("../img/bg/form-bg.png");
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: auto auto;
+  border-top-width: medium;
+  border-right-width-value: medium;
+  border-bottom-width: medium;
+  border-left-width-value: medium;
+  border-top-style: none;
+  border-right-style-value: none;
+  border-bottom-style: none;
+  border-left-style-value: none;
+  border-image-source: none;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-width: 1 1 1 1;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  color: #9e9d98;
+  font-family: "Raleway",sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: capitalize;
+  height: 60px;
+  line-height: 49px;
+  width: 78px;
+}
+
+
+.select-radio.active
+{
+  background-color: #0ab2ab;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: auto auto;
+  color: #ffffff;
+}
+
+/* Line 654 */
+ .btn-default:active,  .btn-default.active,  .open .dropdown-toggle.btn-default
+{
+  background-color: transparent;
+  background-image: url("../images/form-bg.png");
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: auto auto;
+  border-top-width: medium;
+  border-right-width-value: medium;
+  border-bottom-width: medium;
+  border-left-width-value: medium;
+  border-top-style: none;
+  border-right-style-value: none;
+  border-bottom-style: none;
+  border-left-style-value: none;
+  border-image-source: none;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-width: 1 1 1 1;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  height: 60px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  color: #9e9d98;
+  font-family: "Raleway",sans-serif;
+  font-weight: 300;
+  background: #000;
+}
+
+
+ label
+{
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "Raleway",sans-serif;
+  font-weight: 400;
+}
+			
+	.table-of-contents {
+			header {
+				h2 {
+					 background-image: url("../img/bg/arrow-back.png")!important;
+					 background-position: left center!important;
+
+				}
+			}	
+		}	
+
+
+
+#forpublishers, #forschools , #forstudents, #inaction, #contactanchor {
+	position:relative!important;
+	top:-99px!important;
+}
+

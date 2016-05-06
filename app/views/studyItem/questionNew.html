@@ -1,0 +1,23 @@
+<article class="questionLeft" ng-class="{'table-of-contents' : showResult == 'true'}" ng-cloak>
+
+    <question-header data-header-message="{{questionHeaderText}}" back-handler="onBack()" data-show-result="showResult"  data-gid="gid" data-id="id" data-istablecontent="istablecontent"></question-header>
+
+    <div class="questionWrapper" ng-hide="showResult == 'true' || item.studyItemType == 'F' || istablecontent"  >
+        <span ng-show="item.difficulty !== null" class="labelHard">{{item.difficulty}}</span>
+        <!--<p> Select the answer choice that most closely matches the meaning of the following word:-->
+          <!--<br /> <div class="text-center flashcardBodyFront"> abhor</div></p>-->
+      <!---->
+      <!--<p> {{item.description}}</p>-->
+      <p><studycontentdesc></studycontentdesc></p>
+
+    </div><!-- // questio Wrapper -->
+    <div id="flashcardstudy" data-table-contents data-answers="answers" data-item="item" data-gid="gid"  ng-show="istablecontent" data-groups="groups"></div>
+    <div id="flashcardstudy" data-flashcardstudy data-answers="answers" data-item="item" data-uid="uid" data-author="author" ng-show="item.studyItemType == 'F' && !istablecontent"></div>
+
+    <question-result ng-show="showResult == 'true'" data-selected-choice="Selected Choice" data-right-answer="Right Answer" data-explanation="explanation" ></question-result>
+
+    <question-footer ng-hide="istablecontent" data-usi="usi" data-uid="{{uid}}" data-gid="{{gid}}" data-id="{{id}}"></question-footer>
+
+    <div class="clearfix"></div>
+    <!-- // question wrapper left -->
+</article>
